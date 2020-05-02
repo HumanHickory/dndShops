@@ -1,0 +1,387 @@
+﻿<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <!--Bootstrap and JQuery -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+TC" rel="stylesheet">
+    <link rel="stylesheet" href="../../Cities/Sonridge/Sonridge.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDEU</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <style>
+
+        body {
+            font-family: 'Noto Serif TC';
+        }
+
+
+
+        .white {
+            color: white;
+        }
+
+        .headerText {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+
+        h1 {
+            font-size: 6rem;
+            text-shadow: 5px 5px 8px rgba(0, 0, 0, .5);
+        }
+
+
+        .bg {
+            background-color: black;
+        }
+
+        .white-bg {
+            background-color: white;
+        }
+
+        .card-header {
+            background-color: #9D0303;
+        }
+
+        .btn-link {
+            color: white;
+        }
+
+
+        @media only screen and (max-width: 500px) {
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+
+</head>
+
+<body class="bg">
+
+
+
+    <div class="container">
+
+
+        <div class="row mt-3">
+            <div class="text-center col-12 py-5 rounded" style="color:white;">
+                <div class="display-4">Coalition Dedicated to the Eradication of the Undead (CDEU)</div>
+                <hr class="col-8 mt-5" style="border: 2px solid white;" />
+            </div>
+        </div>
+
+        <div class="row mt-3" id="amenities">
+            <div class="col-12 white-bg py-5 rounded">
+                <div class="text-center">
+                    <h2><b>Guild Amenities</b></h2>
+                    <hr />
+                    <p>You have a better chance of not dying against the undead. We may give you other things if you're not useless.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3" id="membership">
+            <div class="col-12 white-bg py-5 rounded">
+                <div class="text-center">
+                    <h2><b>Membership </b></h2>
+                    <hr />
+                </div>
+                <p>
+                    Anyone can apply to be a member if they have a passion for destroying the undead. Despite the sudden decrease in undead activity, we are still actively recruiting members in case the undead
+                    army returns unexpectedly.
+                </p>
+            </div>
+        </div>
+
+        <div class="row mt-3" id="membership">
+            <div class="col-12 white-bg py-5 rounded">
+                <div class="text-center">
+                    <h2><b>Ranks, Benefits, and Fees</b></h2>
+                    <hr />
+                </div>
+                <div class="accordion" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Umbra Discipulus
+                                </button>
+                            </h2>
+                        </div>
+
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div><b>Description:</b>Low commitment level. You will gain access to guild information and will gain two items that benefit you and the guild. You may adventure freely, but it is expected that you will pass vital information to the guild, such as locations of undead hoards. In return, you will be informed of this information as well, by attending guild meetings. </div>
+                                <div><b>Price:</b> 10gp</div>
+                                <div><b>Condition:</b>Make your case in front of the Cerici Vitae. They will determine if you can join. A vial of blood (for the amulet)</div>
+                                <div><b>Reward:</b></div>
+                                <ul>
+                                    <li>Sacrificium Vitae</li>
+                                    <ul>
+                                        <li>An amulet made specifically for the user by using their blood.</li>
+                                        <li>Allows user to blow themselves up, doing 200 radiant damage to undead (total amount, closest take the most damage) up to 30 feet away</li>
+                                        <li>User is completely obliterated. They cannot be brought back. </li>
+                                    </ul>
+                                    <li>Access to guild meetings</li>
+                                    <li>Amulet of the Vampire Hunter</li>
+                                    <ul>
+                                        <li>You cannot be turned any form of undead after you die if you were attuned to the amulet at time of death.</li>
+                                    </ul>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Immortuos Venandi
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div><b>Description:</b>Active member of the guild. </div>
+                                <div><b>Price:</b> 30gp</div>
+                                <div><b>Condition:</b> 1.	Be invited on and survive an undead raid</div>
+                                <div><b>Reward:</b> </div>
+                                <ul>
+                                    <li>Acess to guild quests</li>
+                                    <li>We might let you sleep in some of our nice beds.</li>
+                                    <li>Amulet of Turning</li>
+                                    <ul>
+                                        <li>Allows you to use turn undead on one undead. Wisdom saving throw vs 8 + Wisdom. Lasts 1 minute. 3 charges. Must be recharged at the coalition</li>
+                                    </ul>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingThree">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Exercitus vivorum
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div><b>Description:</b>You have committed to being part of the army to stop the undead. When undead hoards get near, you will be called upon to stop them. Your particular abilities may be called upon by the coalition for other tasks, as needed. </div>
+                                <div><b>Price:</b> 30gp</div>
+                                <div><b>Condition:</b> 1.	Be an Immortuos Venandi and complete at least 1 quest</div>
+                                <div><b>Rewards:</b></div>
+                                <p>Choose <b>One</b> of the Following</p>
+                                <ul>
+                                    <li>Gain a feat</li>
+                                    <ul>
+                                        <li>Alert</li>
+                                        <li>Athlete</li>
+                                        <li>Charger</li>
+                                        <li>Healer</li>
+                                        <li>Keen Mind</li>
+                                        <li>Observant</li>
+                                        <li>Resilient</li>
+                                    </ul>
+                                    <li>Gain Proficiency in 1 skill</li>
+                                    <ul>
+                                        <li>Arcana + 1 to Int</li>
+                                        <li>Religion + 1 to Int</li>
+                                        <li>History + 1 to Int</li>
+                                        <li>Survival + 1 to Wis</li>
+                                    </ul>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="headingFour">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Sanguis Exciderunt
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div><b>Description:</b> A special division of the Exercitius Vivorum. You will learn how to wield blood magic in relation to your current abilities. Blood magic may involve sacrificing a few for the sake of the many. </div>
+                                <div><b>Price:</b> 0gp</div>
+                                <div><b>Condition:</b> Must be invited by Clerici Vitae. Must be willing to come to the aid of the guild at any time.</div>
+                                <div><b>WARNING:To become Sanguis Exciderunt, you must blood bond to a Clerici Vitae.</b> </div>
+                                <ul>
+                                    <li>You can feel their location and teleport to them at any time.</li>
+                                    <li>They can channel your power temporarily.</li>
+                                    <li>They can allow you to channel their power temporarily.</li>
+                                    <li>Gain blood magic abilities based on class and level.</li>
+                                    <li>Gain +2 when fighting undead.</li>
+                                    <li>If the Clerici you are bonded too dies, you will also die.</li>
+                                    <li>The blood bond will stay in effect until the CDEU is disbanded.</li>
+                                    <li>Blood bonds are non-transferable</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="headingFive">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    Suffragium Clericis
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div><b>Description: </b>The assistants to the Clerici. They perform all the mundane but necessary tasks to keep the guild running. </div>
+                                <div><b>Price:</b> 0gp</div>
+                                <div><b>Condition:</b> Be a Immortuos Venandi or higher. Intelligence must be 14 or higher. There must be an opening or need. Must sign 1 month contract minimum.</div>
+                                <div><b>Rewards:</b></div>
+                                <ul>
+                                    <li>2gp a day in pay. 5 days a week worth of work. </li>
+                                    <li>Will begin training in abyssal or infernal</li>
+                                    <ul>
+                                        <li>With 12 months of work, you will become proficient in reading infernal or abyssal. With 12 more months you will become proficient in speaking infernal or abyssal.</li>
+                                    </ul>
+                                    <li>+1 to intelligence with 6 months worth of work. Need not be consecutive. </li>
+                                    <li>Ring of the Clerks</li>
+                                    <ul>
+                                        <li>Advantage on all intelligence checks</li>
+                                        <li>+1 to all intelligence checks</li>
+                                    </ul>
+
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="row mt-3" id="leadership">
+            <div class="col-12 white-bg py-5 rounded">
+                <div class="text-center">
+                    <h2><b>Clerici Vitae</b></h2>
+                    <hr />
+                </div>
+
+                <div class="accordion" id="leadershipAccordion">
+                    <div class="card">
+                        <div class="card-header" id="headingSeven">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
+                                    Alexandru (Sandu) Baciu the Shepard
+                                </button>
+                            </h2>
+                        </div>
+
+                        <div id="collapseSeven" class="collapse show" aria-labelledby="headingSeven" data-parent="#leadershipAccordion">
+                            <div class="card-body">
+                                A human druid from Willow's Watch, Sandu came to us when his village was destroyed by the undead.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingEight">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                    Ciprian Barbu the Bearded
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#leadershipAccordion">
+                            <div class="card-body">
+                                <p>
+                                    As a dwarf barbarian, Ciprian simply enjoys killing the undead. His blood lust is his only motivation.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingNine">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                                    Dorian Eder the Handsome
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#leadershipAccordion">
+                            <div class="card-body">
+                                <p>Dorian, a rare glimmerfold bard, has been sent from Star Dust in Feywild to deal with the looming evil over the land. He is adamant that the undead problem is just the beginning of our problems.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="headingTen">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                                    Katarina Cel Tradat the Betrayed
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#leadershipAccordion">
+                            <div class="card-body">
+                                <p>
+                                    Once a beautiful Aasmiar, Katarina has denounced her angelic ways and become a warlock. After her angelic guide pushed her to murder her father, a warlock for the Raven Queen,
+                                    Katarina turned on her guide and fell from grace. She is here because the Raven Queen, her new patron, suggested this was the optimal place to be.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="headingEleven">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+                                    Demetra Dalca the Lighting  Storm
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseEleven" class="collapse" aria-labelledby="headingEleven" data-parent="#leadershipAccordion">
+                            <div class="card-body">
+                                <p>
+                                    A lightning genasi, Demetra is able to conduct electricity to fuel her arcane magic. Her body is rippled with branching scars, as the electrical current never stops running through her veins.
+                                    Several moons ago, a zombie bit her hand, forcing her to remove it. She used this as an opportunity to install a metal hand, allowing her to conduct electricity with even more ferocity now,
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="../../Cities/Sonridge/JQuery/Script.js"></script>
+
+
+    <script>
+     
+
+    </script>
+</body>
+</html>

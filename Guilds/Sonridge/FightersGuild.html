@@ -1,0 +1,489 @@
+﻿<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <!--Bootstrap and JQuery -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+TC" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonridge Fighter's Guild</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="stylesheet" href="../../Cities/Sonridge/Sonridge.css" />
+    <script src="../../Cities/Sonridge/JQuery/Script.js"></script>
+
+
+    <style>
+
+
+        body {
+            font-family: 'Noto Serif TC';
+        }
+
+        .hero-header-container {
+            background: url("../../img/hero/fightersGuild-Hero.jpg") no-repeat center;
+            background-size: cover;
+            height: 50vh;
+            position: relative;
+        }
+
+            .hero-header-container:before {
+                background: linear-gradient(to bottom, rgba(0,0,0,.1), rgba(0,0,0,.3));
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+            }
+
+        .white {
+            color: white;
+        }
+
+        .headerText {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+
+        h1 {
+            font-size: 6rem;
+            text-shadow: 5px 5px 8px rgba(0, 0, 0, .5);
+        }
+
+
+        .bg {
+            /*background-color: #b3b3cc;*/
+            background: linear-gradient(0deg, rgba(111,111,150,1) 0%, rgba(61,61,92,1) 100%);
+        }
+
+        .white-bg {
+            background-color: white;
+        }
+
+        .card-header {
+            background-color: #3d3d5c;
+        }
+
+        .btn-link {
+            color: white;
+        }
+
+
+        @media only screen and (max-width: 500px) {
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+
+</head>
+
+<body class="bg">
+  
+    <header>
+        <div class="hero-header-container">
+            <div class="headerText">
+                <h1 class="white header-title animate-pop-in">Knights of the Lost Age </h1>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="row mt-3">
+            <div class="text-center col-12 py-5 rounded" style="color:white;">
+                <h2>Strength is a gift that can only be received through discipline. </h2>
+                <div><i>-General Caelgath Zauviir</i></div>
+                <hr class="col-8 mt-5" style="border: 2px solid white;" />
+            </div>
+        </div>
+
+        <div class="row mt-3" id="amenities">
+            <div class="col-12 white-bg py-5 rounded">
+                <div class="text-center">
+                    <h2><b>Guild Amenities</b></h2>
+                    <hr />
+                    <p>Knights of the Lost Age provides continuous amenities to our members. Although not all amenitites are provided with basic memberships, warriors can move up in ranks and be granted access to benefits that others can only dream of.</p>
+                </div>
+                <ol>
+                    <li>Access to local quests with pay</li>
+                    <li>Access to Guild Inn</li>
+                    <li>Access to training facilities (increase strength or gain proficiency in athletics)</li>
+                    <li>Access to pool (increase constitution or double current swim speed)</li>
+                    <li>Access to acrobatics (increase dexterity or gain proficiency in acrobatics)</li>
+                    <li>Discounts on weapons at Epic Flail</li>
+                    <li>Discounts on armor at Ricochet Armaments </li>
+                    <li>Access to be mentored by Higher Ups (potentially learn a new feat)</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="row mt-3" id="membership">
+            <div class="col-12 white-bg py-5 rounded">
+                <div class="text-center">
+                    <h2><b>Membership</b></h2>
+                    <hr />
+                </div>
+                <p>
+                    Members may join the guild by paying the necessary costs and engaging in combat with a guild-chosen opponent.
+                    Member may choose to engage in magical combat or non-magical combat prior to test. Additional rewards may be provided,
+                    as available, upon promotion but are not guaranteed. New members may come in at any rank up to Captain but will still
+                    be required to complete at least 1 orientation class. You need only pay the entrance fee for the rank you are applying for.
+                    Failure to pass any test, including the entrance test, at any level will prevent re-trial for at least 1 month.
+                </p>
+            </div>
+        </div>
+
+        <div class="row mt-3" id="membership">
+            <div class="col-12 white-bg py-5 rounded">
+                <div class="text-center">
+                    <h2><b>Ranks, Benefits, and Fees</b></h2>
+                    <hr />
+                </div>
+                <div class="accordion" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    General Membership
+                                </button>
+                            </h2>
+                        </div>
+
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div><b>Price:</b> 10gp</div>
+                                <div><b>Condition:</b> Beat a challenge rating 1 by yourself</div>
+                                <div><b>Reward:</b> Membership, membership pin, access to fighter's guild amenitites 1-5</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Sergeant
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div><b>Price:</b> 30gp</div>
+                                <div><b>Condition:</b> Beat a challenge rating 2 by yourself</div>
+                                <div><b>Reward:</b> Uniform, Sergeant Pack, outranks General Members</div>
+                                <div>
+                                    <b>Sergeant Pack:</b>
+                                    <ul>
+                                        <li>50 feet silken rope</li>
+                                        <li>Books of Elvenkind</li>
+                                        <li>Silvered Dagger</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingThree">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Master Sergeant
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div><b>Price:</b> 100gp</div>
+                                <div><b>Condition:</b> Beat a challenge rating 4 by yourself. Must have completed 2 local quests</div>
+                                <div><b>Rewards:</b> New Uniform, 1 Trainee, outrank Sergeants, access to remaining amenities</div>
+                                <div><b>May take one feat from list:</b> Crossbow Expert, Blade Master, Tavern Brawler, or Defnsive Duelist</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="headingFour">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Lieutenant
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div><b>Price:</b> 200gp</div>
+                                <div><b>Condition:</b> Beat a challenge rating 6 by yourself. Must have completed 4 local quests</div>
+                                <div><b>Rewards:</b> </div>
+                                <ul>
+                                    <li>New Uniform</li>
+                                    <li>Ability to gain commision for recruits (5gp per recruit)</li>
+                                    <li>Ability to take on up to 3 Trainees</li>
+                                    <li>Ability to apply for the removal of a lower member</li>
+                                    <li>Access to Officer Temporary Housing</li>
+                                    <ul>
+                                        <li>Free boarding</li>
+                                        <li>Free Food</li>
+                                        <li>Maid Services</li>
+                                    </ul>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="headingFive">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    Captain
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div><b>Price:</b> 500gp</div>
+                                <div><b>Condition:</b> Beat a challenge rating 7 by yourself. Must regularly do local quests.</div>
+                                <div><b>Rewards:</b></div>
+                                <ul>
+                                    <li>New Uniform</li>
+                                    <li>Ability to establish small guilds in cities. Must apply and get approved for it</li>
+                                    <li>Ability to take on up to 5 Trainees</li>
+                                    <li>Permanent Room in Officer Housing</li>
+                                    <li>Can be witness to General Member promotion combat and Sergeant promotion combat</li>
+                                    <li>May nominate General Candidates</li>
+                                    <li>May take one feat from list:</li>
+                                    <ul>
+                                        <li>Dual Wielder</li>
+                                        <li>Durable</li>
+                                        <li>Flail Master</li>
+                                        <li>Grappler</li>
+                                        <li>Great Weapon Master</li>
+                                        <li>Heavily Armored</li>
+                                        <li>Heavy Armor Master</li>
+                                        <li>Lightly Armored</li>
+                                        <li>Medium Armor Master</li>
+                                        <li>Martial Adept</li>
+                                        <li>Moderately Armored</li>
+                                        <li>Mounted Combatant</li>
+                                    </ul>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="headingFive">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    Master-at-Arms
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div><b>Price:</b> 1000gp</div>
+                                <div>Must pre-apply for test and request must be approved by current General. May not belong to any other guilds unless approved by General. </div>
+                                <div>Beat a current Master-at-Arms to take their place.</div>
+                                <div>May apply to be a new type of Master-at-Arms, but must be approved by the general. Must beat 2 masters of arms (at separate times) to qualify.</div>
+                                <div><b>Rewards:</b></div>
+                                <ul>
+                                    <li>New uniform</li>
+                                    <li>May choose to become the permanent Master-at-Arms</li>
+                                    <ul>
+                                        <li>Gain title ‘Master of ____’</li>
+                                        <li>Penthouse in Officer Housing</li>
+                                        <li>Pension of 3000gp per month</li>
+                                        <li>Must reside in Sonridge and cannot be away for extended periods of time</li>
+                                        <li>Automatically get Inspiring Leader feat</li>
+                                        <li>May have at least 10 trainees.</li>
+                                    </ul>
+                                    <li>May choose not to become permanent Master-at-Arms</li>
+                                    <ul>
+                                        <li>Current Master will maintain title</li>
+                                        <li>Gain title "Master"</li>
+                                    </ul>
+                                    <li>Can establish full guilds in another city (approval needed)</li>
+                                    <li>May bear witness to Master Sergeant, Lieutenant, and Captain promotion combat. </li>
+                                    <li>May Choose 1 feat from Captain choices.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="headingSix">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                    General
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div>There is no cost to become general. Conditions and rewards will be discussed at time of application. Must be a Master or Master-at-Arms and reside in Sonridge.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="row mt-3" id="leadership">
+            <div class="col-12 white-bg py-5 rounded">
+                <div class="text-center">
+                    <h2><b>Leadership</b></h2>
+                    <hr />
+                </div>
+
+                <div class="accordion" id="leadershipAccordion">
+                    <div class="card">
+                        <div class="card-header" id="headingSeven">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
+                                    General Caelgath Zauviir
+                                </button>
+                            </h2>
+                        </div>
+
+                        <div id="collapseSeven" class="collapse show" aria-labelledby="headingSeven" data-parent="#leadershipAccordion">
+                            <div class="card-body">
+                                General Zauviir, Half Drow Half Elf, is said to have studied martial arts since before the first dragons hatched from their eggs. As a disciplined monk, it was his ki that calmed
+                                the raging turmoil of the oceans, the relentless rage of the volcanos, and the endless howling of the wind. Now, a man older than time himself, has settled down in Sonridge to teach others
+                                the way of the fist. He has been General of The Knights of the Lost Age for over 300 years, and is still going strong.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingEight">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                    Master of Archery
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#leadershipAccordion">
+                            <div class="card-body">
+                                <p><b>Aaron Windsbane</b></p>
+                                <p>
+                                    Aaron Windsbane, a human ranger from the town of Swallows Song, has spent his life searching the world for rare bows, crossbows, arrows, and bolts. It is said that, even as a boy,
+                                    he never missed his target with a ranged weapon.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingNine">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                                    Master of Blades
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#leadershipAccordion">
+                            <div class="card-body">
+                                <p><b>Julius</b></p>
+                                <p>Julius, a half elf paladin, has studied swordmanship since before most of us were born. He excels at all bladed weapondry, but prefers swords.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="headingTen">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                                    Master of Fists
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#leadershipAccordion">
+                            <div class="card-body">
+                                <p><b>Berhsyn</b></p>
+                                <p>A goliath barbarian, Berhsyn began fighting with his brother, Thyrson, as children. His love for breaking bones with his bare fists quickly advanced him up the ranks at our guild.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="headingEleven">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+                                    Master of Mounted Combat
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseEleven" class="collapse" aria-labelledby="headingEleven" data-parent="#leadershipAccordion">
+                            <div class="card-body">
+                                <p><b>Armond Shepard</b></p>
+                                <p>
+                                    A Human Fighter, Armond grew up on a farm fighting with wooden swords with his brothers. As the eldest, it was Armond's duty to protect the flock from wolves. Very quickly, he
+                                    realized he would be much more effective if riding his childhood horse, SugarSnout. From there, it was nearly impossible for Armond's parents to get him off horseback.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="headingTwelve">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
+                                    Master of Ki
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseTwelve" class="collapse" aria-labelledby="headingTwelve" data-parent="#leadershipAccordion">
+                            <div class="card-body">
+                                <p><b>Z</b></p>
+                                <p>
+                                    A blind human monk, nothing is known of Z's past. He enjoys long hours of silence before battle, and only takes on monk trainees.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="headingThirteen">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen">
+                                    Master of Arcane Combat
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseThirteen" class="collapse" aria-labelledby="headingThirteen" data-parent="#leadershipAccordion">
+                            <div class="card-body">
+                                <p><b>Celes</b></p>
+                                <p>
+                                    As the only female Master At Arms, Celes is the most commonly challenged Master. However, she has never lost a battle as long as she's been with the guild. As an Elven Eldritch Knight,
+                                    she is deadly with both weapondry and magic.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+
+
+
+    </script>
+</body>
+</html>

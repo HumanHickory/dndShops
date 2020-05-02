@@ -1,0 +1,637 @@
+﻿<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <!--Bootstrap and JQuery -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+TC" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonridge Academy of Mystic Arts</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="stylesheet" href="../../Cities/Sonridge/Sonridge.css" />
+    <script src="../../Cities/Sonridge/JQuery/Script.js"></script>
+
+    <style>
+
+        body {
+            font-family: 'Noto Serif TC';
+        }
+
+        .hero-header-container {
+            background: url("../../img/hero/MysticArtsHero.jpg") no-repeat center;
+            background-size: cover;
+            height: 50vh;
+            position: relative;
+        }
+
+            .hero-header-container:before {
+                background: linear-gradient(to bottom, rgba(0,0,0,.1), rgba(0,0,0,.3));
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+            }
+
+        .white {
+            color: white;
+        }
+
+        .headerText {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+
+        h1 {
+            font-size: 6rem;
+            text-shadow: 5px 5px 8px rgba(0, 0, 0, .5);
+        }
+
+
+        .bg {
+            background-color: #0000d9;
+        }
+
+        .white-bg {
+            background-color: white;
+        }
+
+        .card-header {
+            background-color: #03c1c1;
+        }
+
+        .btn-link {
+            color: white;
+        }
+
+
+        @media only screen and (max-width: 500px) {
+            h1 {
+                font-size: 2rem;
+            }
+        }
+
+
+        body {
+            height: 100%;
+            margin: 0;
+            background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(0,255,239,1) 0%, rgba(11,20,64,1) 100%);
+        }
+
+        .rain {
+            position: absolute;
+            left: 0;
+            width: 75%;
+            height: 100%;
+            z-index: 2;
+        }
+
+            .rain.back-row {
+                display: none;
+                z-index: 1;
+                bottom: 60px;
+                opacity: 0.5;
+            }
+
+        body.back-row-toggle .rain.back-row {
+            display: block;
+        }
+
+        .drop {
+            position: absolute;
+            bottom: 100%;
+            width: 15px;
+            height: 120px;
+            pointer-events: none;
+            animation: drop 0.5s linear infinite;
+        }
+
+        @keyframes drop {
+            0% {
+                transform: translateY(0vh);
+            }
+
+            75% {
+                transform: translateY(90vh);
+            }
+
+            100% {
+                transform: translateY(90vh);
+            }
+        }
+
+        .stem {
+            width: 1px;
+            height: 60%;
+            margin-left: 7px;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.25));
+            animation: stem 0.5s linear infinite;
+        }
+
+        @keyframes stem {
+            0% {
+                opacity: 1;
+            }
+
+            65% {
+                opacity: 1;
+            }
+
+            75% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .splat {
+            width: 15px;
+            height: 10px;
+            border-top: 2px dotted rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            opacity: 1;
+            transform: scale(0);
+            animation: splat 0.5s linear infinite;
+            display: none;
+        }
+
+        body.splat-toggle .splat {
+            display: block;
+        }
+
+        @keyframes splat {
+            0% {
+                opacity: 1;
+                transform: scale(0);
+            }
+
+            80% {
+                opacity: 1;
+                transform: scale(0);
+            }
+
+            90% {
+                opacity: 0.5;
+                transform: scale(1);
+            }
+
+            100% {
+                opacity: 0;
+                transform: scale(1.5);
+            }
+        }
+    </style>
+
+</head>
+
+<body class="bg">
+
+    <header>
+        <div class="hero-header-container">
+            <div class="headerText">
+                <h1 class="white header-title animate-pop-in">Academy of Mystic Arts </h1>
+            </div>
+        </div>
+    </header>
+
+
+
+    <div class="container">
+        <div class="rain front-row"></div>
+        <div class="rain back-row"></div>
+
+        <div class="row mt-3">
+            <div class="text-center col-12 py-5 rounded" style="color:white;">
+                <h2>Knowledge and truth can only be truly achieved through magic. </h2>
+                <div><i>-Ahmera</i></div>
+                <hr class="col-8 mt-5" style="border: 2px solid white;" />
+            </div>
+        </div>
+
+        <div class="row mt-3" id="amenities">
+            <div class="col-12 white-bg py-5 rounded">
+                <div class="text-center">
+                    <h2><b>Guild Amenities</b></h2>
+                    <hr />
+                    <p>Amenitites are academy exclusive and can only be accessed by members. Not all amenities are available to general members.</p>
+                </div>
+                <ol>
+                    <li>Access to local quests with pay</li>
+                    <li>Access to Guild Inn</li>
+                    <li>Access to General Library (learn new languages, look up monsters, etc) and librarians</li>
+                    <li>Access to Arcane Library (increase intelligence or learn 1 spell level 2 or lower)</li>
+                    <li>Access to Divination Lounge (increase wisdom or learn 1 level 4 or lower divination spell)</li>
+                    <li>Access to Auditorium (increase charisma or learn 1 level 4 or lower bard spell)</li>
+                    <li>Discounts on product at Eye of the Beholder</li>
+                    <li>Access to be mentored by Higher Ups (potentially learn a new feat)</li>
+
+                </ol>
+            </div>
+        </div>
+
+        <div class="row mt-3" id="membership">
+            <div class="col-12 white-bg py-5 rounded">
+                <div class="text-center">
+                    <h2><b>Membership</b></h2>
+                    <hr />
+                </div>
+                <p>
+                    Members may join the guild by paying the necessary costs. All members must have at least minor magical ability but may not be able to ascend to higher ranks without being able to cast higher level spells.
+                </p>
+            </div>
+        </div>
+
+        <div class="row mt-3" id="membership">
+            <div class="col-12 white-bg py-5 rounded">
+                <div class="text-center">
+                    <h2><b>Ranks, Benefits, and Fees</b></h2>
+                    <hr />
+                </div>
+                <div class="accordion" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Performer
+                                </button>
+                            </h2>
+                        </div>
+
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div><b>Price:</b> 10gp</div>
+                                <div><b>Condition:</b> Perform a 1st level spell</div>
+                                <div><b>Reward:</b> Membership, white robe, access to arcane library </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Apprentice
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div><b>Price:</b> 30gp</div>
+                                <div><b>Condition:</b> Perform a 3rd level spell</div>
+                                <div><b>Reward:</b> s</div>
+                                <ul>
+                                    <li>Red Robe</li>
+                                    <li>Access to Divination Lounge</li>
+                                    <li>A wand (given at random)</li>
+                                    <li>May learn a feat:</li>
+                                    <ul>
+                                        <li>Elemental Adept</li>
+                                        <li>Inspiring Leader</li>
+                                        <li>Keen Mind</li>
+                                        <li>Linguist</li>
+                                        <li>Observant</li>
+                                        <li>Skilled</li>
+                                    </ul>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingThree">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Student of the Arts
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div><b>Price:</b> 100gp</div>
+                                <div><b>Condition:</b> Perform a 5th level spell</div>
+                                <div><b>Rewards:</b></div>
+                                <ul>
+                                    <li>Green Robe</li>
+                                    <li>Access to Auditorium and all other guild perks</li>
+                                    <li>Gain a Feat</li>
+                                    <ul>
+                                        <li>Magic Initiate</li>
+                                        <li>Mage Slayer</li>
+                                        <li>Ritual Caster</li>
+                                        <li>Spell Sniper</li>
+                                        <li>Or a single previously offered feat</li>
+                                    </ul>
+                                    <li><b>Wizards:</b> may publish spell books for money</li>
+                                    <li><b>Non-Wizards:</b> can write magical guides for money</li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="headingFour">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Mage
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div><b>Price:</b> 1000gp</div>
+                                <div><b>Condition:</b> Cast a 7th level spell </div>
+                                <div><b>Rewards:</b> </div>
+                                <ul>
+                                    <li>Purple Robe</li>
+                                    <li>May take War caster feat or any single previous feat  (may take elemental adept more than once)</li>
+                                    <li>Gain 1st level in Wizard, Sorcerer, Bard, Cleric, Warlock or Druid class.  This does not take the place of a level (cannot take a higher level than 1st level)</li>
+                                    <li>Publications are appraised for more gold</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="headingFive">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    Guardian
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div><b>Price:</b> 10000gp</div>
+                                <div><b>Condition:</b> Cast an 8th level spell. Must return regularly to Sonridge</div>
+                                <div><b>Rewards:</b></div>
+                                <ul>
+                                    <li>Blue Robe </li>
+                                    <li>Ability to establish small guilds in cities. Must apply and get approved for it</li>
+                                    <li>Ability to take on up to 5 Trainees</li>
+                                    <li>Permanent Room in Academy Tower Housing</li>
+                                    <li>Gain 1 new spell slot for every spell level up to 5</li>
+                                    <li>Publications are appraised for more gold</li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="headingFive">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    Counsel Member
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div><b>Price:</b> 0</div>
+                                <div>Cast 9th Level Spell </div>
+                                <div>Must be a permanent resident of Sonridge</div>
+                                <div><b>Rewards:</b></div>
+                                <ul>
+                                    <li>Black Robes</li>
+                                    <li>1000gp per week pension</li>
+                                    <li>Permanent Penhouse suite</li>
+                                    <li>Can establish full guilds in another city (approval needed)</li>
+                                    <li>Gain 1 new spell slot for levels 6-9 </li>
+                                    <li>May Choose 1 feat from previous choices.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="headingSix">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                    Supreme
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div>Only Counsel Members may apply to become Supreme.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="row mt-3" id="leadership">
+            <div class="col-12 white-bg py-5 rounded">
+                <div class="text-center">
+                    <h2><b>Leadership</b></h2>
+                    <hr />
+                </div>
+
+                <div class="accordion" id="leadershipAccordion">
+                    <div class="card">
+                        <div class="card-header" id="headingSeven">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
+                                    Ahmera
+                                </button>
+                            </h2>
+                        </div>
+
+                        <div id="collapseSeven" class="collapse show" aria-labelledby="headingSeven" data-parent="#leadershipAccordion">
+                            <div class="card-body">
+                                An elven sorceress, Ahmera is said to be thousands of years old, but looks no older than a 200 year old elf. Her magic is drawn from every realm and she has been undefeated for many centuries.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingEight">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                    Rhyben
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#leadershipAccordion">
+                            <div class="card-body">
+                                <p>
+                                    Rhyben is the newest member of the counsel and is an air genasi bard. His carefree nature is welcomed in the counsel.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingNine">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                                    Marina
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#leadershipAccordion">
+                            <div class="card-body">
+                                <p>Marina, a Triton Druid from the sea. Although she can attune with all natural power, no one in the world can rival her connection with the natural power of water.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="headingTen">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                                    Onessa
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#leadershipAccordion">
+                            <div class="card-body">
+                                <p>Known for her unfailing ability to heal, this Aasimar Cleric is one with all life forms.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="headingEleven">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+                                    Cerberin
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseEleven" class="collapse" aria-labelledby="headingEleven" data-parent="#leadershipAccordion">
+                            <div class="card-body">
+                                <p>
+                                    Where there is light, there must be darkness. Cerberin, the Drow Warlock, has bonded with a demon lords in his lifetime, bringing darkness and destruction to the world. Now,
+                                    he uses that energy to keep his home of Sonridge safe.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="headingTwelve">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
+                                    Valera
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseTwelve" class="collapse" aria-labelledby="headingTwelve" data-parent="#leadershipAccordion">
+                            <div class="card-body">
+                                <p>
+                                    An elven wizard, Valera prefers spending her time in the library studying arcane magic and history.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="headingThirteen">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen">
+                                    Aldrin
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseThirteen" class="collapse" aria-labelledby="headingThirteen" data-parent="#leadershipAccordion">
+                            <div class="card-body">
+                                <p>
+                                    The Academy's museum curator, Aldrin is a human wizard who is not shy to admit that he believes magic users to be better than non-magic users.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="headingFourteen">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFourteen" aria-expanded="false" aria-controls="collapseFourteen">
+                                    Drake
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseFourteen" class="collapse" aria-labelledby="headingFourteen" data-parent="#leadershipAccordion">
+                            <div class="card-body">
+                                <p>
+                                    Another warlock, Drake has dedicated his magic to serving the arch fey. Although he resides in Sonridge, the Supreme has granted him permission to spend the vast majority of his time in Feywild.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingFifteen">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFifteen" aria-expanded="false" aria-controls="collapseFifteen">
+                                    Scyth
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseFifteen" class="collapse" aria-labelledby="headingFifteen" data-parent="#leadershipAccordion">
+                            <div class="card-body">
+                                <p>
+                                    A most unusual counsel member, Scyth is a dragonborn sorcerer from the Desert of Dragons, in the sands of Demon's hearth Desert. It is said that Scyth has worked with ancient dragons to
+                                    perfect his magic and gain powers that other sorcerers could never dream of.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+
+        var makeItRain = function () {
+            //clear out everything
+            $('.rain').empty();
+
+            var increment = 0;
+            var drops = "";
+            var backDrops = "";
+
+            while (increment < 100) {
+                //couple random numbers to use for various randomizations
+                //random number between 98 and 1
+                var randoHundo = (Math.floor(Math.random() * (98 - 1 + 1) + 1));
+                //random number between 5 and 2
+                var randoFiver = (Math.floor(Math.random() * (5 - 2 + 1) + 2));
+                //increment
+                increment += randoFiver;
+                //add in a new raindrop with various randomizations to certain CSS properties
+                drops += '<div class="drop" style="left: ' + increment + '%; bottom: ' + (randoFiver + randoFiver - 1 + 100) + '%; animation-delay: 0.' + randoHundo + 's; animation-duration: 0.5' + randoHundo + 's;"><div class="stem" style="animation-delay: 0.' + randoHundo + 's; animation-duration: 0.5' + randoHundo + 's;"></div><div class="splat" style="animation-delay: 0.' + randoHundo + 's; animation-duration: 0.5' + randoHundo + 's;"></div></div>';
+                backDrops += '<div class="drop" style="right: ' + increment + '%; bottom: ' + (randoFiver + randoFiver - 1 + 100) + '%; animation-delay: 0.' + randoHundo + 's; animation-duration: 0.5' + randoHundo + 's;"><div class="stem" style="animation-delay: 0.' + randoHundo + 's; animation-duration: 0.5' + randoHundo + 's;"></div><div class="splat" style="animation-delay: 0.' + randoHundo + 's; animation-duration: 0.5' + randoHundo + 's;"></div></div>';
+            }
+
+            $('.rain.front-row').append(drops);
+            $('.rain.back-row').append(backDrops);
+        }
+
+
+
+        makeItRain();
+
+    </script>
+</body>
+</html>

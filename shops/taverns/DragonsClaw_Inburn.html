@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+<style>
+
+:root {
+    --main: #052719;
+    --primary: black;
+    --secondary: #370929;
+    --tertiary: #06092C;
+    --quaternary: #9C6504;
+	}
+
+
+body {
+  font-family: 'Playfair Display', serif;
+	font-size: 1.7rem;
+    background: var(--main);
+    color: #939393;
+}
+
+#header{
+  position: absolute;
+  z-index: 1000;
+  top: 210px;
+  left: 40%;
+  color: white;
+  font-family: 'Playfair Display', serif;
+}
+
+hr {
+	border: 8px solid var(--primary);
+	margin-top: 0px;
+}
+
+.h3, h3 {
+	color: var(--primary);
+	}
+	
+.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+	padding-right: 0 !important;
+	padding-left: 0 !important;
+	}
+	
+	
+
+a {
+	color: white;
+}
+
+a:hover {
+	color: var(--secondary);
+	text-decoration: none;
+}
+
+
+
+
+
+.backdrop {
+    background-color: rgba(255, 255, 255, .7);
+    padding-top: .6em;
+    padding-bottom: .4em;
+}
+
+h1, .h1 {
+    font-size: 4rem !important;
+}
+
+h2, .h2 {
+    font-size: 3rem !important;
+}
+
+.parallax { 
+  /* The image used */
+  background-image: url("../../img/hero/inburn-tavern-hero.jpg");
+
+  /* Set a specific height */
+  height: 600px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.test {
+	border: 2px solid red;
+	}
+
+.primary {
+	color: var(--quaternary);
+	}
+	
+.secondary {
+	color: var(--secondary);
+	}
+
+.secondaryBG {
+	background-color: var(--secondary);
+	}
+	
+.tertiaryBG {
+	background-color: var(--tertiary);
+}
+
+@media only screen and (max-width: 1400px) and (min-width: 1025px) {
+	.laptop {
+		font-size: 1.2rem !important;
+		}
+		
+}
+
+@media only screen and (max-width: 1024px) {
+	#header {
+		left: 35%;
+		}
+}
+
+.col-xs-5ths,
+.col-sm-5ths,
+.col-md-5ths,
+.col-lg-5ths {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.col-xs-5ths {
+    width: 20%;
+    float: left;
+}
+
+@media (min-width: 768px) {
+    .col-sm-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-md-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-lg-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+
+
+</style>
+
+
+
+    <title>Dragon's Claw</title>
+</head>
+<body>
+
+<div class="d-none">http://dustin.wikidot.com/food#toc7</div>
+<h1 id="header">Dragon's Claw</h1>
+   <div class="parallax"></div>
+   
+   <hr />
+   
+   <div class="container">
+		<div class="row text-center">
+		
+			<a class="col-sm-5ths" href="#Specialties">
+				Specialties
+			</a>
+			<a class="col-sm-5ths" href="#Soups">
+				 Soups
+			</a>
+			<a class="col-sm-5ths"href="#cuisine">
+				Swamp Cuisine
+			</a>
+			<a class="col-sm-5ths" href="#drinks">
+				Beverages
+			</a>			
+
+		</div>
+		<div class="row">
+		
+
+
+			<h2 class="col-12 my-4" id="Specialties"> Specialties </h2>
+		
+			<div class="col-5 d-none d-xl-block" data-aos="fade-right"> 
+				<img src="../../img/food/deepFriedPrawns.jpg" style="width: 75%;" />
+			</div>
+			
+		
+			<div class="col-7" data-aos="fade-left"> 
+				<div class="col-12">
+					<b>Deep Fried Prawns</b> <span class="primary">1 gp</span>
+				</div>
+				<div class="col-12">
+					<small>Fresh caught prawns battered in cattail flour and ale then deep fried. </small>					
+				</div>
+				
+				<div class="col-12 mt-3">
+					<b>Raw Oysters</b> <span class="primary">5 gp</span>
+				</div>
+				<div class="col-12">
+					<small>12 freshly harvested oysters served with a special sauce</small>
+				</div>
+				
+                <div class="col-12 mt-3">
+                    <b>Dragon Boil</b><span class="primary"> 15 gp</span>
+                </div>
+				<div class="col-12">
+					<small>Severs up to 8 people. Crawdads, sausage, corn, and potatoes all boiled together. </small>
+				</div>
+
+			</div>
+			
+
+		</div>
+   </div>
+   
+   
+   <div class="container-fluid mt-4  d-xl-none">
+   			<div class="col-12">
+				<img src="../../img/food/deepFriedPrawns.jpg" style="width: 100%;"/>
+			</div>
+	</div>
+   
+   
+   <div class="container-fluid mt-xl-5 pb-xl-4 secondaryBG">
+
+		<div class="row text-center">
+
+		
+				<h2 class="col-12 my-4" id="Soups"> Soups </h2>
+				
+				<div class="col-4 offset-2 mb-3" data-aos="fade-right">
+					<h3 class="col-12"><b>Soup</b></h3>
+					<div class="col-12 mt-3">
+						<b>Frog Egg Soup</b><span class="primary"> 1 gp</span>
+					</div>
+					<div class="col-12">
+						<small>No longer using Bullywug eggs.</small>
+					</div>
+					<div class="col-12 mt-3">
+						<b>Swamp Soup </b><span class="primary"> 1 Gp</span>
+					</div>
+					<div class="col-12">
+						<small> Tomato based soup with oysters and biscuits.</small>
+					</div>
+					<div class="col-12 mt-3">
+						<b>Gumbo </b><span class="primary"> 1 gp</span>
+					</div>
+					<div class="col-12">
+						<small>Shellfish soup cooked with celery, bell peppers, and onions.</small>
+					</div>					
+				
+				</div>
+				
+				<div class="col-4 mb-3" data-aos="fade-left">
+				
+				<h3 class="col-12"><b>Salad</b></h3>
+
+				<div class="col-12 mt-3">
+					<b>Cabbage Salad</b><span class="primary"> 1 gp</span>
+				</div>
+				<div class="col-12">
+					<small>White cabbage with limes and tomatoes.</small>
+				</div>
+				
+				<h3 class="col-12 mt-5 mt-3"><b>Bakery</b></h3>
+
+				
+				<div class="col-12 mt-3">
+					<b>Cattail Bread </b><span class="primary"> 1 gp/loaf</span>
+				</div>
+				<div class="col-12">
+					<small>Light bread made from Cattail flour.</small>
+				</div>
+
+				</div>
+
+		</div>
+	</div>	
+	
+	<div class="container-fluid pb-5 pb-xl-0 tertiaryBG">
+
+		<div class="row">
+			<div class="col-12 d-xl-none"> 
+				<img src="../../img/food/frogLegsMobile.jpg" style="width: 100%;" />
+			</div>
+		
+		<div class="col-xl-4 offset-3 col-8 my-4 text-xl-right text-left laptop" style="padding-right: 50px !important;" data-aos="fade-right"> 
+				<h2 class="col-12 my-4" id="cuisine"> Swamp Cuisine </h2>
+				
+				<div class="col-12 mt-3">
+					<b>Fried Gator </b><span class="primary"> 5 gp</span>
+				</div>
+				<div class="col-12">
+					<small>Cut up some of them pesky gators and deep fried em.</small>
+				</div>
+				
+				<div class="col-12 mt-3">
+					<b>Sauteed Not-Bullywug Legs</b><span class="primary"> 4 gp</span>
+				</div>
+				<div class="col-12">
+					<small><s>Bullywug</s> Frog legs sauteed with bog rosemarry oil.</small>
+				</div>
+				<div class="col-12 mt-3">
+					<b>Lightly Fried Dragonflies</b><span class="primary"> 2 gp</span>
+				</div>
+				<div class="col-12">
+					<small>Dragonflies ran through an egg bath and then lightly battered and pan fried.</small>
+				</div>
+
+			</div>
+			
+		
+			<div class="col-xl-5 col-12 d-none d-xl-block"> 
+				<img src="../../img/food/frogLegs.jpg" style="width: 100%;" />
+			</div>
+
+		</div>
+	</div>	
+
+   
+<div class="container-fluid pb-5 secondaryBG">
+	<div class="row">
+		<div class="text-center col-12">
+			<h2 class="col-12 my-4" id="drinks"> Beverages </h2> 
+		</div>
+		<div class="col-xl-3 offset-xl-1 col-8 offset-2 text-justify" style="font-size: .8em;">
+			<h3 class="col-12 mt-5 mt-3"><b>Beer</b><span class="primary"> 1 gp / pint</span></h3>
+			<div class="col-12"><b>Bitter Black</b><small> A heavy stout. Served at cellar temperature, it is jet black with a dark brown head of foam.</small></div>
+			<div class="col-12"><b>Dragon's Breath</b><small> A brew of harsh temperament. It is often served with a platter of dark rye bread and strong cheese.</small></div>
+			<div class="col-12"><b>Elminster's Choice</b><small> A dark, cloudy beer with a heavy head and a smoky aftertaste.</small></div>
+			<div class="col-12"><b>Luiren's Best</b><small> Brewed by the halflings, this hefty stout is as black as ink and thick. It has a sweet flavor and frothy head.</small></div>
+		</div>
+		<div class="col-xl-3 ml-xl-5 col-8 offset-2 text-justify" style="font-size: .8em;">
+			<h3 class="col-12 mt-5 mt-3"><b>Wine</b><span class="primary"> 2 gp / pint</span></h3>
+			<div class="col-12"><b>Arabellan Dry</b><small> A dry red wine with woodsy undertones and a berrylike taste.</small></div>
+			<div class="col-12"><b>Blood Wine</b><small> Blood wine has a heavy body and deep-red tone. Its taste is lush and full with a slight after bite, made from shriveled grapes said to be possessed by the dead.</small></div>
+			<div class="col-12"><b>Fire Wine </b><small> A thick, almost black wine made in Casterhills. It is very strong and spicy, and is said to have medicinal qualities.</small></div>
+			<div class="col-12"><b>Bog Wine </b><small> Free with purchase of food. Illness or death following consumption is in no way related to the wine.</small></div>
+		</div>
+		
+		<div class="col-xl-3 ml-xl-5  col-8 offset-2 text-justify" style="font-size: .8em;">
+			<h3 class="col-12 mt-5 mt-3"><b>Mixed Drinks</b><span class="primary"> 3 gp / pint</span></h3>
+			<div class="col-12"><b>Lizard's Bourbon </b><small> Bourbon made here in Inburn. Drink it straight or on the rocks.</small></div>
+			<div class="col-12"><b>Visitors Bourbon</b><small> Lizard's Bourbon watered down, for those who can't handle it straight.</small></div>
+			<div class="col-12"><b>Venom</b><small> Bourbon made with a small amount of toxin from toads. Causes an enjoyable tingling sensation and sometimes death.</small></div>
+			<div class="col-12"><b>Dragonfly</b><small> A sweet bourbon with a hint of mint and ground dragonfly.</small> </div>
+		</div>
+
+	</div>
+</div>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script>
+    AOS.init();
+
+</script>
+	
+</body>
+
+
+	</html>

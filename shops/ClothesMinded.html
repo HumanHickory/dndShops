@@ -1,0 +1,236 @@
+﻿<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+	<!--Bootstrap and JQuery -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+	<meta name="viewport" content= "width=device-width, initial-scale=1.0"> 
+	
+<link href="https://fonts.googleapis.com/css?family=Lexend+Zetta|Red+Hat+Text&display=swap" rel="stylesheet">
+  <title>Clothes Minded</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+<style>
+
+body {
+	padding-left: 5vw;
+	padding-right: 5vw;
+font-family: 'Red Hat Text', sans-serif;
+
+}
+
+h1, h2, h3, h4 {
+	font-family: 'Lexend Zetta', sans-serif !important;
+}
+
+.row {
+	padding: 0; 
+	margin: 0; 
+	}
+
+.test {
+	border: 2px solid red;
+	}
+	
+	.test2 {
+	border: 2px solid blue;
+	}
+	
+.blackbg {
+	background-color: black;
+	}
+
+.padr-3 {
+	padding-right: .3em;
+	}
+	
+	.padl-3 {
+	padding-left: .3em;
+	}
+	
+	.padt-3 {
+	padding-top: .3em;
+	}
+	
+	.padb-3 {
+	padding-bottom: .3em;
+	}
+	
+
+.whiteBG {
+	background-color: white;
+	}
+
+.quadHolder > img{
+	width: 100%;
+}	
+	
+.ImgWrapperHeader {
+	max-width:100%;
+	max-height:100%;
+}
+
+.ImgWrapperHeader > img {
+	width: 100%;
+	}
+	
+.ParallaxWrapper {
+	padding: 0;
+	margin: 0;
+	min-height: 50vh;
+	width: 100%;	
+}	
+
+.parallax{
+	width: 100%;
+	height: 100%;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover; 
+	background-image: url("../img/ClothesMinded/huntress.jpg");
+}
+
+.parallaxCircus {
+	width: 100%;
+	height: 100%;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover; 
+	background-image: url("../img/ClothesMinded/circus.jpg");
+}
+
+.infoBox {
+	padding: 6% 4%;
+	color: white;
+}
+
+.productBox {
+	height: 50%;
+}
+
+
+.cost {
+	color: #e0e0e0;
+	text-shadow: 2px 2px 6px rgba(0, 0, 0, .5); 
+}
+
+@media only screen and (max-width: 768px){
+.whiteBG {
+	background-color: white;
+	}
+	
+.productBox {
+	height: 50%;
+	}
+
+}
+
+
+
+
+</style>
+
+</head>
+
+<body>
+	<h1 class="mt-5"> Clothes Minded </h1>
+	
+	<div class="blackbg row">
+		<div class="ImgWrapperHeader col-12">
+			<img src="../img/hero/clothesMinded-hero.png"/>
+		</div>	
+	</div>
+	
+	<div style="background-color: #F18D9E" class="my-2 row productBox">
+		<div class="col-lg-4 col-12 text-center infoBox">
+			<h2 class="text-uppercase"> Common Clothes </h2>
+			<h5>This set of clothes could consist of a loose shirt and baggy breeches, or a loose shirt and skirt or overdress. Cloth wrappings are used for shoes.</h5>
+			<h4 class="cost">5 sp</h5>
+		</div>
+		<div class="ParallaxWrapper col-lg-8 col-12">		
+			<div class="parallax"></div>
+		</div>
+	</div>
+	
+	
+	
+	<div style="background-color: #98DBC6" class="my-2 row productBox">
+		<div class="ParallaxWrapper col-lg-8 col-12 d-none d-lg-flex">		
+			<div class="parallax"></div>
+		</div>
+		<div class="col-lg-4 col-12 text-center infoBox">
+			<h2 class="text-uppercase"> Fine Clothes </h2>
+			<h5>This set of clothes is designed specifically to be expensive and to show it, including fancy, tailored clothes in whatever fashion happens to be the current style in the courts of the nobles.Precious metals and gems could be worked into the clothing.</h5>
+			<h4 class="cost">15 gp</h4>
+		</div>
+	</div>
+	
+	
+	
+	<div style="background-color: #E6D72A" class="my-2 row">
+		<div class="col-lg-6 col-12 infoBox text-center text-lg-left">
+			<h2 class="text-uppercase"> Traveler's Clothing </h2>
+			<h5>This set of clothes could consist of boots, a wool skirt or breeches, a sturdy belt, a shirt (perhaps with a vest or jacket), and an ample cloak with a hood.</h5>
+			<h4 class="cost">2 gp</h4>
+		</div>
+		
+		<div class="col-lg-6 col-12 mr-0 row whiteBG pt-2 pt-lg-0 pl-lg-2">
+			<div class="col-6 quadHolder padr-3 padb-3 pl-0">
+				<img src="../img/ClothesMinded/archer.jpg">
+			</div>
+			
+			<div class="col-6 quadHolder padl-3 padb-3 pr-0">
+				<img src="../img/ClothesMinded/tool.jpg">
+			</div>		
+			
+			<div class="col-6 quadHolder padr-3 padt-3 pl-0">
+				<img src="../img/ClothesMinded/druid.jpg">
+			</div>
+			
+			<div class="col-6 quadHolder padl-3 padt-3 pr-0">
+				<img src="../img/ClothesMinded/wiccan.jpg">
+			</div>	
+		</div>		
+	</div>
+	
+	
+	<div style="background-color: #a9db98" class="my-2 row productBox">
+		<div class="ParallaxWrapper col-lg-8 col-12">		
+			<div class="parallaxCircus"></div>
+		</div>
+		<div class="col-lg-4 col-12 text-center infoBox">
+			<h2 class="text-uppercase"> Costume </h2>
+			<h5>This set of clothes is fashioned after a particular costume, typically meant for entertaining.</h5>
+			<h4 class="cost">5 cp</h4>
+		</div>
+	</div>
+	
+	<div style="background-color: #c198db" class="my-2 row productBox">
+		<div class="col-lg-4 col-12 text-center infoBox">
+			<h2 class="text-uppercase"> Disguise Kit </h2>
+			<h5>This pouch of cosmetics, hair dye, and small props lets you create disguises that change your physical appearance. Proficiency with this kit lets you add your proficiency bonus to any ability checks you make to create a visual disguise.</h5>
+			<h4 class="cost">25 gp</h4>
+		</div>
+		<div class="ParallaxWrapper col-lg-8 col-12 d-none d-lg-flex">		
+			<div class="parallaxCircus"></div>
+		</div>
+	</div>
+	
+
+	
+
+
+  <script>
+  
+  </script>
+</body>
+</html>

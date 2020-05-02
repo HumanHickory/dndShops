@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+<style>
+
+:root {
+	--primary: #278b96;
+	--secondary: #F1F3CE;
+	--tertiary: #00293C;
+	
+	<!-- --primary: #cf5227; -->
+	<!-- --secondary: #F6F1E4; -->
+	<!-- --tertiary: #41463e; -->
+	}
+
+body {
+  font-family: 'Playfair Display', serif;
+	font-size: 1.7rem;
+}
+
+#header{
+  position: absolute;
+  z-index: 1000;
+  top: 210px;
+  left: 40%;
+  color: white;
+  font-family: 'Playfair Display', serif;
+}
+
+hr {
+	border: 8px solid var(--primary);
+	margin-top: 0px;
+}
+
+.h3, h3 {
+	color: var(--primary);
+	}
+	
+.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+	padding-right: 0 !important;
+	padding-left: 0 !important;
+	}
+	
+	
+
+a {
+	color: var(--primary);
+}
+
+a:hover {
+	color: var(--tertiary);
+	text-decoration: none;
+}
+
+
+
+
+
+.backdrop {
+    background-color: rgba(255, 255, 255, .7);
+    padding-top: .6em;
+    padding-bottom: .4em;
+}
+
+h1, .h1 {
+    font-size: 4rem !important;
+}
+
+h2, .h2 {
+    font-size: 3rem !important;
+}
+
+.parallax { 
+  /* The image used */
+  background-image: url("../../img/hero/sonridge-tavern-hero.jpg");
+
+  /* Set a specific height */
+  height: 600px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.test {
+	border: 2px solid red;
+	}
+
+.primary {
+	color: var(--primary);
+	}
+	
+.secondary {
+	color: var(--secondary);
+	}
+
+.secondaryBG {
+	background-color: var(--secondary);
+	}
+	
+.tertiaryBG {
+	background-color: var(--tertiary);
+	color: var(--secondary);
+}
+
+@media only screen and (max-width: 1400px) and (min-width: 1025px) {
+	.laptop {
+		font-size: 1.2rem !important;
+		}
+		
+}
+
+@media only screen and (max-width: 1024px) {
+	#header {
+		left: 35%;
+		}
+}
+
+.col-xs-5ths,
+.col-sm-5ths,
+.col-md-5ths,
+.col-lg-5ths {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.col-xs-5ths {
+    width: 20%;
+    float: left;
+}
+
+@media (min-width: 768px) {
+    .col-sm-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-md-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-lg-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+
+
+</style>
+
+
+
+    <title>The Iron Raven</title>
+</head>
+<body>
+
+<div class="d-none">http://dustin.wikidot.com/food#toc7</div>
+	<h1 id="header">The Iron Raven</h1>
+   <div class="parallax"></div>
+   
+   <hr />
+   
+   <div class="container">
+		<div class="row text-center">
+		
+			<a class="col-sm-5ths" href="#Specialties">
+				Specialties
+			</a>
+			<a class="col-sm-5ths" href="#Soups">
+				 Soups
+			</a>
+			<a class="col-sm-5ths"href="#Underdark">
+				Underdark
+			</a>
+			<a class="col-sm-5ths" href="#Desserts">
+				Desserts
+			</a>
+			<a class="col-sm-5ths" href="#drinks">
+				Beverages
+			</a>			
+
+		</div>
+		<div class="row">
+		
+
+
+			<h2 class="col-12 my-4" id="Specialties"> Specialties </h2>
+		
+			<div class="col-5 d-none d-xl-block" data-aos="fade-right"> 
+				<img src="../../img/food/quailEggs.jpg" style="width: 75%;" />
+			</div>
+			
+		
+			<div class="col-7" data-aos="fade-left"> 
+				<div class="col-12">
+					<strong>Mushroom-Stuffed Wild Boar</strong> <span class="primary">1 gp</span>
+				</div>
+				<div class="col-12">
+					<small>Roasted Boar stuffed with mushrooms and served with black truffle butter. </small>					
+				</div>
+				
+				<div class="col-12 mt-3">
+					<strong>Scotch Quail Eggs </strong> <span class="primary">60 sp</span>
+				</div>
+				<div class="col-12">
+					<small>Soft boiled quail egg wrapped in homemade sausage, then deeped fried for a golden crust.</small>
+				</div>
+				
+				<div class="col-12 mt-3">
+					<strong>Grouse Northwoods</strong> <span class="primary">80 sp</span>
+				</div>
+				<div class="col-12">
+					<small>Roasted grouse atop wild rice, mushrooms, and cranberries.</small>
+				</div>
+
+			</div>
+			
+
+		</div>
+   </div>
+   
+   
+   <div class="container-fluid mt-4  d-xl-none">
+   			<div class="col-12">
+				<img src="../../img/food/quailEggsMobile.jpg" style="width: 100%;"/>
+			</div>
+	</div>
+   
+   
+   <div class="container-fluid mt-xl-5 pb-xl-4 secondaryBG">
+
+		<div class="row text-center">
+
+		
+				<h2 class="col-12 my-4" id="Soups"> Soups & Salads </h2>
+				
+				<div class="col-4 offset-2 mb-3" data-aos="fade-right">
+					<h3 class="col-12"><strong>Soup</strong></h3>
+					<div class="col-12 mt-3">
+						<strong>Breek</strong><span class="primary"> 10 sp</span>
+					</div>
+					<div class="col-12">
+						<small>Cheese onion soup served with Black Bread.</small>
+					</div>
+					<div class="col-12 mt-3">
+						<strong>Bluecap Mushroom Stew </strong><span class="primary"> 15 sp</span>
+					</div>
+					<div class="col-12">
+						<small> Blue mushrooms imported from Undrek'Thoz, served with crackers.</small>
+					</div>
+					<div class="col-12 mt-3">
+						<strong>Erbeßsuppen </strong><span class="primary"> 1 sp</span>
+					</div>
+					<div class="col-12">
+						<small>Split pea vegetable soup with optional onions. Served with Black Bread.</small>
+					</div>					
+				
+				</div>
+				
+				<div class="col-4 mb-3" data-aos="fade-left">
+				
+				<h3 class="col-12"><strong>Salad</strong></h3>
+
+				<div class="col-12 mt-3">
+					<strong>Garden Salad</strong><span class="primary"> 1 sp</span>
+				</div>
+				<div class="col-12">
+					<small>Variety of lettuce, tomatoes and cucumbers, drizzeled in olive oil.</small>
+				</div>
+				
+				<h3 class="col-12 mt-5 mt-3"><strong>Bakery</strong></h3>
+
+				
+				<div class="col-12 mt-3">
+					<strong>Black Bread </strong><span class="primary"> 1 sp/loaf</span>
+				</div>
+				<div class="col-12">
+					<small>Heavy, black bread. Made Fresh Daily.</small>
+				</div>
+
+				</div>
+
+		</div>
+	</div>	
+	
+	<div class="container-fluid pb-5 pb-xl-0 tertiaryBG">
+
+		<div class="row">
+			<div class="col-12 d-xl-none"> 
+				<img src="../../img/food/fishFilletMobile.jpg" style="width: 100%;" />
+			</div>
+		
+		<div class="col-xl-4 offset-3 col-8 my-4 text-xl-right text-left laptop" style="padding-right: 50px !important;" data-aos="fade-right"> 
+				<h2 class="col-12 my-4" id="Underdark"> Underdark Cuisine </h2>
+				
+				<div class="col-12 mt-3">
+					<strong>Cave Fisher </strong><span class="primary"> 50 sp</span>
+				</div>
+				<div class="col-12">
+					<small>Boiled Cave Fisher drenched in Roth&eacute; butter with glowing mushrooms.</small>
+				</div>
+				
+				<div class="col-12 mt-3">
+					<strong>Fisherman's Basket</strong><span class="primary"> 15 sp</span>
+				</div>
+				<div class="col-12">
+					<small>2 fried fillets of Blind Cave fish, served with a bowl of black cave algae soup.</small>
+				</div>
+				<div class="col-12 mt-3">
+					<strong>Ground Roth&eacute; Sausage</strong><span class="primary"> 13 sp</span>
+				</div>
+				<div class="col-12">
+					<small>Ground meat and green algae wrapped in Roth&eacute; instine, served with spit-roasted spider leg and mushrooms.</small>
+				</div>
+
+			</div>
+			
+		
+			<div class="col-xl-5 col-12 d-none d-xl-block"> 
+				<img src="../../img/food/fishFillet.jpg" style="width: 100%;" />
+			</div>
+
+		</div>
+	</div>	
+   
+<div class="container mb-5">
+		<div class="row">
+
+			<h2 class="col-12 my-4 d-none d-xl-block" id="Desserts"> Desserts </h2>
+		
+		<div class="col-xl-5 col-12 ml-1 ml-xl-0 row">
+			<div class="col-xl-5 col-4 mr-xl-3" data-aos="flip-right"> 
+				<img src="../../img/food/lemonCake.jpg" style="width: 100%;" />
+			</div>
+						
+			<div class="col-xl-5 col-4" data-aos="flip-up"> 
+				<img src="../../img/food/figTart.jpg" style="width: 100%;" />
+			</div>
+			
+			<div class="col-xl-5 col-4 mt-xl-3" data-aos="flip-left"> 
+				<img src="../../img/food/flan.jpg" style="width: 100%;" />
+			</div>
+		</div>
+		
+					<h2 class="col-8 offset-2 my-4 d-xl-none"> Desserts </h2>
+
+		
+			<div class="col-xl-7 offset-xl-0 col-8 offset-2 " data-aos="fade-left"> 
+				<div class="col-12">
+					<strong>Lemon Cake</strong> <span class="primary"> 5 sp</span>
+				</div>
+				<div class="col-12">
+					<small>Sweet and sour cakes, topped with lemon icing and a candied lemon slice </small>
+				</div>
+				
+				<div class="col-12 mt-3">
+					<strong>Fig Tart </strong> <span class="primary"> 5 sp</span>
+				</div>
+				<div class="col-12">
+					<small>Pastry dough wrapped around a sweet fig preserve. Served with honey. </small>
+				</div>
+				
+				<div class="col-12 mt-3">
+					<strong>Dragon's Milk</strong> <span class="primary"> 10 sp</span>
+				</div>
+				<div class="col-12">
+					<small>A milky desert from Demon's Hearth Desert, it has a milky and caramel taste.</small>
+				</div>
+
+			</div>
+		</div>
+   </div>
+   
+   
+   
+	
+	
+<div class="container-fluid pb-5 secondaryBG">
+	<div class="row">
+		<div class="text-center col-12">
+			<h2 class="col-12 my-4" id="drinks"> Beverages </h2> 
+		</div>
+		<div class="col-xl-3 offset-xl-1 col-8 offset-2 text-justify" style="font-size: .8em;">
+			<h3 class="col-12 mt-5 mt-3"><strong>Beer</strong><span class="primary"> 1 sp / pint</span></h3>
+			<div class="col-12"><strong>Bitter Black</strong><small> A heavy stout. Served at cellar temperature, it is jet black with a dark brown head of foam.</small></div>
+			<div class="col-12"><strong>Dragon's Breath</strong><small> A brew of harsh temperament. It is often served with a platter of dark rye bread and strong cheese.</small></div>
+			<div class="col-12"><strong>Elminster's Choice</strong><small> A dark, cloudy beer with a heavy head and a smoky aftertaste.</small></div>
+			<div class="col-12"><strong>Luiren's Best</strong><small> Brewed by the halflings, this hefty stout is as black as ink and thick. It has a sweet flavor and frothy head.</small></div>
+			<div class="col-12"><strong>Honey Pine Dew</strong><small> A halfling mead with a light honey and oak taste. </small></div>
+		</div>
+		<div class="col-xl-3 ml-xl-5 col-8 offset-2 text-justify" style="font-size: .8em;">
+			<h3 class="col-12 mt-5 mt-3"><strong>Wine</strong><span class="primary"> 2 sp / pint</span></h3>
+			<div class="col-12"><strong>Arabellan Dry</strong><small> A dry red wine with woodsy undertones and a berrylike taste.</small></div>
+			<div class="col-12"><strong>Blood Wine</strong><small> Blood wine has a heavy body and deep-red tone. Its taste is lush and full with a slight after bite, made from shriveled grapes said to be possessed by the dead.</small></div>
+			<div class="col-12"><strong>Fire Wine </strong><small> A thick, almost black wine made in Casterhills. It is very strong and spicy, and is said to have medicinal qualities.</small></div>
+			<div class="col-12"><strong>Mead </strong><small> Mead is a delicate, sweet wine made from honey.</small></div>
+			<div class="col-12"><strong>Table Wine </strong><small> Common table wine is a staple of taverns across the continent.</small></div>
+			<div class="col-12"><strong>Winter Wine</strong><small> A purplish-blue dessert wine made from frozen grapes in the North.</small></div>
+		</div>
+		
+		<div class="col-xl-3 ml-xl-5  col-8 offset-2 text-justify" style="font-size: .8em;">
+			<h3 class="col-12 mt-5 mt-3"><strong>Mixed Drinks</strong><span class="primary"> 3 sp / pint</span></h3>
+			<div class="col-12"><strong>Will-o-Whiskey </strong><small> Casterhills whisky with minor hallucinatory effects, starts with a tiny tingling light in the corner of your eyes, ends with a shining orb of light dancing a few yards away from you, moving away as you try to catch it.</small></div>
+			<div class="col-12"><strong>Mad Man's Mix</strong><small> A silvery spirit that tastes different for every drinker. (Note: may cause temporary insanity).</small></div>
+			<div class="col-12"><strong>Spider's Bite</strong><small> Strongest drink in the Silent Planes (Note: may cause poisoning, but you'll be drunk as fuck)</small></div>
+			<div class="col-12"><strong>Bloody Mary</strong><small> A drink made by mixing a tomato based vegetable mix and cave fisher blood.</small> </div>
+		</div>
+
+	</div>
+</div>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script>
+    AOS.init();
+
+</script>
+	
+</body>
+
+
+	</html>

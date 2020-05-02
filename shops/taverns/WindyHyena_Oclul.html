@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+    <style>
+
+        :root {
+            --main: #d0b7ac;
+            --primary: #a5887a;
+            --secondary: #543c2c;
+            --tertiary: #df915e;
+            --quaternary: #356242;
+        }
+
+
+        body {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.7rem;
+            background: var(--main);
+            color: white;
+        }
+
+        #header {
+            position: absolute;
+            z-index: 1000;
+            top: 210px;
+            left: 40%;
+            color: white;
+            font-family: 'Playfair Display', serif;
+        }
+
+        hr {
+            border: 8px solid var(--primary);
+            margin-top: 0px;
+        }
+
+        .h3, h3 {
+            color: var(--primary);
+        }
+
+        .col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+            padding-right: 0 !important;
+            padding-left: 0 !important;
+        }
+
+
+
+        a {
+            color: white;
+        }
+
+            a:hover {
+                color: var(--secondary);
+                text-decoration: none;
+            }
+
+
+
+
+
+        .backdrop {
+            background-color: rgba(255, 255, 255, .7);
+            padding-top: .6em;
+            padding-bottom: .4em;
+        }
+
+        h1, .h1 {
+            font-size: 4rem !important;
+        }
+
+        h2, .h2 {
+            font-size: 3rem !important;
+        }
+
+        .parallax {
+            /* The image used */
+            background-image: url("../../img/hero/oclul-tavern-hero.jpg");
+            /* Set a specific height */
+            height: 600px;
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .test {
+            border: 2px solid red;
+        }
+
+        .primary {
+            color: var(--primary);
+            text-shadow: 1px 1px 1px black;
+        }
+
+        .secondary {
+            color: var(--secondary);
+        }
+
+        .secondaryBG {
+            background-color: var(--secondary);
+        }
+
+        .tertiaryBG {
+            background-color: var(--tertiary);
+        }
+
+        @media only screen and (max-width: 1400px) and (min-width: 1025px) {
+            .laptop {
+                font-size: 1.2rem !important;
+            }
+        }
+
+        @media only screen and (max-width: 1024px) {
+            #header {
+                left: 35%;
+            }
+        }
+
+        .col-xs-5ths,
+        .col-sm-5ths,
+        .col-md-5ths,
+        .col-lg-5ths {
+            position: relative;
+            min-height: 1px;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+        .col-xs-5ths {
+            width: 20%;
+            float: left;
+        }
+
+        @media (min-width: 768px) {
+            .col-sm-5ths {
+                width: 20%;
+                float: left;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .col-md-5ths {
+                width: 20%;
+                float: left;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .col-lg-5ths {
+                width: 20%;
+                float: left;
+            }
+        }
+    </style>
+
+
+
+    <title>The Windy Hyena</title>
+</head>
+<body>
+
+    <div class="d-none">http://dustin.wikidot.com/food#toc7</div>
+    <h1 id="header">The Windy Hyena</h1>
+    <div class="parallax"></div>
+
+    <hr />
+
+    <div class="container">
+        <div class="row text-center">
+
+            <a class="col-sm-5ths" href="#Specialties">
+                Specialties
+            </a>
+            <a class="col-sm-5ths" href="#Soups">
+                Soups
+            </a>
+            <a class="col-sm-5ths" href="#drinks">
+                Beverages
+            </a>
+
+        </div>
+        <div class="row">
+
+
+
+            <h2 class="col-12 my-4" id="Specialties"> Specialties </h2>
+
+            <div class="col-5 d-none d-xl-block" data-aos="fade-right">
+                <img src="../../img/food/rabbitConfit.jpg" style="width: 75%;" />
+            </div>
+
+
+            <div class="col-7" data-aos="fade-left">
+                <div class="col-12">
+                    <b>Rabbit Confit</b> <span class="primary">15 gp</span>
+                </div>
+                <div class="col-12">
+                    <small>Skinned rabbit with desert herbs. </small>
+                </div>
+
+                <div class="col-12 mt-3">
+                    <b>Stone Grilled Camel</b> <span class="primary">15 gp</span>
+                </div>
+                <div class="col-12">
+                    <small>Chopped camel cooked on a hot stone. +10gp for baby camel meat.</small>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <div class="container-fluid mt-4  d-xl-none">
+        <div class="col-12">
+            <img src="../../img/food/deepFriedPrawns.jpg" style="width: 100%;" />
+        </div>
+    </div>
+
+
+    <div class="container-fluid mt-xl-5 pb-xl-4 secondaryBG">
+
+        <div class="row text-center">
+
+
+            <h2 class="col-12 my-4" id="Soups"> Soups </h2>
+
+            <div class="col-4 offset-2 mb-3" data-aos="fade-right">
+                <h3 class="col-12"><b>Soup</b></h3>
+                <div class="col-12 mt-3">
+                    <b>Rabbit Soup</b><span class="primary"> 10 gp</span>
+                </div>
+                <div class="col-12">
+                    <small>Boiled rabbit stew.</small>
+                </div>
+                <div class="col-12 mt-3">
+                    <b>Cous Cous Soup </b><span class="primary"> 10 gp</span>
+                </div>
+                <div class="col-12">
+                    <small> Bits of meat and vegetables mixed in with cous cous.</small>
+                </div>
+
+            </div>
+
+            <div class="col-4 mb-3" data-aos="fade-left">
+
+                <h3 class="col-12"><b>Salad</b></h3>
+
+                <div class="col-12 mt-3">
+                    <b>Cactus Salad</b><span class="primary"> 10 gp</span>
+                </div>
+                <div class="col-12">
+                    <small>Prickly pear cactus mixed with other imported vegetables.</small>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container-fluid pb-5 tertiaryBG">
+        <div class="row">
+            <div class="text-center col-12">
+                <h2 class="col-12 my-4" id="drinks"> Beverages </h2>
+            </div>
+            <div class="col-xl-3 offset-xl-1 col-8 offset-2 text-justify" style="font-size: .8em;">
+                <h3 class="col-12 mt-5 mt-3"><b>Beer</b><span class="primary"> 1 gp / pint</span></h3>
+                <div class="col-12"><b>Cactus Flower</b><small> A light, sweet beer that pairs well with lime.</small></div>
+            </div>
+            <div class="col-xl-3 ml-xl-5 col-8 offset-2 text-justify" style="font-size: .8em;">
+                <h3 class="col-12 mt-5 mt-3"><b>Wine</b><span class="primary"> 2 gp / pint</span></h3>
+                <div class="col-12"><b>Dry Desert Lime</b><small> A sour white wine.</small></div>           
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+
+    </script>
+
+</body>
+
+
+</html>

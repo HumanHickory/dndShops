@@ -1,0 +1,120 @@
+body {
+	background-color: #031636; 
+	font-family: 'Heebo', sans-serif;
+	}
+	
+	
+	.marketImg { 
+	background: url("CityImg/SonridgeMarket.jpg") no-repeat center; 
+	background-size: cover; 
+	height: 50vh; 
+	position: relative;  
+	}
+	
+	.marketImg:before {
+	background: linear-gradient(to bottom, rgba(0,0,0,.1), rgba(0,0,0,.3));
+	content: "";
+	position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.imgText {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	color: white;
+	font-size: 4rem;
+	}
+
+.test {
+	border: 2px solid red;
+}
+
+.directoryButton {
+	height: 100%;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+.banner {
+	border-radius: 5px;
+	padding: 10px;
+}
+
+.whiteBG {
+	background-color: white;
+	border-radius: 5px;
+	padding: 10px;
+
+}
+
+.primary {
+	background-color: #F5BE41;
+	color: white;
+}
+
+.secondary {
+	background-color: #31A9B8;
+	color: white;
+}
+
+.tertiary {
+	background-color: #e03a22;
+	color: white;
+}
+
+.quaternary {
+	background-color: #258039;
+	color: white;
+}
+
+.white {
+	color: white;
+}
+
+.gray {
+	color: #505050;
+}
+
+.copper {
+	color: #b87333;
+}
+
+.gold {
+	color: #ffd700;
+}
+
+.green {
+	color: green;
+}
+
+.purple {
+	color: rebeccapurple;
+}
+
+.blue {
+	color: darkblue;
+}
+
+a.tile:hover {
+	color: inherit;
+	text-shadow: 3px 3px 3px rgba(0, 0, 0, .4);
+	text-decoration: none;
+}
+
+p.firstLetter::first-letter {
+	font-size: 300%;
+	font-family: 'Great Vibes', cursive;
+}
+
+.navbar {
+    background-color: white;
+}
+/* font-family: 'Parisienne', cursive; */
+
+

@@ -1,5 +1,3 @@
-var production = false;
-
 $(document).ready(function () {
     $('body').prepend(BuildHeader());
 
@@ -10,12 +8,9 @@ function BuildHeader() {
     var CityName = "Arynsport";
     var Tavern = "TheSaltyParrot_Arynsport";
 
-    var root = "";
-    if (!production) {
-        root = "file:///Z:/dndShops.com/";
-    } else {
-        root = "https://www.dndshops.club/";
-    }
+
+    var root = getRoot();
+ 
 
     var nav = "<nav class='navbar navbar-expand-lg navbar-dark'>";
     nav += "<a class='navbar-brand' href='" + root + "Cities/" + CityName + "/index.html'>" + CityName + "</a>";

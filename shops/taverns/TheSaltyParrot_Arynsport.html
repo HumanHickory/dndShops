@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+
+        :root {
+            --main: #76b6c4;
+            --primary: #064273;
+            --secondary: white;
+            --tertiary: #1da2d8;
+            --quaternary: #7fcdff;
+            --fontHead: 'Work Sans', sans-serif;
+            --fontBody: 'Lato', sans-serif;
+        }
+
+
+
+
+        body {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.7rem;
+            background: var(--main);
+            color: white;
+        }
+
+        #header {
+            position: absolute;
+            z-index: 1000;
+            top: 210px;
+            left: 40%;
+            color: white;
+            text-shadow: 2px 3px 2px black;
+        }
+
+        hr {
+            border: 8px solid var(--primary);
+            margin-top: 0px;
+        }
+
+        .h3, h3 {
+            color: var(--primary);
+        }
+
+        .col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+            padding-right: 0 !important;
+            padding-left: 0 !important;
+        }
+
+        a {
+            color: white;
+        }
+
+            a:hover {
+                color: var(--secondary);
+                text-decoration: none;
+            }
+
+        .backdrop {
+            background-color: rgba(255, 255, 255, .7);
+            padding-top: .6em;
+            padding-bottom: .4em;
+        }
+
+        h1, .h1 {
+            font-size: 6rem !important;
+        }
+
+        h2, .h2 {
+            font-size: 3rem !important;
+        }
+
+        .parallax {
+            background-image: url("../../img/hero/arynsport-tavern.jpeg");
+            height: 600px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .test {
+            border: 2px solid red;
+        }
+
+        .primary {
+            color: var(--primary);
+        }
+
+        .secondary {
+            color: var(--secondary);
+        }
+
+        .secondaryBG {
+            background-color: var(--secondary);
+        }
+
+
+        .tertiary {
+            color: var(--tertiary);
+        }
+
+        .tertiaryBG {
+            background-color: var(--tertiary);
+        }
+
+        @media only screen and (max-width: 1400px) and (min-width: 1025px) {
+            .laptop {
+                font-size: 1.2rem !important;
+            }
+        }
+
+        @media only screen and (max-width: 1024px) {
+            #header {
+                left: 35%;
+            }
+        }
+
+        .col-xs-5ths,
+        .col-sm-5ths,
+        .col-md-5ths,
+        .col-lg-5ths {
+            position: relative;
+            min-height: 1px;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+        .col-xs-5ths {
+            width: 20%;
+            float: left;
+        }
+
+        @media (min-width: 768px) {
+            .col-sm-5ths {
+                width: 20%;
+                float: left;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .col-md-5ths {
+                width: 20%;
+                float: left;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .col-lg-5ths {
+                width: 20%;
+                float: left;
+            }
+        }
+    </style>
+
+
+
+    <title>The Salty Parrot</title>
+</head>
+<body>
+
+    <div class="d-none">http://dustin.wikidot.com/food#toc7</div>
+    <h1 id="header">The Salty Parrot</h1>
+    <div class="parallax"></div>
+
+    <hr />
+
+    <div class="container">
+        <div class="row text-center">
+
+            <a class="col-sm-5ths" href="#Specialties">
+                Specialties
+            </a>
+            <a class="col-sm-5ths" href="#Soups">
+                Soups
+            </a>
+            <a class="col-sm-5ths" href="#cuisine">
+                Fish Tacos
+            </a>
+            <a class="col-sm-5ths" href="#drinks">
+                Beverages
+            </a>
+
+        </div>
+        <div class="row">
+
+
+
+            <h2 class="col-12 my-4" id="Specialties"> Specialties </h2>
+
+            <div class="col-5 d-none d-xl-block" data-aos="fade-right">
+                <img src="../../img/food/pineappleFriedRice.jpg" style="width: 75%;" />
+            </div>
+
+
+            <div class="col-7" data-aos="fade-left">
+                <div class="col-12">
+                    <b>Blackend Tuna</b> <span class="primary">20 sp</span>
+                </div>
+                <div class="col-12">
+                    <small>Fresh caught tuna seared to perfection. Serviced with lemon. </small>
+                </div>
+
+                <div class="col-12 mt-3">
+                    <b>Pineapple Shrimp Rice </b> <span class="primary">10 sp</span>
+                </div>
+                <div class="col-12">
+                    <small>Fried rice mixed with pineapple and sweet chili shrimp, served in a carved pineapple bowl</small>
+                </div>
+
+                <div class="col-12 mt-3">
+                    <b>Sweetened Shredded Pork</b><span class="primary"> 15 sp</span>
+                </div>
+                <div class="col-12">
+                    <small>Pork marinated with pineapple and sweet brown sauce, then cooked in a small oven for an entire day. </small>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <div class="container-fluid mt-4  d-xl-none">
+        <div class="col-12">
+            <img src="../../img/food/pineappleFriedRice.jpg" style="width: 100%;" />
+        </div>
+    </div>
+
+
+    <div class="container-fluid mt-xl-5 pb-xl-4 secondaryBG">
+
+        <div class="row text-center">
+
+
+            <h2 class="col-12 my-4" id="Soups"> Soups </h2>
+
+            <div class="col-4 offset-2 mb-3 tertiary" data-aos="fade-right">
+                <h3 class="col-12"><b>Soup</b></h3>
+                <div class="col-12 mt-3">
+                    <b>Mango Lime Soup</b><span class="primary"> 1 sp</span>
+                </div>
+                <div class="col-12">
+                    <small>Served with aged white bread.</small>
+                </div>
+                <div class="col-12 mt-3">
+                    <b>Cold Cucumber Soup </b><span class="primary"> 1 sp</span>
+                </div>
+                <div class="col-12">
+                    <small> Served with sweet brown bread.</small>
+                </div>
+                <div class="col-12 mt-3">
+                    <b>Salmon Soup </b><span class="primary"> 1 sp</span>
+                </div>
+                <div class="col-12">
+                    <small>Served with sweet brown bread.</small>
+                </div>
+
+            </div>
+
+            <div class="col-4 mb-3 tertiary" data-aos="fade-left">
+
+                <h3 class="col-12"><b>Salad</b></h3>
+
+                <div class="col-12 mt-3">
+                    <b>Tropical Shrimp Salad</b><span class="primary"> 3 sp</span>
+                </div>
+                <div class="col-12">
+                    <small>Shrimp, Avocado, and a fruity dressing.</small>
+                </div>
+
+                <div class="col-12 mt-3">
+                    <b>Admiral's Salad</b><span class="primary"> 3 sp</span>
+                </div>
+                <div class="col-12">
+                    <small>Coconut, Walnut and Goat Cheese, with a light wine dressing</small>
+                </div>
+
+                <h3 class="col-12 mt-5 mt-3"><b>Bakery</b></h3>
+
+
+                <div class="col-12 mt-3">
+                    <b>Coconut Cream Cake</b><span class="primary"> 1 sp</span>
+                </div>
+                <div class="col-12">
+                    <small>White Cake with coconut frosting.</small>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container-fluid pb-5 pb-xl-0 tertiaryBG">
+
+        <div class="row">
+            <div class="col-12 d-xl-none">
+                <img src="../../img/food/fishTacoMobile.jpg" style="width: 100%;" />
+            </div>
+
+            <div class="col-xl-4 offset-3 col-8 my-4 text-xl-right text-left laptop" style="padding-right: 50px !important;" data-aos="fade-right">
+                <h2 class="col-12 my-4" id="cuisine"> Famous Fish Tacos </h2>
+
+                <div class="col-12 mt-3">
+                    <b>The Original Fish Taco </b><span class="primary"> 1 sp</span>
+                </div>
+                <div class="col-12">
+                    <small>Fried up white fish, flour wrap, purple cabbage, a squeeze of lime.</small>
+                </div>
+
+                <div class="col-12 mt-3">
+                    <b>Crab Tacos</b><span class="primary"> 2 sp</span>
+                </div>
+                <div class="col-12">
+                    <small>Crab meat, creamed cheese, diced cucumbers, white rice, dried seaweed wrap</small>
+                </div>
+                <div class="col-12 mt-3">
+                    <b>Spicy Fish Tacos</b><span class="primary"> 1 sp</span>
+                </div>
+                <div class="col-12">
+                    <small>The Original Fish Taco, with spicy peppers and an ultra spicy tropical hot sauce</small>
+                </div>
+
+                <div class="col-12 mt-3">
+                    <b>White Sauce Fish Tacos</b><span class="primary"> 1 sp</span>
+                </div>
+                <div class="col-12">
+                    <small>Raw tuna, creamy white sauce, seaweed wrap</small>
+                </div>
+
+                <div class="col-12 mt-3">
+                    <b><span style="color:gold">NEW</span> Tropical Fish Tacos</b><span class="primary"> 2 sp</span>
+                </div>
+                <div class="col-12">
+                    <small>Fried up white fish, marinated shrimp, diced mango, diced pineapple, diced tomates, sweet brown drizzle </small>
+                </div>
+
+            </div>
+
+
+            <div class="col-xl-5 col-12 d-none d-xl-block">
+                <img src="../../img/food/fishTaco.jpg" style="width: 100%;" />
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="container-fluid pb-5 secondaryBG tertiary">
+        <div class="row">
+            <div class="text-center col-12">
+                <h2 class="col-12 my-4" id="drinks"> Beverages </h2>
+            </div>
+            <div class="col-xl-3 offset-xl-1 col-8 offset-2 text-justify" style="font-size: .8em;">
+                <h3 class="col-12 mt-5 mt-3"><b>Beer</b><span class="primary">4 cp / pint</span></h3>
+                <div class="col-12"><b>Palmfrawn</b><small> A light and refreshing pale lager made with corn and hops. Best served with lime.</small></div>
+                <div class="col-12"><b>Blueocean</b><small> A light wheat beer with a gentle hint of orange.</small></div>
+                <div class="col-12"><b>Swallows Orchard</b><small> An imported cider from Swallow's Song, it's sweet and spicy filled flavor is popular with every dish </small></div>
+                <div class="col-12"><b>Seabitch</b><small> A light, tropical beer with high alochol content. Tinking sensation is normal. Stop if blindness occurs.</small></div>
+            </div>
+            <div class="col-xl-3 ml-xl-5 col-8 offset-2 text-justify" style="font-size: .8em;">
+                <h3 class="col-12 mt-5 mt-3"><b>Wine</b><span class="primary"> 5 cp/ pint</span></h3>
+                <div class="col-12"><b>Manycheer Sweet</b><small> A sweet wine made from a local vineyard run by halflings. The wine is guaranteed to put you in a good mood (but not magically, because that's illegal). </small></div>
+                <div class="col-12"><b>Mint Wine</b><small> An unusual dry wine with a refreshing aftertaste.</small></div>
+                <div class="col-12"><b>Last Harbor </b><small> A green wine brewed by the sea elves of Last Harbor. It is sweet and refreshing. Hallucinations have occured after consuming this wine.</small></div>
+                <div class="col-12"><b>The Winemaker's Wife </b><small> Anabeth was the wife of the winemaker, who died hours before her husband finished this blend, due to malnutrition and poor living conditions. Must buy 2, one for you and one for anabeth. </small></div>
+            </div>
+
+            <div class="col-xl-3 ml-xl-5  col-8 offset-2 text-justify" style="font-size: .8em;">
+                <h3 class="col-12 mt-5 mt-3"><b>Mixed Drinks</b><span class="primary"> 8 cp / pint</span></h3>
+                <div class="col-12"><b>Sultry Sunset </b><small> Juice of cranberry, tropical liquor, and pineapple juice.</small></div>
+                <div class="col-12"><b>Sea Elf</b><small> Coconut rum with tropical juices and a cherry. Will sneak up on you (just like those damn sea elves).</small></div>
+                <div class="col-12"><b>Dragon Turtle</b><small> Layered sweet liquors, this is sure to get you buzzed of the first sip.</small></div>
+                <div class="col-12"><b>The Parrot</b><small> A Tavern Specialty, we layer blue, white and yellow liquors together to get the colors of Salty the Parrot.</small> </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+
+    </script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,864 @@
+﻿﻿
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Fondamento|Qwigley|Tangerine|ZCOOL+KuaiLe&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="site.css" />
+
+    <style>
+        body {
+            /*background-image: url(../gnomeDepot/grayWood.jpg);*/
+            font-family: 'Indie Flower', cursive;
+            color: #ee7125;
+        }
+
+        .jumbotron {
+            background-color: #ee7125;
+            color: white;
+        }
+
+        .sidebar, .openbtn {
+            background-color: #ee7125 !important;
+        }
+
+            .sidebar a {
+                color: white !important;
+            }
+
+                .sidebar a:hover, .openbtn:hover {
+                    color: white !important;
+                    font-weight: bold;
+                    text-decoration: underline;
+                }
+
+        .backdrop {
+            background-color: rgba(255, 255, 255, .9);
+        }
+
+        .table {
+            color: navy;
+        }
+    </style>
+
+
+
+    <title>Gnome Depot</title>
+</head>
+<body>
+
+
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#Home">Popular Items</a>
+        <a href="#kitsAndPacks">Kits and Packs</a>
+        <a href="#wildernessSurvival">Wilderness Survival</a>
+        <a href="#generalSupplies">General Supplies</a>
+        <a href="#storageSolutions">Storage Solutions</a>
+        <a href="#tools">Tools</a>
+    </div>
+
+    <div class="container-fluid">
+        <button class="openbtn mt-3" onclick="openNav()">&#9776;</button>
+
+
+    </div>
+
+    <div class="container mt-5">
+        <div class="row  text-center">
+
+            <div class="col-12 mb-3 jumbotron" id="Home">
+                <h1>Gnome Depot</h1>
+                <h3>More Slaying. More Doing.</h3>
+            </div>
+
+            <h2 class=" col-12 my-3 backdrop">Most Popular Items!</h2>
+
+        </div>
+    </div>
+
+    <div class="container-fluid mt-5">
+        <div class="row  text-center">
+
+            <div class="scene col-xl-2 col-md-3 pl-0 pr-0 mr-3 offset-xl-3 offset-1">
+                <div class="card" id="card1">
+                    <div class="card__face card__face--front">
+                        <div class="stock">
+                            <img src="../img/gnomeDepot/blockAndTackle.png" />
+                        </div>
+                        <div class="mt-3">
+                            <h4 class="">Block and Tackle </h4>
+                            <h3 class="green mt-2"><strong>1 gp </strong></h3>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <h5 class=" col-12"><strong>Notes: </strong></h5>
+                        <ul class=" col-12">
+                            <li><strong>Weight:</strong> 5 lb</li>
+                            <li>A set of pulleys with a cable threaded through them and a hook to attach to Objects, a block and tackle allows you to hoist up to four times the weight you can normally lift.</li>
+
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scene col-xl-2 col-md-3 pl-0 pr-0 mr-3">
+                <div class="card" id="card2">
+                    <div class="card__face card__face--front">
+                        <div class="stock">
+                            <img src="../img/gnomeDepot/bullseyeLantern.png" />
+                        </div>
+                        <div class="mt-3">
+                            <h4 class="">Lantern, bullseye </h4>
+                            <h3 class="green mt-2"><strong>10 gp </strong></h3>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <h5 class=" col-12"><strong>Notes: </strong></h5>
+                        <ul class=" col-12">
+                            <li><strong>Weight:</strong> 2 lb</li>
+                            <li>A bullseye lantern casts bright light in a 60-foot cone and dim light for an additional 60 feet. Once lit, it burns for 6 hours on a flask (1 pint) of oil.</li>
+
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scene col-xl-2 col-md-3 pl-0 pr-0 mr-3">
+                <div class="card" id="card3">
+                    <div class="card__face card__face--front">
+                        <div class="stock">
+                            <img src="../img/gnomeDepot/lantern.png" />
+                        </div>
+                        <div class="mt-3">
+                            <h4 class="">Lantern, hooded </h4>
+                            <h3 class="green mt-2"><strong>5 gp </strong></h3>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <h5 class=" col-12"><strong>Notes: </strong></h5>
+                        <ul class=" col-12">
+                            <li><strong>Weight:</strong> 2 lb</li>
+                            <li>A hooded lantern casts bright light in a 30-foot radius and dim light for an additional 30 feet. Once lit, it burns for 6 hours on a flask (1 pint) of oil. As an action, you can lower the hood, reducing the light to dim light in a 5-foot radius.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row  text-center">
+
+
+
+
+            <div class="scene col-xl-2 col-md-3 pl-0 pr-0 mr-3 mt-3 offset-xl-3 offset-1">
+                <div class="card" id="card4">
+                    <div class="card__face card__face--front">
+                        <div class="stock">
+                            <img src="../img/gnomeDepot/piton.png" />
+                        </div>
+                        <div class="mt-3">
+                            <h4 class="">Piton </h4>
+                            <h3 class="green mt-2"><strong>5 cp </strong></h3>
+
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <h5 class=" col-12"><strong>Notes: </strong></h5>
+                        <ul class=" col-12">
+                            <li><strong>Weight:</strong> 1/4 lb</li>
+                            <li>When a wall doesn’t offer handholds and footholds, you can make your own. A piton is a steel spike with an eye through which you can loop a rope.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scene col-xl-2 col-md-3 pl-0 pr-0 mr-3 mt-3">
+                <div class="card" id="card5">
+                    <div class="card__face card__face--front">
+                        <div class="stock">
+                            <img src="../img/gnomeDepot/whetstone.png" />
+                        </div>
+                        <div class="mt-3">
+                            <h4 class="">Whetstone </h4>
+                            <h3 class="green mt-2"><strong>1 cp </strong></h3>
+
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <h5 class=" col-12"><strong>Notes: </strong></h5>
+                        <ul class=" col-12">
+                            <li><strong>Weight:</strong> 1 lb</li>
+                            <li>A standard whetstone used to sharpen blades.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scene col-xl-2 col-md-3 pl-0 pr-0 mr-3 mt-3">
+                <div class="card" id="card6">
+                    <div class="card__face card__face--front">
+                        <div class="stock">
+                            <img src="../img/gnomeDepot/caltrops.png" />
+                        </div>
+                        <div class="mt-3">
+                            <h4 class="">Caltrop </h4>
+                            <h3 class="green mt-2"><strong>1 gp </strong></h3>
+
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <h5 class=" col-12"><strong>Notes: </strong></h5>
+                        <ul class=" col-12">
+                            <li><strong>Weight:</strong> 2 lb</li>
+                            <li>Bag of 20</li>
+                            <li>As an action, you can spread a single bag of caltrops to cover a 5-foot-square area. Any creature that enters the area must succeed on a DC 15 Dexterity saving throw or stop moving and take 1 piercing damage. Until the creature regains at least 1 hit point, its walking speed is reduced by 10 feet. A creature moving through the area at half speed doesn't need to make the saving throw.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-5">
+            <div class="row  text-center">
+
+                <!--Food Supplies-->
+                <div class=" col-12 my-3 backdrop mt-5" id="kitsAndPacks">
+                    <h2>Kits and Packs</h2>
+                    <h4>For the one who doesn't know how to shop for themselves </h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-5">
+            <table class="table table-bordered table-striped">
+                <tr class="table-head">
+                    <th> Name </th>
+                    <th> Weight </th>
+                    <th> Price </th>
+                    <th> Notes: </th>
+                </tr>
+                <tr>
+                    <td> Climber's Kit</td>
+                    <td> 12 lbs </td>
+                    <td> 25 gp </td>
+                    <td> Includes special pitons, boot tips, gloves, and a harness </td>
+                </tr>
+                <tr>
+                    <td> Fishing Tackle </td>
+                    <td> 4 lbs </td>
+                    <td> 1 gp </td>
+                    <td> Includes a wooden rod, silken line, corkwood bobbers, steel hooks, lead sinkers, velvet lures, and narrow netting. </td>
+                </tr>
+                <tr>
+                    <td> Healer's Kit </td>
+                    <td> 3 lbs </td>
+                    <td> 5 gp </td>
+                    <td> This kit is a leather pouch containing bandages, salves, and splints. 10 uses </td>
+                </tr>
+                <tr>
+                    <td> Mess Kit </td>
+                    <td> 1 lbs </td>
+                    <td> 2 sp </td>
+                    <td> This tin box contains a cup and simple cutlery. The box clamps together, and one side can be used as a cooking pan and the other as a plate or shallow bowl. </td>
+                </tr>
+
+            </table>
+
+            <div class="backdrop col-12 mb-2">
+                <strong>Please Note:</strong> All packs come as is and cannot be broken. Supplies in packs may be outsourced and cannot be sold as individual components by Gnome Depot. For more information,
+                please contact your GM or use basic reasoning skills to understand why something may be unavailable. Additionally, Gnome Depot reserves the right to not buy back components in a pack after sale,
+                unless the items are usual stock of Gnome Depot.
+            </div>
+            <table class="table table-bordered table-striped">
+                <tr class="table-head">
+                    <th> Name </th>
+                    <th> Price </th>
+                    <th> Notes: </th>
+                </tr>
+                <tr>
+                    <td> Diplomat's Pack </td>
+                    <td> 39 cp </td>
+                    <td> Includes a chest, 2 cases for maps and scrolls, a set of fine clothes, a bottle of ink, an ink pen, a lamp, 2 flasks of oil, 5 sheets of paper, a vial of perfume, sealing wax, and soap.</td>
+                </tr>
+                <tr>
+                    <td> Dungeoneer's Pack</td>
+                    <td> 12 gp </td>
+                    <td> Includes a backpack, a crowbar, a hammer, 10 pitons, 10 torches, a tinderbox, 10 days of rations, and a waterskin. The pack also has 50 feet of hempen rope strapped to the side of it. </td>
+                </tr>
+                <tr>
+                    <td> Explorer's Pack </td>
+                    <td> 10 gp</td>
+                    <td> Includes a backpack, a bedroll, a mess kit, a tinderbox, 10 torches, 10 days of rations, and a waterskin. The pack also has 50 feet of hempen rope strapped to the side of it.</td>
+                </tr>
+                <tr>
+                    <td> Scholar's Pack  </td>
+                    <td> 40 sp </td>
+                    <td> Includes a backpack, a book of lore, a bottle of ink, an ink pen, 10 sheets of parchment, a little bag of sand, and a small knife.</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+
+        <div class="container mt-5">
+            <div class="row  text-center">
+
+                <!--Food Supplies-->
+                <div class=" col-12 my-3 backdrop mt-5" id="wildernessSurvival">
+                    <h2>Wilderness Survival</h2>
+                    <h4>Give a man a fish, and he'll eat for a day. Don't teach a man how to fish and you feed yourself. </h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-5">
+            <table class="table table-bordered table-striped">
+                <tr class="table-head">
+                    <th> Name </th>
+                    <th> Weight </th>
+                    <th> Price </th>
+                    <th> Notes: </th>
+                </tr>
+                <tr>
+                    <td> Fishing Tackle </td>
+                    <td> 4 lbs </td>
+                    <td> 1 gp </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> Hunting Trap </td>
+                    <td> 25 lbs </td>
+                    <td> 5 gp </td>
+                    <td> </td>
+
+                </tr>
+                <tr>
+                    <td> Mess Kit </td>
+                    <td> 1 lbs </td>
+                    <td> 2 sp </td>
+                    <td> </td>
+
+                </tr>
+                <tr>
+                    <td> Grappling Hook </td>
+                    <td> 4 lb </td>
+                    <td> 2 gp </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> Piton </td>
+                    <td> 1/4 lb</td>
+                    <td> 5 cp </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> Rations</td>
+                    <td> 2 lb </td>
+                    <td> 5 sp </td>
+                    <td> 1 days worth </td>
+                </tr>
+                <tr>
+                    <td> Tent </td>
+                    <td> 20 lb</td>
+                    <td> 2 gp </td>
+                    <td> Sleeps two </td>
+                </tr>
+                <tr>
+                    <td> Tinderbox </td>
+                    <td> 1 lb</td>
+                    <td> 5 sp </td>
+                    <td> </td>
+                </tr>
+
+            </table>
+
+        </div>
+
+
+
+        <div class="container mt-5">
+            <div class="row  text-center">
+
+                <!--General Supplies-->
+                <div class=" col-12 my-3 backdrop mt-5" id="generalSupplies">
+                    <h2>General Supplies</h2>
+                    <h4>Supplies for the uneventful shopper</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-5">
+
+
+            <table class="table table-bordered table-striped">
+                <tr class="table-head">
+                    <th> Name </th>
+                    <th> Weight </th>
+                    <th> Price </th>
+                    <th> Notes: </th>
+                </tr>
+                <tr>
+                    <td> Abacus </td>
+                    <td> 2 lbs </td>
+                    <td> 2 gp </td>
+                    <td> </td>
+                </tr>
+
+                <tr>
+                    <td> Ball Bearings </td>
+                    <td> 2 lb </td>
+                    <td> 1 gp </td>
+                    <td> Pack of 1,000 </td>
+
+                </tr>
+                <tr>
+                    <td> Bedroll </td>
+                    <td> 7 lb </td>
+                    <td> 1 gp </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> Bell </td>
+                    <td>  </td>
+                    <td> 1 gp </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> Blanket </td>
+                    <td> 3 lb </td>
+                    <td> 5 sp </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> Block and Tackle </td>
+                    <td> 5 lb </td>
+                    <td> 1 gp </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> Book </td>
+                    <td> 5 lb </td>
+                    <td> 25 gp </td>
+                    <td> </td>
+                </tr>
+
+
+                <tr>
+                    <td> Caltrop </td>
+                    <td> 2 lb </td>
+                    <td> 1 gp </td>
+                    <td> Bag of 20 </td>
+                </tr>
+
+                <tr>
+                    <td> Candle </td>
+                    <td>  </td>
+                    <td> 1 cp </td>
+                    <td> </td>
+                </tr>
+
+                <tr>
+                    <td> Map or Scroll Case </td>
+                    <td> 1 lb </td>
+                    <td> 1 gp </td>
+                    <td> </td>
+                </tr>
+
+                <tr>
+                    <td> Chain </td>
+                    <td> 10 lb </td>
+                    <td> 5 gp </td>
+                    <td> 10 ft </td>
+                </tr>
+
+                <tr>
+                    <td> Chalk </td>
+                    <td>  </td>
+                    <td> 1 cp </td>
+                    <td> 1 piece </td>
+                </tr>
+
+                <tr>
+                    <td> Hour Glass </td>
+                    <td> 1 lb </td>
+                    <td> 25 gp </td>
+                    <td>  </td>
+                </tr>
+                <tr>
+                    <td> Ink </td>
+                    <td>  </td>
+                    <td> 10 gp </td>
+                    <td> 1 oz, Various Colors Available </td>
+                </tr>
+                <tr>
+                    <td> Ink Pen or Quill </td>
+                    <td>  </td>
+                    <td> 2 cp </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> Ladder </td>
+                    <td> 25 lb</td>
+                    <td> 1 sp </td>
+                    <td> 10 foot tall </td>
+                </tr>
+                <tr>
+                    <td> Lamp </td>
+                    <td> 1 lb </td>
+                    <td> 5 sp </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> Lantern, Bullseye </td>
+                    <td> 2 lb </td>
+                    <td> 10 gp </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> Lantern, Hooded </td>
+                    <td> 2 lb </td>
+                    <td> 5 gp </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> Lock </td>
+                    <td> 1 lb </td>
+                    <td> 10 gp </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> Magnifying Glass </td>
+                    <td>  </td>
+                    <td> 100 gp </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> Manacles </td>
+                    <td> 6 lb </td>
+                    <td> 2 gp </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> Mirror, Steel </td>
+                    <td> 1/2 lb </td>
+                    <td> 5 gp </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> Oil (flask) </td>
+                    <td> 1 lb </td>
+                    <td> 1 sp </td>
+                    <td> Flask not included </td>
+                </tr>
+                <tr>
+                    <td> Paper </td>
+                    <td>  </td>
+                    <td> 2 sp </td>
+                    <td> 1 Sheet </td>
+                </tr>
+
+                <tr>
+                    <td> Parchment </td>
+                    <td>  </td>
+                    <td> 1 sp </td>
+                    <td> 1 Sheet </td>
+                </tr>
+                <tr>
+                    <td> Perfume </td>
+                    <td>  </td>
+                    <td> 1 gp </td>
+                    <td> vial included </td>
+                </tr>
+                <tr>
+                    <td> Pole </td>
+                    <td> 7 lb</td>
+                    <td> 5 cp </td>
+                    <td> 10 foot </td>
+                </tr>
+                <tr>
+                    <td> Rope, Hempen </td>
+                    <td> 10 lb</td>
+                    <td> 1 gp </td>
+                    <td> 50 ft </td>
+                </tr>
+                <tr>
+                    <td> Rope, Silk </td>
+                    <td> 5 lb</td>
+                    <td> 10 gp </td>
+                    <td> 50 ft </td>
+                </tr>
+                <tr>
+                    <td> Scale, Merchant </td>
+                    <td> 3 lb</td>
+                    <td> 5 gp </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> Sealing Wax </td>
+                    <td> </td>
+                    <td> 5 sp </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> Signal Whistle </td>
+                    <td> </td>
+                    <td> 5 cp </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> Signet Ring </td>
+                    <td> </td>
+                    <td> 5 gp </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> Soap </td>
+                    <td> </td>
+                    <td> 2 cp </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> Spikes, iron </td>
+                    <td> 5 lb</td>
+                    <td> 1 gp </td>
+                    <td> Pack of 10 </td>
+                </tr>
+                <tr>
+                    <td> Spyglass </td>
+                    <td> 1 lb</td>
+                    <td> 1,000 gp </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> Torch </td>
+                    <td> 1 lb</td>
+                    <td> 1 cp </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> Whetstone </td>
+                    <td> 1 lb</td>
+                    <td> 1 cp </td>
+                    <td> </td>
+                </tr>
+
+
+
+            </table>
+        </div>
+
+        <div class="container mt-5">
+            <div class="row  text-center">
+
+                <!--Storage Supplies-->
+                <div class=" col-12 my-3 backdrop mt-5" id="storageSolutions">
+                    <h2>Storage Solutions</h2>
+                    <h4></h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-5">
+            <table class="table">
+                <tr class="table-head">
+                    <th> Name </th>
+                    <th> Weight </th>
+                    <th> Price </th>
+                    <th> Notes: </th>
+                </tr>
+                <tr>
+                    <td> Backpack </td>
+                    <td> 5 lb </td>
+                    <td> 2 sp </td>
+                    <td> 1 ft<sup>3</sup> storage space, 30 lbs of gear</td>
+                </tr>
+                <tr>
+                    <td> Barrel</td>
+                    <td> 70 lb </td>
+                    <td> 2 gp </td>
+                    <td> 40 g liquid, 4 ft<sup>3</sup> solid </td>
+                </tr>
+                <tr>
+                    <td> Basket </td>
+                    <td> 2 lb </td>
+                    <td> 4 sp </td>
+                    <td> 2 ft<sup>3</sup>, 40 lbs of gear</td>
+                </tr>
+                <tr>
+                    <td> Bottle, glass </td>
+                    <td> 2 lbs </td>
+                    <td> 2 gp </td>
+                    <td> 1 1/2 pt liquid</td>
+                </tr>
+
+                <tr>
+                    <td> Bucket </td>
+                    <td> 2lb </td>
+                    <td> 5 cp </td>
+                    <td> 3 g liquid, 1/2 ft<sup>3</sup> solid</td>
+                </tr>
+                <tr>
+                    <td> Chest</td>
+                    <td> 25 lb </td>
+                    <td> 5 gp </td>
+                    <td> 12 ft<sup>3</sup>, 300 lbs of gear </td>
+                </tr>
+
+                <tr>
+                    <td> Flask or Tankard </td>
+                    <td> 1 lb </td>
+                    <td> 2 cp </td>
+                    <td> 1 pt liquid</td>
+                </tr>
+                <tr>
+                    <td> Jug or Pitcher </td>
+                    <td> 4 lbs </td>
+                    <td> 2 cp </td>
+                    <td> 1 g liquid</td>
+                </tr>
+
+                <tr>
+                    <td> Pot, iron </td>
+                    <td> 10 lb</td>
+                    <td> 2 gp </td>
+                    <td> 1 g liquid </td>
+                </tr>
+                <tr>
+                    <td> Pouch </td>
+                    <td> 1 lb</td>
+                    <td> 5 sp </td>
+                    <td> 1/5 ft<sup>3</sup>, 6 lbs of gear</td>
+                </tr>
+                <tr>
+                    <td> Sack </td>
+                    <td> 1/2 lb</td>
+                    <td> 1 cp </td>
+                    <td> 1 ft<sup>3</sup>, 30 lbs of gear</td>
+                </tr>
+                <tr>
+                    <td> Vial </td>
+                    <td> </td>
+                    <td> 1 gp </td>
+                    <td> 4 oz liquid</td>
+                </tr>
+                <tr>
+                    <td> Waterskin </td>
+                    <td> 5 lbs (full)</td>
+                    <td> 2 sp </td>
+                    <td> 4 pt liquid</td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="container mt-5">
+            <div class="row  text-center">
+
+                <!--Tools-->
+                <div class=" col-12 my-3 backdrop mt-5" id="tools">
+                    <h2>Tools</h2>
+                    <h4></h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-5">
+            <table class="table table-bordered table-striped">
+                <tr class="table-head">
+                    <th> Name </th>
+                    <th> Weight </th>
+                    <th> Price </th>
+                    <th> Notes: </th>
+                </tr>
+                <tr>
+                    <td> Crowbar </td>
+                    <td> 5 lb </td>
+                    <td> 2 gp </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> Hammer </td>
+                    <td> 3 lb </td>
+                    <td> 1 gp </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> Sledge Hammer</td>
+                    <td> 10 lb </td>
+                    <td> 2 gp </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> Pick, Miner's </td>
+                    <td> 10 lb </td>
+                    <td> 2 gp </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> Bottle, glass </td>
+                    <td> 2 lbs </td>
+                    <td> 2 gp </td>
+                    <td> </td>
+                </tr>
+
+                <tr>
+                    <td> Ram, portable </td>
+                    <td> 35 lb </td>
+                    <td> 4 gp </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> Shovel</td>
+                    <td> 5 lb </td>
+                    <td> 2 gp </td>
+                    <td> </td>
+                </tr>
+
+            </table>
+        </div>
+
+    </div>
+
+
+</body>
+</html>
+
+<script>
+    $('.card').click(function () {
+        var cardID = $(this).attr('id');
+        var jqueryCardID = "#" + cardID;
+
+        $(jqueryCardID).toggleClass('is-flipped');
+
+    });
+
+
+    /* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
+    function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+        //document.getElementById("main").style.marginLeft = "250px";
+    }
+
+    /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+    function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        //document.getElementById("main").style.marginLeft = "0";
+    }
+
+
+</script>

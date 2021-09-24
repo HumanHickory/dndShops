@@ -66,14 +66,14 @@ a:hover {
 }
 
 .hero-header-container { 
-	background: url("img/hero/hero-img.jpg") no-repeat center; 
+	background: url("img/hero/townDirectory.jpg") no-repeat center; 
 	background-size: cover; 
 	height: 100vh; 
 	position: relative;  
 	}
 	
 .hero-header-container:before {
-	background: linear-gradient(to bottom, rgba(0,0,0,.3), rgba(0,0,0,.5));
+	background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0));
 	content: "";
 	position: absolute;
     top: 0;
@@ -181,7 +181,8 @@ header:after {
         <h2 class="col-12">
             Visit Town or City
         </h2>
-        <a class="wrapper col-6 col-xl-3" id="1" data-aos="zoom-in" data-aos-delay="100" href="Cities/Sonridge/index.html">
+
+        <a class="wrapper col-6 col-xl-3 d-none" id="1" data-aos="zoom-in" data-aos-delay="100" href="Cities/Sonridge/index.html">
             <div class="img-holder">
                 <img src="img/icons/sonridge.jpg" />
 
@@ -191,7 +192,17 @@ header:after {
             </div>
         </a>
 
-        <a class="wrapper col-6 col-xl-3" id="1" data-aos="zoom-in" data-aos-delay="100" href="Cities/Inburn/index.html">
+        <a class="wrapper col-6 col-xl-3" id="1" data-aos="zoom-in" data-aos-delay="100" href="Cities/Arynsport/index.html">
+            <div class="img-holder">
+                <img src="img/icons/arynsport.jpg" />
+
+                <div class="hidden text-center pt-4 pb-3" id="hidden3">
+                    <h5 class="link"> Arynsport </h5>
+                </div>
+            </div>
+        </a>
+
+        <a class="wrapper col-6 col-xl-3 d-none" id="1" data-aos="zoom-in" data-aos-delay="100" href="Cities/Inburn/index.html">
             <div class="img-holder">
                 <img src="img/icons/Inburn.jpg">
                 <div class="hidden text-center pt-4 pb-3" id="hidden1">
@@ -265,7 +276,11 @@ var i = 1;
 while (i < 40) {
 	rt.fadeOut(3000, function(){
 	rt.text("Sonridge City").css('color', 'darkcyan')
-	}).fadeIn(3000);
+    }).fadeIn(3000);
+
+    rt.fadeOut(3000, function () {
+        rt.text("Arynsport").css('color', 'aqua')
+    }).fadeIn(3000);
 
 	rt.fadeOut(3000, function(){
 	rt.text("Inburn").css('color', 'limegreen')

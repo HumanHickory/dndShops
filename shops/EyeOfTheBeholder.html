@@ -6,605 +6,624 @@
 
 
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-	<link href="https://fonts.googleapis.com/css?family=EB+Garamond&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=EB+Garamond&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet">
 <style>
 
-body {
-	font-family: 'EB Garamond', serif;
-	}
+    body {
+        font-family: 'EB Garamond', serif;
+    }
 
-h1 {
-	font-size: 4.5rem;
-		color: white;
+    h1 {
+        font-size: 4.5rem;
+        color: white;
+    }
 
-}
-
-.magic {
-	font-family: 'Great Vibes', cursive;
-	font-size: 2.5rem;
-}
-
-
-.test {
-	border: 2px solid red;
-}
-
-.spellSubtext {
-		font-weight: normal;
-
-}
-
-.btn-link {
-	font-weight: bold;
-	color: black !important;
-}
-
-a.plain {
-	font-weight: bold;
-	color: black !important;
-	font-size: 1rem;
-}
-
-.header{
-  position: absolute;
-  z-index: 1000;
-  top: 210px;
-  left: 35%;
-  color: white;
-}
-
-.parallax { 
-  /* The image used */
-  background-image: url("../img/hero/eob-hero.jpg");
-
-  /* Set a specific height */
-  height: 600px; 
-
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.parallaxBubble { 
-  /* The image used */
-  background-image: url("../img/EoB/bubblesBig.png");
+    .magic {
+        font-family: 'Great Vibes', cursive;
+        font-size: 2.5rem;
+    }
 
 
+    .test {
+        border: 2px solid red;
+    }
 
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+    .spellSubtext {
+        font-weight: normal;
+    }
 
-.blue {
-	color: rgba(48, 62, 219, 1) !important;
-}
+    .btn-link {
+        font-weight: bold;
+        color: black !important;
+    }
 
-.black {
-	color: black;
-	}
+    a.plain {
+        font-weight: bold;
+        color: black !important;
+        font-size: 1rem;
+    }
 
-p, ul {
-	font-size: 1.5rem;
-	}
-	
-li.noStyle {
-	list-style: none;
-	}
+    .header {
+        position: absolute;
+        z-index: 1000;
+        top: 210px;
+        left: 35%;
+        color: white;
+    }
 
-a {
-	font-size: 1.5rem;
-	color: #0f03ba;
-}
+    .parallax {
+        /* The image used */
+        background-image: url("../img/hero/eob-hero.jpg");
+        /* Set a specific height */
+        height: 600px;
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .parallaxBubble {
+        /* The image used */
+        background-image: url("../img/EoB/bubblesBig.png");
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .blue {
+        color: rgba(48, 62, 219, 1) !important;
+    }
+
+    .black {
+        color: black;
+    }
+
+    p, ul {
+        font-size: 1.5rem;
+    }
+
+    li.noStyle {
+        list-style: none;
+    }
+
+    a {
+        font-size: 1.5rem;
+        color: #0f03ba;
+    }
 
 
-a:hover {
-	color: black;
-}
+        a:hover {
+            color: black;
+        }
 
-.outline {
-	box-shadow: 4px 4px 10px rgba(0, 0, 0, .4);
-	border-radius: 7px;
-}
+    .outline {
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, .4);
+        border-radius: 7px;
+    }
 
-.nav {
-	background-image: linear-gradient(to right, #9cecfb, #65c7f7, #0052d4);
-	color: white;
-	box-shadow: 6px 4px 15px rgba(0, 0, 0, .5);
-	text-shadow: 4px 4px 10px rgba(255, 255, 255, .4);
-}
+    .nav {
+        background-image: linear-gradient(to right, #9cecfb, #65c7f7, #0052d4);
+        color: white;
+        box-shadow: 6px 4px 15px rgba(0, 0, 0, .5);
+        text-shadow: 4px 4px 10px rgba(255, 255, 255, .4);
+    }
 
-.nav-link.active {
-	border: none;
-	background-color: rgba(0, 0, 0, 0) !important;
-	font-weight: bold;
-	text-decoration: underline double;
-}
+    .nav-link.active {
+        border: none;
+        background-color: rgba(0, 0, 0, 0) !important;
+        font-weight: bold;
+        text-decoration: underline double;
+    }
 
-.nav-link:hover {
-	border: none;
-	color: white;
-}
+    .nav-link:hover {
+        border: none;
+        color: white;
+    }
 
-@media only screen and (max-width: 1400px) and (min-width: 1025px) {
-	p, a {
-		font-size: 1.7rem !important;
-		}
-		
-}
+    @media only screen and (max-width: 1400px) and (min-width: 1025px) {
+        p, a {
+            font-size: 1.7rem !important;
+        }
+    }
 
-@media only screen and (max-device-width: 1366px) {
-  .parallax {
-    background-attachment: scroll;
-  }
-  a {
-	font-size: 2rem;
-  }
-  
-  p {
-	font-size: 2rem;
-  }
-  
-  h3 {
-	font-size: 2.5rem;
-  }
-}
+    @media only screen and (max-device-width: 1366px) {
+        .parallax {
+            background-attachment: scroll;
+        }
+
+        a {
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: 2rem;
+        }
+
+        h3 {
+            font-size: 2.5rem;
+        }
+    }
 </style>
-    <title>Eye of the Beholder</title>
+<title>Eye of the Beholder</title>
 </head>
 <body>
-	<div class="header">
-		<div class="text-center">
-			<h1>Eye of the Beholder</h1>
-		</div>
-	</div>
-   <div class="parallax"></div>
-   	<div class="container-fluid" style="background-image: radial-gradient(#9cecfb, #65c7f7, #0052d4);">   
-		<div class="row mt-0">
-			<ul class="nav nav-tabs text-center col-12" id="myTab" role="tablist">
-				<li class="nav-item col-4 col-xl-3 offset-xl-1">
-						<a class="nav-link active" id="arcane-tab" data-toggle="tab" href="#arcane" role="tab" aria-controls="arcane" aria-selected="true">Arcane Focus</a>
-				</li>
-				<li class="nav-item col-4 col-xl-3">
-						<a class="nav-link" id="druid-tab" data-toggle="tab" href="#druid" role="tab" aria-controls="druid" aria-selected="false">Druidic Focus</a>
-				</li>
-				<li class="nav-item col-4 col-xl-3">
-						<a class="nav-link" id="holy-tab" data-toggle="tab" href="#holy" role="tab" aria-controls="holy" aria-selected="false">Holy Symbol</a>
-				</li>
-			</ul>
-			<div class="tab-content container my-5 outline" id="myTabContent" style="background-color: white;">
-				<div class="tab-pane fade show active" id="arcane" role="tabpanel" aria-labelledby="arcane-tab">
-					<div class="row">
-						<div class="col-xl-4 mt-3">
-							<img src="../img/EoB/crystal.jpg" style="width: 100%;">
-						</div>
-						<div class="col-xl-6">
-							<h2 class="pt-4 col-12"><Strong> Arcane Focus </strong></h2>
-							<hr>
-							<p>An arcane focus is a special item designed to channel the power of arcane spells. A sorcerer, warlock, or wizard can use such an item as a spellcasting 
-					<a href="#" data-toggle="tooltip" title="A focus can be used in place of non-consumable spell materials">focus</a>.</p>
-						</div>
-					</div>
-					
-					<ul class="mt-3">
-						<li class="noStyle"><strong>Crystal</strong> <span class="blue">10 gp</span></li>
-						<ul>
-							<li style="font-size: .8em;"> Large variety of crystals available including Agate, Amethyst, Aquamarine, Citrine, Diamond, Garnet, Hematite, Jade, Lapiz Lazuli, Malachite, Opal and Rose Quartz </li>
-							<li style="font-size: .8em;"> Sizes may vary. </li>
-						</ul>
-					
-						<li class="noStyle"><strong>Orb</strong> <span class="blue">20 gp</span></li>
-						<ul>
-							<li style="font-size: .8em;"> Currently, only standard quartz orbs are available and is limited to Amethyst, Citrine, rose quartz and smoky quartz. </li>
-						</ul>
-						
-						<li class="noStyle"><strong>Rod</strong> <span class="blue">10 gp</span></li>
-						<ul>
-							<li style="font-size: .8em;"> Simple wooden rod with a brass covering on both the bottom and top of the rod. </li>
-						</ul>
-						
-						<li class="noStyle"><strong>Staff</strong> <span class="blue">5 gp</span></li>
-						<ul>
-							<li style="font-size: .8em;"> Large wooden staff with runes carved on the sides. It is unclear if the runes are for decoration, or have magical properties. </li>
-							<li style="font-size: .8em;"> Staff specifically created to channel arcane magic. </li>
-						</ul>
-						
-						<li class="noStyle"><strong>Wand</strong> <span class="blue">10 gp</span></li>
-						<ul>
-							<li style="font-size: .8em;"> Sanded down wand carved out of wood with a magical component at its core. </li>
-							<li style="font-size: .8em;"> Wand specifically created to channel arcane magic. </li>
-						</ul>
-					
-					</ul>
-					
-					
+    <div class="header">
+        <div class="text-center">
+            <h1>Eye of the Beholder</h1>
+        </div>
+    </div>
+    <div class="parallax"></div>
+    <div class="container-fluid" style="background-image: radial-gradient(#9cecfb, #65c7f7, #0052d4);">
+        <div class="row mt-0">
+            <ul class="nav nav-tabs text-center col-12" id="myTab" role="tablist">
+                <li class="nav-item col-4 col-xl-3 offset-xl-1">
+                    <a class="nav-link active" id="arcane-tab" data-toggle="tab" href="#arcane" role="tab" aria-controls="arcane" aria-selected="true">Arcane Focus</a>
+                </li>
+                <li class="nav-item col-4 col-xl-3">
+                    <a class="nav-link" id="druid-tab" data-toggle="tab" href="#druid" role="tab" aria-controls="druid" aria-selected="false">Druidic Focus</a>
+                </li>
+                <li class="nav-item col-4 col-xl-3">
+                    <a class="nav-link" id="holy-tab" data-toggle="tab" href="#holy" role="tab" aria-controls="holy" aria-selected="false">Holy Symbol</a>
+                </li>
+            </ul>
+            <div class="tab-content container my-5 outline" id="myTabContent" style="background-color: white;">
+                <div class="tab-pane fade show active" id="arcane" role="tabpanel" aria-labelledby="arcane-tab">
+                    <div class="row">
+                        <div class="col-xl-4 mt-3">
+                            <img src="../img/EoB/crystal.jpg" style="width: 100%;">
+                        </div>
+                        <div class="col-xl-6">
+                            <h2 class="pt-4 col-12"><Strong> Arcane Focus </Strong></h2>
+                            <hr>
+                            <p>
+                                An arcane focus is a special item designed to channel the power of arcane spells. A sorcerer, warlock, or wizard can use such an item as a spellcasting
+                                <a href="#" data-toggle="tooltip" title="A focus can be used in place of non-consumable spell materials">focus</a>.
+                            </p>
+                        </div>
+                    </div>
 
-					
-				</div>
-				<div class="tab-pane fade" id="druid" role="tabpanel" aria-labelledby="druid-tab">
-					<div class="row">
-						<div class="col-xl-4 mt-3">
-							<img src="../img/EoB/holly.jpg" style="width: 100%;">
-						</div>
-						<div class="col-xl-6">
-							<h2 class="pt-4 col-12"><Strong> Druidic Focus </strong></h2>
-							<hr>
-							<p>In tune with nature, a druid can use nature-based items as a spellcasting
-								<a href="#" data-toggle="tooltip" title="A focus can be used in place of non-consumable spell materials">focus</a>
-								where a spell might require non-consumable materials or components.</p>
-						</div>
-					</div>
-					
-					<ul class="mt-3">
-						<li class="noStyle"><strong>Sprig of Mistletoe or Holly</strong> <span class="blue">1 gp</span></li>
-						<ul>
-							<li style="font-size: .8em;"> Just a sprig of mistletoe or holly that can be used by druids. </li>
-						</ul>
-					
-						<li class="noStyle"><strong>Totem</strong> <span class="blue">1 gp</span></li>
-						<ul>
-							<li style="font-size: .8em;"> Object incorporates feathers, fur, bones, and/or teeth from sacred animals. </li>
-						</ul>
-						
-						<li class="noStyle"><strong>Wooden Staff</strong> <span class="blue">5 gp</span></li>
-						<ul>
-							<li style="font-size: .8em;"> Simple wooden staff drawn whole from an ancient tree. </li>
-							<li style="font-size: .8em;"> Can be used to channel druidic or arcane magic.. </li>
-						</ul>
-						
-						<li class="noStyle"><strong>Yew Wand</strong> <span class="blue">5 gp</span></li>
-						<ul>
-							<li style="font-size: .8em;"> Wand made out of yew wood. </li>
-							<li style="font-size: .8em;"> Can be used to channel druidic or arcane magic.. </li>
-						</ul>
-						
-					
-					</ul>
-				</div>
-				<div class="tab-pane fade" id="holy" role="tabpanel" aria-labelledby="holy-tab">					
-					<div class="row">
-						<div class="col-xl-4 mt-3">
-							<img src="../img/EoB/ankh.jpg" style="width: 100%;">
-						</div>
-						<div class="col-xl-6">
-							<h2 class="pt-4 col-12"><Strong> Holy Symbol </strong></h2>
-							<hr>
-							<p>A cleric or paladin can use a holy symbol as a spellcasting 
-								<a href="#" data-toggle="tooltip" title="A focus can be used in place of non-consumable spell materials">focus</a>.
-								To use the symbol in this way, the caster must hold it in hand, wear it visibly, or bear it on a shield.</p>
-						</div>
-					</div>
-					<ul class="mt-3">
-						<li class="noStyle"><strong>Amulet</strong> <span class="blue">5 gp</span></li>
-						<ul>
-							<li style="font-size: .8em;"> Depicts a holy symbol. Availability may vary by location.</li>
-						</ul>
-					
-						<li class="noStyle"><strong>Emblem</strong> <span class="blue">5 gp</span></li>
-						<ul>
-							<li style="font-size: .8em;"> Will expertly carve an emblem into wood, such as a shield or relic box. Can inlay with metal for additional cost. Cost determined by symbol and material.</li>
-						</ul>
-						
-						<li class="noStyle"><strong>Reliquary</strong> <span class="blue">5 gp</span></li>
-						<ul>
-							<li style="font-size: .8em;"> A container for relics. </li>
-							<li style="font-size: .8em;"> Wood and metal reliquaries available. </li>
-						</ul>
-					</ul>
+                    <ul class="mt-3">
+                        <li class="noStyle"><strong>Crystal</strong> <span class="blue">10 gp</span></li>
+                        <ul>
+                            <li style="font-size: .8em;"> Large variety of crystals available including Agate, Amethyst, Aquamarine, Citrine, Diamond, Garnet, Hematite, Jade, Lapiz Lazuli, Malachite, Opal and Rose Quartz </li>
+                            <li style="font-size: .8em;"> Sizes may vary. </li>
+                        </ul>
 
-				</div>
-			</div>
-		</div>
-	</div>
+                        <li class="noStyle"><strong>Orb</strong> <span class="blue">20 gp</span></li>
+                        <ul>
+                            <li style="font-size: .8em;"> Currently, only standard quartz orbs are available and is limited to Amethyst, Citrine, rose quartz and smoky quartz. </li>
+                        </ul>
+
+                        <li class="noStyle"><strong>Rod</strong> <span class="blue">10 gp</span></li>
+                        <ul>
+                            <li style="font-size: .8em;"> Simple wooden rod with a brass covering on both the bottom and top of the rod. </li>
+                        </ul>
+
+                        <li class="noStyle"><strong>Staff</strong> <span class="blue">5 gp</span></li>
+                        <ul>
+                            <li style="font-size: .8em;"> Large wooden staff with runes carved on the sides. It is unclear if the runes are for decoration, or have magical properties. </li>
+                            <li style="font-size: .8em;"> Staff specifically created to channel arcane magic. </li>
+                        </ul>
+
+                        <li class="noStyle"><strong>Wand</strong> <span class="blue">10 gp</span></li>
+                        <ul>
+                            <li style="font-size: .8em;"> Sanded down wand carved out of wood with a magical component at its core. </li>
+                            <li style="font-size: .8em;"> Wand specifically created to channel arcane magic. </li>
+                        </ul>
+
+                    </ul>
 
 
-	<div class="container-fluid parallaxBubble">
-		<div class="container py-5">
-			<div class="row text-center pb-5" style="background-color: rgba(255, 255, 255, .8);">
-		
-				<div class="col-12 my-4"><h2 class="magic"><strong>Potions of Healing</strong></h2></div>
-					<div class="col-xl-3">
-						<p><strong>(Lesser) Healing</strong></p>
-						<p><strong>Healing:</strong> 2d4 + 2</p>
-						<p><strong>Price:</strong> 50 gp</p>
-					</div>
-                    <div class="col-xl-3">
-                        <p><strong>Greater Healing</strong></p>
-                        <p><strong>Healing:</strong> 4d4 + 4</p>
-                        <p><strong>Price:</strong> 250 gp</p>
+
+
+                </div>
+                <div class="tab-pane fade" id="druid" role="tabpanel" aria-labelledby="druid-tab">
+                    <div class="row">
+                        <div class="col-xl-4 mt-3">
+                            <img src="../img/EoB/holly.jpg" style="width: 100%;">
+                        </div>
+                        <div class="col-xl-6">
+                            <h2 class="pt-4 col-12"><Strong> Druidic Focus </Strong></h2>
+                            <hr>
+                            <p>
+                                In tune with nature, a druid can use nature-based items as a spellcasting
+                                <a href="#" data-toggle="tooltip" title="A focus can be used in place of non-consumable spell materials">focus</a>
+                                where a spell might require non-consumable materials or components.
+                            </p>
+                        </div>
+                    </div>
+
+                    <ul class="mt-3">
+                        <li class="noStyle"><strong>Sprig of Mistletoe or Holly</strong> <span class="blue">1 gp</span></li>
+                        <ul>
+                            <li style="font-size: .8em;"> Just a sprig of mistletoe or holly that can be used by druids. </li>
+                        </ul>
+
+                        <li class="noStyle"><strong>Totem</strong> <span class="blue">1 gp</span></li>
+                        <ul>
+                            <li style="font-size: .8em;"> Object incorporates feathers, fur, bones, and/or teeth from sacred animals. </li>
+                        </ul>
+
+                        <li class="noStyle"><strong>Wooden Staff</strong> <span class="blue">5 gp</span></li>
+                        <ul>
+                            <li style="font-size: .8em;"> Simple wooden staff drawn whole from an ancient tree. </li>
+                            <li style="font-size: .8em;"> Can be used to channel druidic or arcane magic.. </li>
+                        </ul>
+
+                        <li class="noStyle"><strong>Yew Wand</strong> <span class="blue">5 gp</span></li>
+                        <ul>
+                            <li style="font-size: .8em;"> Wand made out of yew wood. </li>
+                            <li style="font-size: .8em;"> Can be used to channel druidic or arcane magic.. </li>
+                        </ul>
+
+
+                    </ul>
+                </div>
+                <div class="tab-pane fade" id="holy" role="tabpanel" aria-labelledby="holy-tab">
+                    <div class="row">
+                        <div class="col-xl-4 mt-3">
+                            <img src="../img/EoB/ankh.jpg" style="width: 100%;">
+                        </div>
+                        <div class="col-xl-6">
+                            <h2 class="pt-4 col-12"><Strong> Holy Symbol </Strong></h2>
+                            <hr>
+                            <p>
+                                A cleric or paladin can use a holy symbol as a spellcasting
+                                <a href="#" data-toggle="tooltip" title="A focus can be used in place of non-consumable spell materials">focus</a>.
+                                To use the symbol in this way, the caster must hold it in hand, wear it visibly, or bear it on a shield.
+                            </p>
+                        </div>
+                    </div>
+                    <ul class="mt-3">
+                        <li class="noStyle"><strong>Amulet</strong> <span class="blue">5 gp</span></li>
+                        <ul>
+                            <li style="font-size: .8em;"> Depicts a holy symbol. Availability may vary by location.</li>
+                        </ul>
+
+                        <li class="noStyle"><strong>Emblem</strong> <span class="blue">5 gp</span></li>
+                        <ul>
+                            <li style="font-size: .8em;"> Will expertly carve an emblem into wood, such as a shield or relic box. Can inlay with metal for additional cost. Cost determined by symbol and material.</li>
+                        </ul>
+
+                        <li class="noStyle"><strong>Reliquary</strong> <span class="blue">5 gp</span></li>
+                        <ul>
+                            <li style="font-size: .8em;"> A container for relics. </li>
+                            <li style="font-size: .8em;"> Wood and metal reliquaries available. </li>
+                        </ul>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid parallaxBubble">
+        <div class="container py-5">
+            <div class="row text-center pb-5" style="background-color: rgba(255, 255, 255, .8);">
+
+                <div class="col-12 my-4"><h2 class="magic"><strong>Potions of Healing</strong></h2></div>
+                <div class="col-xl-3">
+                    <p><strong>(Lesser) Healing</strong></p>
+                    <p><strong>Healing:</strong> 2d4 + 2</p>
+                    <p><strong>Price:</strong> 50 gp</p>
+                </div>
+                <div class="col-xl-3">
+                    <p><strong>Greater Healing</strong></p>
+                    <p><strong>Healing:</strong> 4d4 + 4</p>
+					<p> Currently Unavailable</p>
+
+                    <!--<p><strong>Price:</strong> 250 gp</p>-->
+
+                </div>
+                <div class="col-xl-3">
+                    <p><strong>Superior Healing</strong></p>
+                    <p><strong>Healing:</strong> 8d4 + 8</p>
+                    <p> Currently Unavailable</p>
+                    <!-- <p><strong>Price:</strong> 2,500 gp</p>-->
+
+                </div>
+                <div class="col-xl-3">
+                    <p><strong>Supreme Healing</strong></p>
+                    <p><strong>Healing:</strong> 10d4 + 20</p>
+                    <p> Currently Unavailable</p>
+                    <!--<p><strong>Price:</strong> 25,000 gp</p>-->
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <div class="container-fluid" style="background-image: radial-gradient(#9cecfb, #65c7f7, #0052d4); color: white;">
+        <div class="container">
+            <div class="row text-center pb-4">
+
+                <div class="col-12 my-4"><h2 class="magic"><strong>Items of the Craft</strong></h2></div>
+
+                <div class="col-xl-6">
+                    <img src="../img/EoB/spellBook.jpg" style="width: 100%;">
+                </div>
+                <div class="col-xl-6 row">
+
+                    <div class="col-12 mt-4 mt-xl-0">
+                        <p>
+                            <strong><a href="#" data-toggle="tooltip" title="This sticky, adhesive fluid ignites when exposed to air. As an action, you can throw this flask up to 20 feet, shattering it on impact. Make a ranged Attack against a creature or object, treating the alchemist's fire as an Improvised Weapon. On a hit, the target takes 1d4 fire damage at the start of each of its turns. A creature can end this damage by using its action to make a DC 10 Dexterity check to extinguish the flames.">Alchemist's Fire</a> </strong>
+                            | 50 gp
+                        </p>
+                    </div>
+
+                    <div class="col-12">
+                        <p>
+                            <strong><a href="#" data-toggle="tooltip" title="As an action, you can splash the contents of this flask onto a creature within 5 feet of you or throw it up to 20 feet, shattering it on impact. In either case, make a ranged Attack against a target creature, treating the holy water as an Improvised Weapon. If the target is a fiend or Undead, it takes 2d6 radiant damage. A Cleric or Paladin may create holy water by performing a Special ritual. The ritual takes 1 hour to perform, uses 25 gp worth of powdered silver, and requires the caster to expend a 1st-level spell slot.">Holy Water</a></strong>
+                            | 25 gp
+                        </p>
 
                     </div>
-                    <div class="col-xl-3">
-                        <p><strong>Superior Healing</strong></p>
-                        <p><strong>Healing:</strong> 8d4 + 8</p>
-                        <p> Currently Unavailable</p>
-                       <!-- <p><strong>Price:</strong> 2,500 gp</p>-->
+                    <div class="col-12">
+                        <p>
+                            <strong>Candle</strong>
+                            |  1 cp
+                        </p>
 
                     </div>
-                    <div class="col-xl-3">
-                        <p><strong>Supreme Healing</strong></p>
-                        <p><strong>Healing:</strong> 10d4 + 20</p>
-                        <p> Currently Unavailable</p>
-                        <!--<p><strong>Price:</strong> 25,000 gp</p>-->
+                    <div class="col-12">
+                        <p>
+                            <strong>Component Pouch</strong>
+                            | 25 gp
+                        </p>
 
                     </div>
-			</div>
-		</div>
-	</div>
-	
-	<div class="container-fluid" style="background-image: radial-gradient(#9cecfb, #65c7f7, #0052d4); color: white;">
-		<div class="container">
-			<div class="row text-center pb-4">
-		
-				<div class="col-12 my-4"><h2 class="magic"><strong>Items of the Craft</strong></h2></div>
-				
-				<div class="col-xl-6">
-					<img src="../img/EoB/spellBook.jpg" style="width: 100%;">
-				</div>
-				<div class="col-xl-6 row">
 
-					<div class="col-12 mt-4 mt-xl-0">
-						<p><strong><a href="#" data-toggle="tooltip" title="This sticky, adhesive fluid ignites when exposed to air. As an action, you can throw this flask up to 20 feet, shattering it on impact. Make a ranged Attack against a creature or object, treating the alchemist's fire as an Improvised Weapon. On a hit, the target takes 1d4 fire damage at the start of each of its turns. A creature can end this damage by using its action to make a DC 10 Dexterity check to extinguish the flames.">Alchemist's Fire</a> </strong>
-						| 50 gp</p>
-					</div>
-					
-					<div class="col-12">
-						<p><strong><a href="#" data-toggle="tooltip" title="As an action, you can splash the contents of this flask onto a creature within 5 feet of you or throw it up to 20 feet, shattering it on impact. In either case, make a ranged Attack against a target creature, treating the holy water as an Improvised Weapon. If the target is a fiend or Undead, it takes 2d6 radiant damage. A Cleric or Paladin may create holy water by performing a Special ritual. The ritual takes 1 hour to perform, uses 25 gp worth of powdered silver, and requires the caster to expend a 1st-level spell slot.">Holy Water</a></strong>
-						| 25 gp</p>
-						
-					</div>
-					<div class="col-12">
-						<p><strong>Candle</strong>
-						|  1 cp</p>
+                    <div class="col-12">
+                        <p>
+                            <strong>Black Ink</strong>
+                            | 10 gp
+                        </p>
 
-					</div>
-					<div class="col-12">
-						<p><strong>Component Pouch</strong>
-						| 25 gp</p>
-						
-					</div>
-					
-					<div class="col-12">
-						<p><strong>Black Ink</strong>
-						| 10 gp</p>
-						
-					</div>
-					
-					<div class="col-12">
-						<p><strong>Quill</strong>
-						| 25 gp</p>
-						
-					</div>
-					
-					<div class="col-12">
-						<p><strong>Blank Spellbook (100pg)</strong>
-						| 25 gp</p>
-						
-					</div>
-					
-					<div class="col-12 d-xl-none">
-						<p><strong>Priest's Pack</strong>
-						| 19 gp</p>
-						
-					</div>
-				</div>
-					<div class="col-xl-6 text-center d-none d-xl-block mt-4">
-						<p><strong>Priest's Pack</strong> | 19 gp</p>
-						<ul>
-							<li class="noStyle">Backpack</li>
-							<li class="noStyle">Blanket</li>
-							<li class="noStyle">10 candles</li>
-							<li class="noStyle">Tinderbox</li>
-							<li class="noStyle">Alms box</li>
-							<li class="noStyle">2 blocks of incense</li>
-							<li class="noStyle">Censer</li>
-							<li class="noStyle">Vestments</li>
-							<li class="noStyle">2 days of rations</li>
-							<li class="noStyle">Waterskin</li>
-						</ul>
-					</div>
-					<div class="col-xl-6 mt-4">
-						<img src="../img/EoB/priestPack.png" style="width: 100%;" title="Priest's Pack | 19 gp">
-					</div>
-							
-				<div class="col-12 mt-4"><h2 class="magic"><strong>Spell Shop</strong></h2></div>
-				<div class="col-12 mb-4"><p class="magic">Spells scrolls have a one time use charge and take up one 1st level spell slot</p></div>
-				
-			</div> <!--row text-center pb-4-->
+                    </div>
 
-			
-<div class="accordion black pb-3" id="accordion1">
-  <div class="card z-depth-0 bordered">
-    <div class="card-header" id="headingOne2">
-      <h5 class="mb-0">
-        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse1"
-          aria-expanded="true" aria-controls="collapse1">
-			<a href="https://www.dndbeyond.com/spells/charm-person" class="plain" target="_blank">Charm Person</a> <span class="spellSubtext"> Level 1 Wizard spell </span><span class="blue">75 gp</span>
-        </button>
-      </h5>
+                    <div class="col-12">
+                        <p>
+                            <strong>Quill</strong>
+                            | 25 gp
+                        </p>
+
+                    </div>
+
+                    <div class="col-12">
+                        <p>
+                            <strong>Blank Spellbook (100pg)</strong>
+                            | 25 gp
+                        </p>
+
+                    </div>
+
+                    <div class="col-12 d-xl-none">
+                        <p>
+                            <strong>Priest's Pack</strong>
+                            | 19 gp
+                        </p>
+
+                    </div>
+                </div>
+                <div class="col-xl-6 text-center d-none d-xl-block mt-4">
+                    <p><strong>Priest's Pack</strong> | 19 gp</p>
+                    <ul>
+                        <li class="noStyle">Backpack</li>
+                        <li class="noStyle">Blanket</li>
+                        <li class="noStyle">10 candles</li>
+                        <li class="noStyle">Tinderbox</li>
+                        <li class="noStyle">Alms box</li>
+                        <li class="noStyle">2 blocks of incense</li>
+                        <li class="noStyle">Censer</li>
+                        <li class="noStyle">Vestments</li>
+                        <li class="noStyle">2 days of rations</li>
+                        <li class="noStyle">Waterskin</li>
+                    </ul>
+                </div>
+                <div class="col-xl-6 mt-4">
+                    <img src="../img/EoB/priestPack.png" style="width: 100%;" title="Priest's Pack | 19 gp">
+                </div>
+            </div> <!--row text-center pb-4-->
+
+  <!--                <div class="col-12 mt-4"><h2 class="magic"><strong>Spell Shop</strong></h2></div>
+                <div class="col-12 mb-4"><p class="magic">Spells scrolls have a one time use charge and take up one 1st level spell slot</p></div>
+
+
+
+           <div class="accordion black pb-3" id="accordion1">
+                <div class="card z-depth-0 bordered">
+                    <div class="card-header" id="headingOne2">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse1"
+                                    aria-expanded="true" aria-controls="collapse1">
+                                <a href="https://www.dndbeyond.com/spells/charm-person" class="plain" target="_blank">Charm Person</a> <span class="spellSubtext"> Level 1 Wizard spell </span><span class="blue">75 gp</span>
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapse1" class="collapse" aria-labelledby="headingOne2"
+                         data-parent="#accordion1">
+                        <div class="card-body">
+                            <b>Components:</b> VS <br>
+                            <b>Range:</b> 30ft <br>
+                            <b>Ritual:</b> No <br>
+                            <b>Concentration:</b> No <br>
+                            <div>
+                                You attempt to charm a humanoid you can see within range. It must make a Wisdom saving throw, and does so with advantage if you or your companions are fighting it. If it fails the saving throw, it is charmed by you until the spell ends or until you or your companions do anything harmful to it. The charmed creature regards you as a friendly acquaintance. When the spell ends, the creature knows it was charmed by you.
+                            </div>
+                            <div>
+                                <b>At Higher Levels.</b> When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st. The creatures must be within 30 feet of each other when you target them.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card z-depth-0 bordered">
+                    <div class="card-header" id="headingTwo2">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                    data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                <a href="https://www.dndbeyond.com/spells/find-familiar" class="plain" target="_blank">Find Familiar</a> <span class="spellSubtext"> Level 1 Wizard spell </span><span class="blue">100 gp</span>
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapse2" class="collapse" aria-labelledby="headingTwo2"
+                         data-parent="#accordion1">
+                        <div class="card-body">
+                            <b>Components:</b> VSM <br>
+                            <b>Range:</b> 10ft <br>
+                            <b>Ritual:</b> Yes <br>
+                            <b>Concentration:</b> No <br>
+                            <div>
+                                You gain the service of a familiar, a spirit that takes an animal form you choose: bat, cat, crab, frog (toad), hawk, lizard, octopus, owl, poisonous snake, fish (quipper), rat, raven, sea horse, spider, or weasel. Appearing in an unoccupied space within range, the familiar has the statistics of the chosen form, though it is a celestial, fey, or fiend (your choice) instead of a beast.
+
+                                Your familiar acts independently of you, but it always obeys your commands. In combat, it rolls its own initiative and acts on its own turn. A familiar can't attack, but it can take other actions as normal.
+
+                                When the familiar drops to 0 hit points, it disappears, leaving behind no physical form. It reappears after you cast this spell again.
+
+                                While your familiar is within 100 feet of you, you can communicate with it telepathically. Additionally, as an action, you can see through your familiar's eyes and hear what it hears until the start of your next turn, gaining the benefits of any special senses that the familiar has. During this time, you are deaf and blind with regard to your own senses.
+
+                                As an action, you can temporarily dismiss your familiar. It disappears into a pocket dimension where it awaits your summons. Alternatively, you can dismiss it forever. As an action while it is temporarily dismissed, you can cause it to reappear in any unoccupied space within 30 feet of you.
+
+                                You can't have more than one familiar at a time. If you cast this spell while you already have a familiar, you instead cause it to adopt a new form. Choose one of the forms from the above list. Your familiar transforms into the chosen creature.
+
+                                Finally, when you cast a spell with a range of touch, your familiar can deliver the spell as if it had cast the spell. Your familiar must be within 100 feet of you, and it must use its reaction to deliver the spell when you cast it. If the spell requires an attack roll, you use your attack modifier for the roll.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card z-depth-0 bordered">
+                    <div class="card-header" id="headingThree2">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                    data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                <a href="https://www.dndbeyond.com/spells/dust-devil" class="plain" target="_blank">Awaken</a> <span class="spellSubtext"> Level 5 Bard, Druid spell </span><span class="blue">1000 gp</span>
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapse3" class="collapse" aria-labelledby="headingThree2"
+                         data-parent="#accordion1">
+                        <div class="card-body">
+                            <b>Components:</b> VSM <br>
+                            <b>Range:</b> Touch <br>
+                            <b>Ritual:</b> No <br>
+                            <b>Concentration:</b> No <br>
+                            <div>
+                                After spending the casting time tracing magical pathways within a precious gemstone, you touch a Huge or smaller beast or plant. The target must have either no Intelligence score or an Intelligence of 3 or less. The target gains an Intelligence of 10. The target also gains the ability to speak one language you know. If the target is a plant, it gains the ability to move its limbs, roots, vines, creepers, and so forth, and it gains senses similar to a human’s. Your GM chooses statistics appropriate for the awakened plant, such as the statistics for the awakened shrub or the awakened tree.
+
+                                The awakened beast or plant is charmed by you for 30 days or until you or your companions do anything harmful to it. When the charmed condition ends, the awakened creature chooses whether to remain friendly to you, based on how you treated it while it was charmed.
+
+                                <b>Requires An agate worth at least 1,000 gp, which the spell consumes </b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card z-depth-0 bordered">
+                    <div class="card-header" id="headingThree2">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                    data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                <a href="https://www.dndbeyond.com/spells/rope-trick" class="plain" target="_blank">Rope Trick</a> <span class="spellSubtext"> Level 2 Wizard spell </span><span class="blue">350 gp</span>
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapse4" class="collapse" aria-labelledby="headingThree2"
+                         data-parent="#accordion1">
+                        <div class="card-body">
+                            <b>Components:</b> VSM <br>
+                            <b>Range:</b> Touch <br>
+                            <b>Ritual:</b> No <br>
+                            <b>Concentration:</b> No <br>
+                            <div>
+                                You touch a length of rope that is up to 60 feet long. One end of the rope then rises into the air until the whole rope hangs perpendicular to the ground. At the upper end of the rope, an invisible entrance opens to an extradimensional space that lasts until the spell ends.
+
+                                The extradimensional space can be reached by climbing to the top of the rope. The space can hold as many as eight Medium or smaller creatures. The rope can be pulled into the space, making the rope disappear from view outside the space.
+
+                                Attacks and spells can't cross through the entrance into or out of the extradimensional space, but those inside can see out of it as if through a 3-foot-by-5- foot window centered on the rope.
+
+                                Anything inside the extradimensional space drops out when the spell ends.
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="card z-depth-0 bordered">
+                    <div class="card-header" id="headingThree2">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                    data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                                <a href="https://www.dndbeyond.com/spells/hypnotic-pattern" class="plain" target="_blank">Hypnotic Pattern</a> <span class="spellSubtext"> Level 3 Wizard spell </span><span class="blue">700 gp</span>
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapse5" class="collapse" aria-labelledby="headingThree2"
+                         data-parent="#accordion1">
+                        <div class="card-body">
+                            <b>Components:</b> SM <br>
+                            <b>Range:</b> 120ft, 30ft cube <br>
+                            <b>Ritual:</b> No <br>
+                            <b>Concentration:</b> yes <br>
+                            <div>
+                                You create a twisting pattern of colors that weaves through the air inside a 30-foot cube within range. The pattern appears for a moment and vanishes. Each creature in the area who sees the pattern must make a Wisdom saving throw. On a failed save, the creature becomes charmed for the duration. While charmed by this spell, the creature is incapacitated and has a speed of 0.
+
+                                The spell ends for an affected creature if it takes any damage or if someone else uses an action to shake the creature out of its stupor.
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card z-depth-0 bordered">
+                    <div class="card-header" id="headingThree2">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                    data-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                                <a href="https://www.dndbeyond.com/spells/instant-summons" class="plain" target="_blank">Flame Blade</a> <span class="spellSubtext"> Level 2 Druid spell </span> <span class="blue">400 gp</span>
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapse6" class="collapse" aria-labelledby="headingThree2"
+                         data-parent="#accordion1">
+                        <div class="card-body">
+                            <b>Components:</b> VSM (A leaf of sumac) <br>
+                            <b>Range:</b> Self <br>
+                            <b>Ritual:</b> No <br>
+                            <b>Concentration:</b> Yes <br>
+                            <div>
+                                Spell lasts 10 minutes or until concentration is lost. Can be used as a bonus action.
+                                You evoke a fiery blade in your free hand. The blade is similar in size and shape to a scimitar, and it lasts for the duration. If you let go of the blade, it disappears, but you can evoke the blade again as a bonus action.
+
+                                You can use your action to make a melee spell attack with the fiery blade. On a hit, the target takes 3d6 fire damage.
+
+                                The flaming blade sheds bright light in a 10-foot radius and dim light for an additional 10 feet.
+
+                                <b>At Higher Levels.</b> When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d6 for every two slot levels above 2nd.
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>-->
     </div>
-    <div id="collapse1" class="collapse" aria-labelledby="headingOne2"
-      data-parent="#accordion1">
-      <div class="card-body">
-        <b>Components:</b> VS <br>
-		<b>Range:</b> 30ft <br>
-		<b>Ritual:</b> No <br>
-		<b>Concentration:</b> No <br>
-		<div>You attempt to charm a humanoid you can see within range. It must make a Wisdom saving throw, and does so with advantage if you or your companions are fighting it. If it fails the saving throw, it is charmed by you until the spell ends or until you or your companions do anything harmful to it. The charmed creature regards you as a friendly acquaintance. When the spell ends, the creature knows it was charmed by you.
-		</div>
-		<div><b>At Higher Levels.</b> When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st. The creatures must be within 30 feet of each other when you target them.
-		</div>
-	  </div>
-    </div>
-  </div>
-  <div class="card z-depth-0 bordered">
-    <div class="card-header" id="headingTwo2">
-      <h5 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-          data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-			<a href="https://www.dndbeyond.com/spells/find-familiar" class="plain" target="_blank">Find Familiar</a> <span class="spellSubtext"> Level 1 Wizard spell </span><span class="blue">100 gp</span>
-        </button>
-      </h5>
-    </div>
-    <div id="collapse2" class="collapse" aria-labelledby="headingTwo2"
-      data-parent="#accordion1">
-      <div class="card-body">
-        <b>Components:</b> VSM <br>
-		<b>Range:</b> 10ft <br>
-		<b>Ritual:</b> Yes <br>
-		<b>Concentration:</b> No <br>
-		<div> 
-		You gain the service of a familiar, a spirit that takes an animal form you choose: bat, cat, crab, frog (toad), hawk, lizard, octopus, owl, poisonous snake, fish (quipper), rat, raven, sea horse, spider, or weasel. Appearing in an unoccupied space within range, the familiar has the statistics of the chosen form, though it is a celestial, fey, or fiend (your choice) instead of a beast.
-
-		Your familiar acts independently of you, but it always obeys your commands. In combat, it rolls its own initiative and acts on its own turn. A familiar can't attack, but it can take other actions as normal.
-
-		When the familiar drops to 0 hit points, it disappears, leaving behind no physical form. It reappears after you cast this spell again.
-
-		While your familiar is within 100 feet of you, you can communicate with it telepathically. Additionally, as an action, you can see through your familiar's eyes and hear what it hears until the start of your next turn, gaining the benefits of any special senses that the familiar has. During this time, you are deaf and blind with regard to your own senses.
-
-		As an action, you can temporarily dismiss your familiar. It disappears into a pocket dimension where it awaits your summons. Alternatively, you can dismiss it forever. As an action while it is temporarily dismissed, you can cause it to reappear in any unoccupied space within 30 feet of you.
-
-		You can't have more than one familiar at a time. If you cast this spell while you already have a familiar, you instead cause it to adopt a new form. Choose one of the forms from the above list. Your familiar transforms into the chosen creature.
-
-		Finally, when you cast a spell with a range of touch, your familiar can deliver the spell as if it had cast the spell. Your familiar must be within 100 feet of you, and it must use its reaction to deliver the spell when you cast it. If the spell requires an attack roll, you use your attack modifier for the roll.
-		</div>
-		</div>
-      </div>
-  </div>
-  <div class="card z-depth-0 bordered">
-    <div class="card-header" id="headingThree2">
-      <h5 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-          data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-			<a href="https://www.dndbeyond.com/spells/dust-devil" class="plain" target="_blank">Awaken</a> <span class="spellSubtext"> Level 5 Bard, Druid spell </span><span class="blue">1000 gp</span>
-        </button>
-      </h5>
-    </div>
-    <div id="collapse3" class="collapse" aria-labelledby="headingThree2"
-      data-parent="#accordion1">
-      <div class="card-body">
-		<b>Components:</b> VSM <br>
-		<b>Range:</b> Touch <br>
-		<b>Ritual:</b> No <br>
-		<b>Concentration:</b> No <br>
-		<div> 
-		After spending the casting time tracing magical pathways within a precious gemstone, you touch a Huge or smaller beast or plant. The target must have either no Intelligence score or an Intelligence of 3 or less. The target gains an Intelligence of 10. The target also gains the ability to speak one language you know. If the target is a plant, it gains the ability to move its limbs, roots, vines, creepers, and so forth, and it gains senses similar to a human’s. Your GM chooses statistics appropriate for the awakened plant, such as the statistics for the awakened shrub or the awakened tree.
-		
-		The awakened beast or plant is charmed by you for 30 days or until you or your companions do anything harmful to it. When the charmed condition ends, the awakened creature chooses whether to remain friendly to you, based on how you treated it while it was charmed.
-
-		<b>Requires An agate worth at least 1,000 gp, which the spell consumes </b>
-		</div>
-      </div>
-    </div>
-  </div>
-
- <div class="card z-depth-0 bordered">
-    <div class="card-header" id="headingThree2">
-      <h5 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-          data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-			<a href="https://www.dndbeyond.com/spells/rope-trick" class="plain" target="_blank">Rope Trick</a> <span class="spellSubtext"> Level 2 Wizard spell </span><span class="blue">350 gp</span>
-        </button>
-      </h5>
-    </div>
-    <div id="collapse4" class="collapse" aria-labelledby="headingThree2"
-      data-parent="#accordion1">
-      <div class="card-body">
-		<b>Components:</b> VSM <br>
-		<b>Range:</b> Touch <br>
-		<b>Ritual:</b> No <br>
-		<b>Concentration:</b> No <br>
-		<div> 
-		You touch a length of rope that is up to 60 feet long. One end of the rope then rises into the air until the whole rope hangs perpendicular to the ground. At the upper end of the rope, an invisible entrance opens to an extradimensional space that lasts until the spell ends.
-
-		The extradimensional space can be reached by climbing to the top of the rope. The space can hold as many as eight Medium or smaller creatures. The rope can be pulled into the space, making the rope disappear from view outside the space.
-
-		Attacks and spells can't cross through the entrance into or out of the extradimensional space, but those inside can see out of it as if through a 3-foot-by-5- foot window centered on the rope.
-
-		Anything inside the extradimensional space drops out when the spell ends.
-
-		</div>
-      </div>
-    </div>
-  </div>
 
 
- <div class="card z-depth-0 bordered">
-    <div class="card-header" id="headingThree2">
-      <h5 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-          data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
-			<a href="https://www.dndbeyond.com/spells/hypnotic-pattern" class="plain" target="_blank">Hypnotic Pattern</a> <span class="spellSubtext"> Level 3 Wizard spell </span><span class="blue">700 gp</span>
-        </button>
-      </h5>
-    </div>
-    <div id="collapse5" class="collapse" aria-labelledby="headingThree2"
-      data-parent="#accordion1">
-      <div class="card-body">
-		<b>Components:</b> SM <br>
-		<b>Range:</b> 120ft, 30ft cube <br>
-		<b>Ritual:</b> No <br>
-		<b>Concentration:</b> yes <br>
-		<div> 
-		You create a twisting pattern of colors that weaves through the air inside a 30-foot cube within range. The pattern appears for a moment and vanishes. Each creature in the area who sees the pattern must make a Wisdom saving throw. On a failed save, the creature becomes charmed for the duration. While charmed by this spell, the creature is incapacitated and has a speed of 0.
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
 
-		The spell ends for an affected creature if it takes any damage or if someone else uses an action to shake the creature out of its stupor.
-
-		</div>
-      </div>
-    </div>
-  </div>
-
- <div class="card z-depth-0 bordered">
-    <div class="card-header" id="headingThree2">
-      <h5 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-          data-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
-			<a href="https://www.dndbeyond.com/spells/instant-summons" class="plain" target="_blank">Flame Blade</a> <span class="spellSubtext"> Level 2 Druid spell </span> <span class="blue">400 gp</span>
-        </button>
-      </h5>
-    </div>
-    <div id="collapse6" class="collapse" aria-labelledby="headingThree2"
-      data-parent="#accordion1">
-      <div class="card-body">
-		<b>Components:</b> VSM (A leaf of sumac) <br>
-		<b>Range:</b> Self <br>
-		<b>Ritual:</b> No <br>
-		<b>Concentration:</b> Yes <br>
-		<div> 
-		Spell lasts 10 minutes or until concentration is lost. Can be used as a bonus action. 
-		You evoke a fiery blade in your free hand. The blade is similar in size and shape to a scimitar, and it lasts for the duration. If you let go of the blade, it disappears, but you can evoke the blade again as a bonus action.
-
-		You can use your action to make a melee spell attack with the fiery blade. On a hit, the target takes 3d6 fire damage.
-
-		The flaming blade sheds bright light in a 10-foot radius and dim light for an additional 10 feet.
-
-		<b>At Higher Levels.</b> When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d6 for every two slot levels above 2nd.
-
-		</div>
-      </div>
-    </div>
-  </div>
-</div>
-			
-		</div>
-	</div>
-
-
-<script>
-$(document).ready(function(){
-  $('[data-toggle="tooltip"]').tooltip(); 
-});
-
-</script>
+    </script>
 </body>
 </html>

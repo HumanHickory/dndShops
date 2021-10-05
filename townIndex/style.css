@@ -1,0 +1,78 @@
+:root{
+    --headerText: 'Bonheur Royale', cursive;
+    --bodyText: 'Josefin Sans', sans-serif;
+}
+
+body {
+    background-color: #d9d9d9;
+}
+
+h1, h2{
+    font-family: var(--headerText)
+}
+
+h1 {
+    font-size: 7rem;
+}
+
+h2{
+    font-size: 3rem;
+}
+
+h2, h3, h4, h5 {
+    font-family: var(--bodyText);
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.wrapper {
+    text-align: center;
+    margin-top: 2rem;
+    border: none;
+}
+
+.img-holder {
+    background: #ECE9E6;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: .5rem;
+    box-shadow: 5px 5px 10px #888888;
+}
+
+.img-holder>img {
+    width: 80%;
+    height: 80%;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    color: black;
+}
+
+button {
+    background-color: inherit;
+}
+
+
+.img-holder:hover {
+    box-shadow: 10px 10px 10px #888888;
+    transition: box-shadow .3s;
+}
+
+
+.white {
+    color: white;
+}
+
+.navbar{
+    background-color:black;
+}

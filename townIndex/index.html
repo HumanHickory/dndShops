@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link href="style.css" rel="stylesheet">
+    <script src="../global.js"></script>
+    <script src="script.js"></script>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
+
+
+    <title>Shops Directory</title>
+
+</head>
+
+<body>
+    <div class="container" style="margin-top: 10vh;">
+        <div class="text-center row pb-5">
+            <h1 class="col-12" id="intro"></h1>
+            <h2 class="col-12"> Visit Shops </h2>
+            <button class="wrapper col-6 col-xl-3" id="EpicFlail" data-aos="zoom-in" data-aos-delay="100"
+                onclick="EpicFlail()">
+                <div class="img-holder">
+                    <img src="../img/epicFlail/flail.png" id="img1">
+                    <div class="hidden text-center pt-4 pb-3" id="hidden1">
+                        <h5 class="link"> Epic Flail </h5>
+                    </div>
+                </div>
+            </button>
+
+            <button class="wrapper col-6 col-xl-3" id="ThroinsGauntlet" data-aos="zoom-in" data-aos-delay="300"
+                onclick="ThroinsGauntlet()">
+                
+                <div class="img-holder">
+                    <img src="../img/Armor/halfPlate.png" id="img2">
+                    <div class="hidden text-center pt-4 pb-3" id="hidden2">
+                        <h5 class="link"> Throin's Gauntlet </h5>
+                    </div>
+                </div>
+            </button>
+
+            <button class="wrapper col-6 col-xl-3" id="GnomeDepot" data-aos="zoom-in" data-aos-delay="100"
+                onclick="GnomeDepot()">
+                <div class="img-holder">
+                    <img src="../img/icons/gnome.png" id="img3">
+                    <div class="hidden text-center pt-4 pb-3" id="hidden3">
+                        <h5 class="link"> Gnome Depot </h5>
+                    </div>
+                </div>
+            </button>
+
+            <button class="wrapper col-6 col-xl-3" id="VictoriousSecret" data-aos="zoom-in" data-aos-delay="200"
+                onclick="VictoriousSecret()">
+                <div class="img-holder">
+                    <img src="../img/ClothesMinded/costume.png" id="img4">
+                    <div class="hidden text-center pt-4 pb-3" id="hidden4">
+                        <h5 class="link"> Victorious Secret </h5>
+                    </div>
+                </div>
+            </button>
+
+
+            <button class="wrapper col-6 col-xl-3" id="FiveFingers" data-aos="zoom-in" data-aos-delay="100"
+                onclick="FiveFingers()">
+                <div class="img-holder">
+                    <img src="../img/icons/Nott.png" id="img6">
+                    <div class="hidden text-center pt-4 pb-3" id="hidden6">
+                        <h5 class="link"> Five Fingers </h5>
+                    </div>
+                </div>
+            </button>
+
+            <button class="wrapper col-6 col-xl-3" id="BachInAMinuet" data-aos="zoom-in" data-aos-delay="200"
+                onclick="BachInAMinuet()">
+                <div class="img-holder">
+                    <img src="../img/ViolinDelights/viol.png" id="img7">
+                    <div class="hidden text-center pt-4 pb-3" id="hidden7">
+                        <h5 class="link"> Bach in a Minuet </h5>
+                    </div>
+                </div>
+            </button>
+
+            <button class="wrapper col-6 col-xl-3" id="EyeOfTheBeholder" data-aos="zoom-in" data-aos-delay="300"
+                onclick="EyeOfTheBeholder()">
+                <div class="img-holder">
+                    <img src="../img/EoB/beholder.png" id="img8">
+                    <div class="hidden text-center pt-4 pb-3" id="hidden8">
+                        <h5 class="link"> Eye of the Beholder </h5>
+                    </div>
+                </div>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        AOS.init({
+            easing: 'ease-out-back',
+            duration: 1000
+        });
+
+    </script>
+
+</body>
+
+</html>

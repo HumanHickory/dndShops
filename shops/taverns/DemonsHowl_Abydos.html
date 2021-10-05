@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Eagle+Lake&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+    <style>
+
+        :root {
+            --main: #12151c;
+    --primary: #661b1c;
+    --secondary: #531516;
+    --tertiary: #1b222c;
+    --quaternary: #191d26;
+    --fontHead: 'Eagle Lake', cursive;
+    --fontBody: 'Nunito', sans-serif;
+        }
+
+
+
+
+        body {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.7rem;
+            background: var(--main);
+            color: white;
+        }
+
+        #header {
+            position: absolute;
+            z-index: 1000;
+            top: 210px;
+            left: 25%;
+            color: black;
+            text-shadow: 2px 3px 2px gray;
+        }
+
+        hr {
+            border: 8px solid var(--primary);
+            margin-top: 0px;
+        }
+
+        .h3, h3 {
+            color: white;
+        }
+
+        .col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+            padding-right: 0 !important;
+            padding-left: 0 !important;
+        }
+
+        a {
+            color: white;
+        }
+
+            a:hover {
+                color: var(--secondary);
+                text-decoration: none;
+            }
+
+        .backdrop {
+            background-color: rgba(255, 255, 255, .7);
+            padding-top: .6em;
+            padding-bottom: .4em;
+        }
+
+        h1, .h1 {
+            font-size: 6rem !important;
+        }
+
+        h2, .h2 {
+            font-size: 3rem !important;
+        }
+
+        .parallax {
+            background-image: url("../../img/hero/abydos-tavern.jpg");
+            height: 600px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .test {
+            border: 2px solid red;
+        }
+
+        .primary {
+            color: var(--primary);
+        }
+
+        .secondary {
+            color: var(--secondary);
+        }
+
+        .secondaryBG {
+            background-color: var(--secondary);
+        }
+
+
+        .tertiary {
+            color: var(--tertiary);
+        }
+
+        .tertiaryBG {
+            background-color: var(--tertiary);
+        }
+
+        @media only screen and (max-width: 1400px) and (min-width: 1025px) {
+            .laptop {
+                font-size: 1.2rem !important;
+            }
+        }
+
+        @media only screen and (max-width: 1024px) {
+            #header {
+                left: 15%;
+            }
+        }
+
+        .col-xs-5ths,
+        .col-sm-5ths,
+        .col-md-5ths,
+        .col-lg-5ths {
+            position: relative;
+            min-height: 1px;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+        .col-xs-5ths {
+            width: 20%;
+            float: left;
+        }
+
+        @media (min-width: 768px) {
+            .col-sm-5ths {
+                width: 20%;
+                float: left;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .col-md-5ths {
+                width: 20%;
+                float: left;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .col-lg-5ths {
+                width: 20%;
+                float: left;
+            }
+        }
+    </style>
+
+
+
+    <title>Demon's Howl Tavern</title>
+</head>
+<body>
+
+    <h1 id="header">Demon's Howl Tavern</h1>
+    <div class="parallax"></div>
+
+    <hr />
+
+    <div class="container">
+        <div class="row text-center">
+
+            <a class="col-sm-5ths" href="#Specialties">
+                Specialties
+            </a>
+            <a class="col-sm-5ths" href="#Soups">
+                Soups and Bakery
+            </a>
+            <a class="col-sm-5ths" href="#drinks">
+                Beverages
+            </a>
+
+        </div>
+        <div class="row">
+
+
+
+            <h2 class="col-12 my-4" id="Specialties"> Specialties </h2>
+
+            <div class="col-5 d-none d-xl-block" data-aos="fade-right">
+                <img src="../../img/food/cactus.jpg" style="width: 75%;" />
+            </div>
+
+
+            <div class="col-xl-7 col-12" data-aos="fade-left">
+                <div class="col-12">
+                    <b>Desert Heart</b> <span class="primary">5 sp</span>
+                </div>
+                <div class="col-12">
+                    <small>Cactus, imported tomatoes, and goat cheese. </small>
+                </div>
+
+                <div class="col-12 mt-3">
+                    <b>Hallowed Cries </b> <span class="primary">10 sp</span>
+                </div>
+                <div class="col-12">
+                    <small><span class="primary">HOT! </span>Goat meat cooked with Abydanisian Peppers. </small>
+                </div>
+
+                <div class="col-12 mt-3">
+                    <b>Sunken Hope</b><span class="primary"> 10 sp</span>
+                </div>
+                <div class="col-12">
+                    <small>Salted Deep Rothé, with roasted cactus on the side. </small>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <div class="container-fluid mt-4  d-xl-none">
+        <div class="col-12">
+            <img src="../../img/food/cactus.jpg" style="width: 100%;" />
+        </div>
+    </div>
+
+
+    <div class="container-fluid mt-xl-5 pb-xl-4 secondaryBG">
+
+        <div class="row text-center">
+
+
+            <h2 class="col-12 my-4" id="Soups"> Soups </h2>
+
+            <div class="col-4 offset-2 mb-3" data-aos="fade-right">
+                <h3 class="col-12"><b>Soup</b></h3>
+                <div class="col-12 mt-3">
+                    <b>Rabbit Stew</b><span style="Color: black"> 4 sp</span>
+                </div>
+                <div class="col-12">
+                    <small>Rabbit in broth.</small>
+                </div>
+                <div class="col-12 mt-3">
+                    <b>Dry Desert Lime </b><span style="Color: black"> 3 sp</span>
+                </div>
+                <div class="col-12">
+                    <small> A citrus soup with a dry aftertaste.</small>
+                </div>
+                <div class="col-12 mt-3">
+                    <b>Abydanisian Peppers and Lime </b><span style="Color: black"> 3 sp</span>
+                </div>
+                <div class="col-12">
+                    <small><span style="Color: black"><b>HOT!</b></span> Hot and sour soup.</small>
+                </div>
+
+            </div>
+
+            <div class="col-4 mb-3" data-aos="fade-left">
+                <div class="col-12 mt-3">
+                    <b>Demon's Bread</b><span style="Color: black"> 1 sp</span>
+                </div>
+                <div class="col-12">
+                    <small>Soft flatbread with a slight liquorish taste.</small>
+                </div>
+
+                <div class="col-12 mt-3">
+                    <b>Desert Pie</b><span style="Color: black"> 1 sp</span>
+                </div>
+                <div class="col-12">
+                    <small>A wheat crust filled with cream.</small>
+                </div>
+
+                <div class="col-12 mt-3">
+                    <b>Cactus Milk</b><span style="Color: black"> 2 sp</span>
+                </div>
+                <div class="col-12">
+                    <small>A sweet drink that is said to keep you hydrated for an entire day.</small>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+  
+
+
+    <div class="container-fluid pb-5 tertiaryBG ">
+        <div class="row">
+            <div class="text-center col-12">
+                <h2 class="col-12 my-4" id="drinks"> Beverages </h2>
+            </div>
+            <div class="col-xl-3 offset-xl-1 col-8 offset-2 text-justify" style="font-size: .8em;">
+                <h3 class="col-12 mt-5 mt-3"><b>Ale</b> <span class="primary"> 5 cp / pint</span></h3>
+                <div class="col-12"><b>Demon's Howl</b><small> Made in Abydos, a heavy red ale brewed in a demon's blood cask.</small></div>
+                <div class="col-12"><b>Warhammers Mark</b><small> A nearly black stout brewed by the dwarves of Sandstone.</small></div>
+            </div>
+            <div class="col-xl-3 ml-xl-5 col-8 offset-2 text-justify" style="font-size: .8em;">
+                <h3 class="col-12 mt-5 mt-3"><b>Wine</b><span class="primary"> 5 cp / pint</span></h3>
+                <div class="col-12"><b>Dry Desert</b><small> A sour white wine brewed in Abydos </small></div>
+                <div class="col-12"><b>Wish of Frost</b><small> A white wine that is always feels cold, no matter how long it is heated. <b>Warning: </b> wine does heat up and will burn you, it just won't feel like it until it's too late.</small></div>
+                
+            </div>
+
+            <div class="col-xl-3 ml-xl-5  col-8 offset-2 text-justify" style="font-size: .8em;">
+                <h3 class="col-12 mt-5 mt-3"><b>Mixed Drinks</b><span class="primary"> 8 cp / pint</span></h3>
+                <div class="col-12"><b>Warlock's Sweat </b><small> A very bitter drink that will induce demonic hallucinations. </small></div>
+                <div class="col-12"><b>Abyssal Escape </b><small> A spicy drink made from peppers and whiskey. </small></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+
+    </script>
+
+</body>
+
+
+</html>

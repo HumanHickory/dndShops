@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script src="directory.js"></script>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <title>Arynsport Shops Directory</title>
+
+    <style>
+
+        body {
+            background-color: #d9d9d9;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Cinzel', serif;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .test {
+            border: 2px solid red;
+        }
+
+        .wrapper {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .img-holder {
+            background: #ECE9E6; /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6); /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            padding: .5rem;
+            box-shadow: 5px 5px 10px #888888;
+        }
+
+            .img-holder > img {
+                width: 80%;
+                height: 80%;
+            }
+
+        a {
+            color: black;
+        }
+
+            a:hover {
+                color: black;
+            }
+
+        .img-holder:hover {
+            box-shadow: 10px 10px 10px #888888;
+            transition: box-shadow .3s;
+        }
+
+        .hero-header-container {
+            background: url("../img/hero/hero-img-arynsport.jpg") no-repeat center;
+            background-size: cover;
+            height: 100vh;
+            position: relative;
+        }
+
+            .hero-header-container:before {
+                background: linear-gradient(to bottom, rgba(0,0,0,.3), rgba(0,0,0,.5));
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+            }
+
+        .white {
+            color: white;
+        }
+
+        .headerText {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        h1 {
+            font-size: 7rem;
+        }
+
+        @keyframes pop-in {
+            0% {
+                opacity: 0;
+                transform: translateY(-4rem) scale(.8);
+            }
+
+            100% {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        @keyframes rotate-up {
+            100% {
+                transform: rotateZ(-4deg);
+            }
+        }
+
+        .animate-pop-in {
+            animation: pop-in .6s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
+            opacity: 0;
+        }
+
+        .header-title {
+            animation-delay: .5s;
+        }
+
+        .header-title2 {
+            animation-delay: .7s;
+        }
+
+        .header-subtitle {
+            animation-delay: .9s;
+        }
+
+        header {
+            align-items: center;
+            display: block;
+            overflow: hidden;
+            position: relative;
+            transform-style: preserve-3d;
+            perspective: 100px;
+        }
+
+            header:after {
+                animation: rotate-up .5s .5s cubic-bezier(0, 0.5, 0, 1) forwards;
+                background: #d9d9d9;
+                content: "";
+                height: 40rem;
+                left: -5%;
+                position: absolute;
+                right: -5%;
+                top: 90%;
+                transform-origin: 0 0;
+                z-index: 0;
+            }
+
+
+        .rotatingText {
+            color: #f2d200;
+        }
+
+        @media only screen and (max-width: 500px) {
+            .hero-header-container {
+                background: url("../img/hero/hero-img-sonridge.jpg") no-repeat center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="hero-header-container">
+            <div class="headerText">
+                <h1 class="white header-title animate-pop-in"> Shops </h1>
+                <h1 class="white header-title2 animate-pop-in"> Directory </h1>
+                <h2 class="white header-subtitle animate-pop-in"> Welcome to <span class="rotatingText" id="rotatingText">D&amp;D Shops </span></h2>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="text-center row pb-5">
+            <h2 class="col-12"> Visit Shops </h2> 
+            <a class="wrapper col-6 col-xl-3" id="1" data-aos="zoom-in" data-aos-delay="100" href="../shops/EpicFlail.html?city=Arynsport">
+                <div class="img-holder">
+                    <img src="../img/epicFlail/flail.png" id="img1">
+                    <div class="hidden text-center pt-4 pb-3" id="hidden1">
+                        <h5 class="link"> Epic Flail </h5>
+                    </div>
+                </div>
+            </a>
+
+            <a class="wrapper col-6 col-xl-3" id="2" data-aos="zoom-in" data-aos-delay="300" href="../shops/ThroinsGauntlet.html?city=Arynsport">
+                <div class="img-holder">
+                    <img src="../img/Armor/halfPlate.png" id="img2">
+                    <div class="hidden text-center pt-4 pb-3" id="hidden2">
+                        <h5 class="link"> Throin's Gauntlet </h5>
+                    </div>
+                </div>
+            </a>
+
+            <a class="wrapper col-6 col-xl-3" id="3" data-aos="zoom-in" data-aos-delay="100" href="../shops/GnomeDepot.html?city=Arynsport">
+                <div class="img-holder">
+                    <img src="../img/icons/gnome.png" id="img3">
+                    <div class="hidden text-center pt-4 pb-3" id="hidden3">
+                        <h5 class="link"> Gnome Depot </h5>
+                    </div>
+                </div>
+            </a>
+
+            <a class="wrapper col-6 col-xl-3" id="4" data-aos="zoom-in" data-aos-delay="200" href="../shops/VictoriousSecret.html">
+                <div class="img-holder">
+                    <img src="../img/ClothesMinded/costume.png" id="img4">
+                    <div class="hidden text-center pt-4 pb-3" id="hidden4">
+                        <h5 class="link"> Victorious Secret </h5>
+                    </div>
+                </div>
+            </a>
+
+
+            <a class="wrapper col-6 col-xl-3" id="6" data-aos="zoom-in" data-aos-delay="100" href="../shops/FiveFinger's.html">
+                <div class="img-holder">
+                    <img src="../img/icons/Nott.png" id="img6">
+                    <div class="hidden text-center pt-4 pb-3" id="hidden6">
+                        <h5 class="link"> Five Fingers </h5>
+                    </div>
+                </div>
+            </a>
+
+            <a class="wrapper col-6 col-xl-3" id="7" data-aos="zoom-in" data-aos-delay="200" href="../shops/BachInAMinuet.html">
+                <div class="img-holder">
+                    <img src="../img/ViolinDelights/viol.png" id="img7">
+                    <div class="hidden text-center pt-4 pb-3" id="hidden7">
+                        <h5 class="link"> Bach in a Minuet </h5>
+                    </div>
+                </div>
+            </a>
+
+            <a class="wrapper col-6 col-xl-3" id="8" data-aos="zoom-in" data-aos-delay="300" href="../shops/EyeOfTheBeholder.html">
+                <div class="img-holder">
+                    <img src="../img/EoB/beholder.png" id="img8">
+                    <div class="hidden text-center pt-4 pb-3" id="hidden8">
+                        <h5 class="link"> Eye of the Beholder </h5>
+                    </div>
+                </div>
+            </a>
+
+
+        </div>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init({
+            easing: 'ease-out-back',
+            duration: 1000
+        });
+
+
+        $(document).ready(function () {
+            var rt = $('#rotatingText');
+            var i = 1;
+
+            while (i < 40) {
+                rt.fadeOut(3000, function () {
+                    rt.text("Arynsport").css('color', 'aqua')
+                }).fadeIn(3000);
+
+                rt.fadeOut(3000, function () {
+                    rt.text("D&D Shops").css('color', '#f2d200')
+                }).fadeIn(3000);
+
+                i++;
+
+            }
+        });
+    </script>
+</body>
+</html>

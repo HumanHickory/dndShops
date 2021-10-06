@@ -1,0 +1,188 @@
+﻿<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <!--Bootstrap and JQuery -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+
+    <script src="../../global.js"></script>
+    <script src="JQuery/Script.js"></script>
+    <link rel="stylesheet" href="Site.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandstone</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,700&family=Lato&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/75675e6492.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+
+    <!------------------------------------------------- Hero IMG ---------------------------------------------->
+
+    <div class="main">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="text-center" style="margin-top: 50%;">
+                    <h1 class="ml16">Sandstone</h1>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <img src="CityImg/CityImage.jpg" alt="Sandstone City Image" width="100%" height="600">
+            </div>
+        </div>
+    </div>
+
+    <!------------------------------------------------- Center Nav ---------------------------------------------->
+    <div class="tertiary">
+        <div class="container pt-5">
+            <div class="row">
+                <div class="col-lg-3 col-6 text-center">
+                    <a href="#history">
+                        <span style="font-size: 48px;">
+                            <i class="fas fa-book-open"></i>
+                        </span>
+                        <h5>Our Kingdom</h5>
+                        <p>Read more about Sandstone</p>
+                    </a>
+                </div>
+
+
+                <div class="col-lg-3 col-6 text-center">
+                    <a href="#government">
+                        <span style="font-size: 48px;">
+                            <i class="fas fa-flag"></i>
+                        </span>
+                        <h5>Government</h5>
+                        <p>Read about King Gardain Fireforge </p>
+                    </a>
+                </div>
+
+                <div class="col-lg-3 col-6 text-center">
+                    <a href="#news">
+                        <span style="font-size: 48px;">
+                            <i class="fas fa-newspaper"></i>
+                        </span>
+                        <h5>News</h5>
+                        <p>Local News</p>
+                    </a>
+                </div>
+
+                <div class="col-lg-3 col-6 text-center">
+                    <a href="">
+                        <span style="font-size: 48px;">
+                            <i class="fas fa-beer"></i>
+                        </span>
+                        <h5>Tavern</h5>
+                        <p>Indulge in the finest dwarven ale</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!------------------------------------------------- History ---------------------------------------------->
+
+    <div class="container my-5 text-center" id="history">
+        <h2>Our Kingdom</h3>
+        <p><b>We are the Dwarves of the South. Of the Red Desert. Our ancestors were proud and strong, building their
+            kingdom at the foothills of the mountains,
+            while our brothers in the north hide tucked away within it. Our fortress is carved from the lower mountain
+            hills into glorious monuments for all to see,
+            and our mine runs deeper into the earth than any other dwarven kingdom.
+        </b></p>
+    </div>
+
+    <div class="container py-5 primary curved">
+        <h5>We do NOT allow magic in our kingdom without written permission from the King himself.</h5>
+    </div>
+
+
+    <div class="container pt-5 " id="government">
+        <h2>King Gardain</h2>
+        <div class="row">
+            <div class="col-lg-7">
+                <p>
+                King Gardain Fireforge son of Morgran is our Dwarven King of the Red Desert. He and his wife, Yilda, and their son Sorgrin
+                work tirelessly to keep our fortress safe and thriving. Under his leadership, we have brokered a deal with the Spider Queen 
+                and the Demon Warlocks of Abydos to ensure peace and prosperity for all.
+            </p>
+            <p>However, our generous and agreable king understands that demons and spiders cannot be trusted, so we have perfected the art of 
+                war alongside the art of diplomacy.
+            </p>
+            </div>
+            <div class="col-lg-5">
+                <img src="CityImg/KingGardain.png" alt="KingGardain" width="100%" height="600">
+            </div>
+        </div>
+    </div>
+
+<div class="secondary" id="news">
+    <div class="container pt-5">
+        <div class="text-center">
+           <h2>News</h2>         
+        </div>
+
+        <div id="carouselContent" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselContent" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselContent" data-slide-to="1"></li>
+                <li data-target="#carouselContent" data-slide-to="2"></li>
+              </ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active justified p-4">
+                    <h3>Path to Vik’il’skra Closed</h3>
+                     <p>The tunnel to Vik’il’skra, City of Spiders, has experienced a cave in. Although problematic, fixing this tunnel is not our first priority.
+                        However, The Abydanisian Warlocks are still demanding we escort their criminals to the the Drow city, and we are certain the Spider Queen
+                        is not taking the cave in very well, as it blocks her people off from the surface world. 
+                     </p>
+                     <p>
+                         For this reason, we are choosing to continue to postphone reconstruction of the tunnel. Although diplomacy is important to us, we will not
+                         bend to the needs and desires of other kingdoms who would treat us like the slaves they trade and sell.
+                     </p>
+                </div>
+                <div class="carousel-item justified p-4">        
+                    <h3>Lightning Storms</h3>
+                    <p>
+                        The Lightning storms in the Valley of the Gods has been spreading. Friends in Kamininari believes there is a Blue Dragon living in the desert mountians,
+                        and as he grows larger, unchallenged, his fearsome lightning storms will spread.
+                    </p>
+                    <p>
+                        The Kamininari are unaffected by the lightning but the dragon-king Nezzarred has offered the help of his men if we decide to search for the beast. 
+                        We have not heard from the Warlock Counsel of Abydos if they are willing to join together to fight this evil. Queen Zilssaria, the Spider Queen, will 
+                        not come to our aid. 
+                    </p>
+                </div>              
+                
+                <div class="carousel-item justified p-4">     
+                    <h3>Lost in the Desert</h3>             
+                    <p>Many of you heard that Medendivestrall has acknowledged the great and powerful King Gardain as a righteous, just, and diplomatic king.
+                        Seven suns ago, we sent five of our men into the desert to retrieve his gift to King Gardain. 
+                    </p>
+                    <p>However, none of these men have returned.</p>
+                    <p>It is our belief that Anuchuit Tribesmen have captured and likely killed our clansmen. Although it is possible that the Abydanisians Tieflings
+                        may have intercepted our men, it is unlike them to cause disagreements with our kingdom, unless provoked. King Gardain is setting up a search party 
+                        to locate these men.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>

@@ -4,153 +4,21 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 
-
-
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <link href="https://fonts.googleapis.com/css?family=EB+Garamond&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet">
+
+
+<script src="../global.js"></script>
+<script src="js/EyeOfTheBeholder.js"></script>
+<link href="css/EyeOfTheBeholder.css" rel="stylesheet">
+
 <style>
 
-    body {
-        font-family: 'EB Garamond', serif;
-    }
-
-    h1 {
-        font-size: 4.5rem;
-        color: white;
-    }
-
-    .magic {
-        font-family: 'Great Vibes', cursive;
-        font-size: 2.5rem;
-    }
-
-
-    .test {
-        border: 2px solid red;
-    }
-
-    .spellSubtext {
-        font-weight: normal;
-    }
-
-    .btn-link {
-        font-weight: bold;
-        color: black !important;
-    }
-
-    a.plain {
-        font-weight: bold;
-        color: black !important;
-        font-size: 1rem;
-    }
-
-    .header {
-        position: absolute;
-        z-index: 1000;
-        top: 210px;
-        left: 35%;
-        color: white;
-    }
-
-    .parallax {
-        /* The image used */
-        background-image: url("../img/hero/eob-hero.jpg");
-        /* Set a specific height */
-        height: 600px;
-        /* Create the parallax scrolling effect */
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-
-    .parallaxBubble {
-        /* The image used */
-        background-image: url("../img/EoB/bubblesBig.png");
-        /* Create the parallax scrolling effect */
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-
-    .blue {
-        color: rgba(48, 62, 219, 1) !important;
-    }
-
-    .black {
-        color: black;
-    }
-
-    p, ul {
-        font-size: 1.5rem;
-    }
-
-    li.noStyle {
-        list-style: none;
-    }
-
-    a {
-        font-size: 1.5rem;
-        color: #0f03ba;
-    }
-
-
-        a:hover {
-            color: black;
-        }
-
-    .outline {
-        box-shadow: 4px 4px 10px rgba(0, 0, 0, .4);
-        border-radius: 7px;
-    }
-
-    .nav {
-        background-image: linear-gradient(to right, #9cecfb, #65c7f7, #0052d4);
-        color: white;
-        box-shadow: 6px 4px 15px rgba(0, 0, 0, .5);
-        text-shadow: 4px 4px 10px rgba(255, 255, 255, .4);
-    }
-
-    .nav-link.active {
-        border: none;
-        background-color: rgba(0, 0, 0, 0) !important;
-        font-weight: bold;
-        text-decoration: underline double;
-    }
-
-    .nav-link:hover {
-        border: none;
-        color: white;
-    }
-
-    @media only screen and (max-width: 1400px) and (min-width: 1025px) {
-        p, a {
-            font-size: 1.7rem !important;
-        }
-    }
-
-    @media only screen and (max-device-width: 1366px) {
-        .parallax {
-            background-attachment: scroll;
-        }
-
-        a {
-            font-size: 2rem;
-        }
-
-        p {
-            font-size: 2rem;
-        }
-
-        h3 {
-            font-size: 2.5rem;
-        }
-    }
+   
 </style>
 <title>Eye of the Beholder</title>
 </head>
@@ -161,8 +29,8 @@
         </div>
     </div>
     <div class="parallax"></div>
-    <div class="container-fluid" style="background-image: radial-gradient(#9cecfb, #65c7f7, #0052d4);">
-        <div class="row mt-0">
+    <div class="container-fluid primaryBg">
+                <div class="row mt-0">
             <ul class="nav nav-tabs text-center col-12" id="myTab" role="tablist">
                 <li class="nav-item col-4 col-xl-3 offset-xl-1">
                     <a class="nav-link active" id="arcane-tab" data-toggle="tab" href="#arcane" role="tab" aria-controls="arcane" aria-selected="true">Arcane Focus</a>

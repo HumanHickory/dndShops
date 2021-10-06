@@ -23,6 +23,8 @@ function getUrlParameter(sParam) {
 };
 
 
+
+
 function BuildHeader() {
     var CityName = getUrlParameter('city');
     var Tavern = GetTavern(CityName);
@@ -63,6 +65,37 @@ function BuildHeader() {
 
 
     nav += "</ul>";
+    nav += "</div>";
+
+    //Right Hand Side
+    nav += "<div class='collapse navbar-collapse flex-grow-1 text-right' id='myNavbar'>";
+    nav += "<ul class='navbar-nav ml-auto flex-nowrap'>";
+    nav += "<li class='nav-item'>";
+    nav += "<a href='" + root + "index.html' class='nav-link m-2 menu-item'>Town Directory</a>";
+    nav += "</li>";
+    nav += "</ul>";
+    nav += "</div>";
+
+    nav += "</nav>";
+
+    return nav;
+
+}
+
+
+
+
+
+function BuildMiniHeader() {
+    var CityName = getUrlParameter('city');
+    var root = getRoot();
+
+
+    var nav = "<nav class='navbar fixed-top navbar-expand-lg navbar-dark'>";
+    nav += "<a class='navbar-brand' href='" + root + "Cities/" + CityName + "/index.html?city=" + CityName + "'>" + CityName + "</a>";
+    nav += "<button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>";
+    nav += "<span class='navbar-toggler-icon'></span>";
+    nav += "</button>";
     nav += "</div>";
 
     //Right Hand Side

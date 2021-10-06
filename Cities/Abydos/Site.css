@@ -10,7 +10,6 @@
 
 
 body {
-    background-color: var(--main);
     font-family: var(--fontBody);
 }
 
@@ -74,6 +73,10 @@ h1, h2, h3, h4, h5 {
 .curved {
     border-radius: 5px;
 	padding: 10px;
+}
+
+.main {
+    background-color: var(--main);
 }
 
 .primary {

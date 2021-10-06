@@ -1,3 +1,33 @@
+$(document).ready(function () {
+
+    $('#kitsTable').DataTable({
+        responsive: true,
+        columnDefs: [
+            { responsivePriority: 1, targets: 0 },
+            { responsivePriority: 2, targets: -1 }
+        ]
+    });
+    $('#wildernessTable').DataTable({
+        responsive: true,
+        columnDefs: [
+            { responsivePriority: 1, targets: 0 },
+            { responsivePriority: 2, targets: -1 }
+        ]
+    });
+    $('#generalTable').DataTable({
+    });
+    $('#storageTable').DataTable({
+        responsive: true,
+        columnDefs: [
+            { responsivePriority: 1, targets: 0 },
+            { responsivePriority: 2, targets: -1 }
+        ]
+    });
+    $('#toolsTable').DataTable({
+    });
+
+});
+
 function Arynsport() {
 
     var content1 = '<div class="img-holder">';

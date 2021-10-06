@@ -31,15 +31,15 @@ function VictoriousSecret() {
 }
 
 function FiveFingers() {
-    window.location.href = "../shops/FiveFinger's.html";
+    window.location.href = "../shops/FiveFinger's.html?city=" + CityName;
 }
 
 function BachInAMinuet() {
-    window.location.href = "../shops/BachInAMinuet.html";
+    window.location.href = "../shops/BachInAMinuet.html?city=" + CityName;
 }
 
 function EyeOfTheBeholder() {
-    window.location.href = "../shops/EyeOfTheBeholder.html";
+    window.location.href = "../shops/EyeOfTheBeholder.html?city=" + CityName;
 }
 
 

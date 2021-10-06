@@ -1,3 +1,25 @@
+$(document).ready(function(){
+
+    $('body').prepend(BuildHeader());
+
+    $(function () {
+        var city = getUrlParameter('city');
+        if (city == "Sonridge") {
+            Sonridge();
+        }else if (city == "Oclul") {
+            Oclul();
+        } else if (city == "Inburn") {
+            Inburn();
+        }else if (city == "Arynsport") {
+            Arynsport();
+        }else if (city == "Abydos") {
+            Abydos();
+        } else {
+            DefaultExclusives();
+        }
+    });
+});
+
 function Sonridge() {
 
     var img1 = '<img src="../img/epicFlail/Sonridge/HammerOfThunder.png" />';
@@ -94,6 +116,35 @@ function Inburn() {
     $("#weaponDesc2").html(text2);
 
 }
+
+function Abydos() {
+
+    var img1 = '<img src="../img/epicFlail/abydos/ramCrossbow.png" />';
+    img1 += '<h5>Desert Crossbow</h5>';
+
+    var text1 = '<h5>Heavy Crossbow</h5>';
+    text1 += "<b>Damage:</b> 1d10 Piercing <br>";
+    text1 += "<b>Features:</b> Ammunition (100/400), Heavy, Two-handed <br>";
+    text1 += "<b>Special:</b>There is a 1d6 (on 6) chance this weapon will do an additional 1d10 damage. </br>";
+    text1 += "<b><span class='gold'> 75gp</span></b>";
+
+    $("#img1").html(img1);
+    $("#weaponDesc1").html(text1);
+
+    var img2 = '<img src="../img/epicFlail/abydos/shadowGlass.png" />';
+    img2 += "<h5>Shadow Glass Dagger</h5>";
+
+    var text2 = '<h5>Dagger</h5>';
+    text2 += '<b>Damage:</b> 1d4 piercing <br>';
+    text2 += '<b>Features:</b> Thrown(20/60), Light <br>';
+    text2 += '<b>Notes:</b> Does an additional 1d8 damage to undead';
+    text2 += '<b><span class="gold"> 6gp</span></b>';
+
+    $("#img2").html(img2);
+    $("#weaponDesc2").html(text2);
+
+}
+
 
 function DefaultExclusives() {
 

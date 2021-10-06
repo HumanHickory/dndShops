@@ -1,0 +1,152 @@
+:root{
+    --fontBody: 'EB Garamond', serif;
+    --fontMagic: 'Great Vibes', cursive;
+    --primary: #0052d4;
+    --secondary: #65c7f7;
+    --tertiary: #9cecfb;
+}
+
+
+
+body {
+    font-family: var(--fontBody);
+}
+
+h1 {
+    font-size: 4.5rem;
+    color: white;
+}
+
+.magic {
+    font-family: var(--fontMagic);
+    font-size: 2.5rem;
+}
+
+
+
+.spellSubtext {
+    font-weight: normal;
+}
+
+.btn-link {
+    font-weight: bold;
+    color: black !important;
+}
+
+a.plain {
+    font-weight: bold;
+    color: black !important;
+    font-size: 1rem;
+}
+
+.header {
+    position: absolute;
+    z-index: 1000;
+    top: 210px;
+    left: 35%;
+    color: white;
+}
+
+.parallax {
+    /* The image used */
+    background-image: url("../../img/hero/eob-hero.jpg");
+    /* Set a specific height */
+    height: 600px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallaxBubble {
+    /* The image used */
+    background-image: url("../../img/EoB/bubblesBig.png");
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.blue {
+    color: var(--primary)!important;
+}
+
+.black {
+    color: black;
+}
+
+p, ul {
+    font-size: 1.5rem;
+}
+
+li.noStyle {
+    list-style: none;
+}
+
+a {
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+
+
+    a:hover {
+        color: black;
+    }
+
+.outline {
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, .4);
+    border-radius: 7px;
+}
+
+.navbar{
+    background-color: var(--secondary);
+}
+
+.nav {
+    background-image: linear-gradient(to right, var(--tertiary), var(--secondary), var(--primary));
+    color: white;
+    box-shadow: 6px 4px 15px rgba(0, 0, 0, .5);
+    text-shadow: 4px 4px 10px rgba(255, 255, 255, .4);
+}
+
+.primaryBg {
+    background-image: radial-gradient(var(--tertiary), var(--secondary), var(--primary));
+}
+
+.nav-link.active {
+    border: none;
+    background-color: rgba(0, 0, 0, 0) !important;
+    font-weight: bold;
+    text-decoration: underline double;
+}
+
+.nav-link:hover {
+    border: none;
+    color: white;
+}
+
+@media only screen and (max-width: 1400px) and (min-width: 1025px) {
+    p, a {
+        font-size: 1.7rem !important;
+    }
+}
+
+@media only screen and (max-device-width: 1366px) {
+    .parallax {
+        background-attachment: scroll;
+    }
+
+    a {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 2.5rem;
+    }
+}

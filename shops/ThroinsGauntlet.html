@@ -3,8 +3,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 
-
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
@@ -15,98 +13,18 @@
     <link href="https://fonts.googleapis.com/css?family=DM+Serif+Text&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+    <script src="../global.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="js/throinsGauntlet.js"></script>
+    <link href="css/throinsGauntlet.css" rel="stylesheet">
+
+
     <title>Throin's Gauntlet</title>
 </head>
-<style>
 
-
-
-    body {
-        background-color: #fffbf5;
-        font-family: 'DM Serif Text', serif;
-        color: #004c45;
-    }
-
-    .test {
-        border: 2px solid red;
-    }
-
-    .wrapper {
-        text-align: center;
-    }
-
-    .img-holder {
-        background-color: #ededed; 
-        padding: .5rem;
-    }
-
-        .img-holder > img {
-            width: 80%;
-            height: 80%;
-        }
-
-    .orange {
-        color: #ff5100;
-    }
-
-    ul {
-        list-style: none;
-        padding-left: 0;
-    }
-
-    p:before {
-        content: "";
-        position: absolute;
-        width: 40%;
-        height: 1px;
-        bottom: 0;
-        left: 30%;
-        border-bottom: 1px solid #ff5100; 
-        margin-bottom: .2rem;
-    }
-
-
-
-    .ml5 {
-        position: relative;
-        font-weight: 300;
-        font-size: 4.5em;
-        color: #004c45;
-    }
-
-        .ml5 .text-wrapper {
-            position: relative;
-            display: inline-block;
-            padding-top: 0.1em;
-            padding-right: 0.05em;
-            padding-bottom: 0.15em;
-            line-height: 1em;
-        }
-
-        .ml5 .line {
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            margin: auto;
-            height: 3px;
-            width: 100%;
-            background-color: #ff5100;
-            transform-origin: 0.5 0;
-        }
-
-
-        .ml5 .letters {
-            display: inline-block;
-            opacity: 0;
-        }
-
-    @media only screen and (max-width: 600px) {
-        .ml5 {
-            font-size: 2.5rem;
-        }
-    }
-</style>
 <body>
 
     <div class="container">
@@ -127,18 +45,14 @@
             <!--ARMORY EXCLUSIVES -->
             <h2 class="my-5 col-12"> Armory Exclusives</h2>
 
-            <div class="wrapper col-6 col-xl-3" id="1" data-aos="zoom-in" data-aos-delay="100">
-              
+            <div class="wrapper col-6 col-xl-3" id="1" data-aos="zoom-in" data-aos-delay="100">      
             </div>
 
             <div class="wrapper col-6 col-xl-3" id="2" data-aos="zoom-in">
-
             </div>
 
             <div class="wrapper col-6 col-xl-3" id="3" data-aos="zoom-in">
-
             </div>
-
 
 
             <!--LIGHT ARMOR -->
@@ -355,10 +269,10 @@
             <div class="col-xl-4 col-12 px-3">
                 <h5>Armor Customization</h5>
                 <ul>
-                    <li>Dye Leather or Padded Armor <span class="orange">5 sp</span></li>
-                    <li>Engrave metal armor <span class="orange">1 gp</span></li>
-                    <li>Fill engravement with silver <span class="orange">1 gp</span></li>
-                    <li>Fill engravement with gold <span class="orange">3 gp</span></li>
+                    <li>Dye Leather or Padded Armor <span class="secondary">5 sp</span></li>
+                    <li>Engrave metal armor <span class="secondary">1 gp</span></li>
+                    <li>Fill engravement with silver <span class="secondary">1 gp</span></li>
+                    <li>Fill engravement with gold <span class="secondary">3 gp</span></li>
                     <li></li>
                 </ul>
             </div>
@@ -375,7 +289,7 @@
                 <h5>Enchantment Binding</h5>
                 <p>Coming Soon</p>
                 <ul class="d-none">
-                    <li>Bind Enchantment <span class="orange">1000gp</span></li>
+                    <li>Bind Enchantment <span class="secondary">1000gp</span></li>
                     <li><small>*does not include enchantment</small></li>
                     <li><small>*100gp non-refundable deposit</small></li>
                     <li><small>*current professional level: Craftsman</small></li>
@@ -386,121 +300,13 @@
 
         </div> <!--ends text-center mt-5 row -->
     </div> <!--container -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    <script src="js/ricochet.js"></script>
     <script>
 
         AOS.init({
             easing: 'ease-out-back',
             duration: 1000
         });
-
-        $(function () {
-            var getUrlParameter = function getUrlParameter(sParam) {
-                var sPageURL = window.location.search.substring(1),
-                    sURLVariables = sPageURL.split('&'),
-                    sParameterName,
-                    i;
-
-                for (i = 0; i < sURLVariables.length; i++) {
-                    sParameterName = sURLVariables[i].split('=');
-
-                    if (sParameterName[0] === sParam) {
-                        return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
-                    }
-                }
-            };
-
-            var city = getUrlParameter('city');
-            if (city == "Sonridge") {
-                Sonridge();
-            } if (city == "Arynsport") {
-                Arynsport();
-            } else {
-                DefaultExclusives();
-            }
-
-            $('.hidden').hide();
-
-        });
-       
-
-        $('.wrapper').hover(function () {
-            var cardID = $(this).attr('id');
-            var jqueryHiddenID = "#hidden" + cardID;
-            var jqueryImgID = "#img" + cardID;
-
-            current_h = $(jqueryImgID)[0].height;
-            current_w = $(jqueryImgID)[0].width;
-
-            $(jqueryHiddenID).show();
-
-            $(jqueryImgID).animate({ width: (current_w * 1.1), height: (current_h * 1.1) }, 300);
-
-
-        }, function () {
-            var cardID = $(this).attr('id');
-            var jqueryHiddenID = "#hidden" + cardID;
-            var jqueryImgID = "#img" + cardID;
-
-
-            $(jqueryHiddenID).hide();
-            $(jqueryImgID).animate({ width: (current_w), height: (current_h) }, 300);
-        });
-
-
-        function createOffset(i) {
-            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-                return offset = -1.2 + 1.2 * 2 * i;
-            } else {
-                return offset = -0.625 + 0.625 * 2 * i;
-            }
-        }
-
-        anime.timeline({ loop: false })
-            .add({
-                targets: '.ml5 .line',
-                opacity: [0.5, 1],
-                scaleX: [0, 1],
-                easing: "easeInOutExpo",
-                duration: 700
-            }).add({
-                targets: '.ml5 .line',
-                duration: 600,
-                easing: "easeOutExpo",
-                translateY: function (e, i, l) {
-                    var offset = createOffset(i);
-                    return offset + "em";
-                }
-            }).add({
-                targets: '.ml5 .ampersand',
-                opacity: [0, 1],
-                scaleY: [0.5, 1],
-                easing: "easeOutExpo",
-                duration: 600,
-                offset: '-=600'
-            }).add({
-                targets: '.ml5 .letters-left',
-                opacity: [0, 1],
-                translateX: ["0.5em", 0],
-                easing: "easeOutExpo",
-                duration: 600,
-                offset: '-=300'
-            }).add({
-                targets: '.ml5 .letters-right',
-                opacity: [0, 1],
-                translateX: ["-0.5em", 0],
-                easing: "easeOutExpo",
-                duration: 600,
-                offset: '-=600'
-            });
-
-
-
-
-
 
     </script>
 

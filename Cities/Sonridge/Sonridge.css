@@ -115,6 +115,10 @@ p.firstLetter::first-letter {
 .navbar {
     background-color: white;
 }
+
+.navbar-dark, .navbar-nav, .nav-link, .navbar-brand {
+	color: black !important;
+}
 /* font-family: 'Parisienne', cursive; */
 
 

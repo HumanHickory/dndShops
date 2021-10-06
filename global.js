@@ -88,11 +88,20 @@ function BuildHeader() {
 
 function BuildMiniHeader() {
     var CityName = getUrlParameter('city');
+    var FormattedName; 
+    if(CityName == "OysterIslands"){
+        FormattedName = "The Oyster Islands";
+    } else if (CityName == "Sonridge"){
+        FormattedName = "Sonridge City";
+    } else {
+        FormattedName = CityName;
+    }
+
     var root = getRoot();
 
 
     var nav = "<nav class='navbar fixed-top navbar-expand-lg navbar-dark'>";
-    nav += "<a class='navbar-brand' href='" + root + "Cities/" + CityName + "/index.html?city=" + CityName + "'>" + CityName + "</a>";
+    nav += "<a class='navbar-brand' href='" + root + "Cities/" + CityName + "/index.html?city=" + CityName + "'>" + FormattedName + "</a>";
     nav += "<button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>";
     nav += "<span class='navbar-toggler-icon'></span>";
     nav += "</button>";

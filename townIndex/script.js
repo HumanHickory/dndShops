@@ -11,6 +11,10 @@ $(document).ready(function () {
         Abydos();
     } else if (CityName == "Arynsport") {
         Arynsport();
+    } else if (CityName ="Sonridge"){
+        Sonridge();
+    }else if (CityName ="Arabelle"){
+        Arabelle();
     }
 });
 
@@ -42,13 +46,34 @@ function EyeOfTheBeholder() {
     window.location.href = "../shops/EyeOfTheBeholder.html?city=" + CityName;
 }
 
+function Zimzam() {
+    window.location.href = "../shops/Zimzam.html?city=" + CityName;
+}
+
 
 function Abydos() {
     $("#GnomeDepot").hide();
     $("#VictoriousSecret").hide();
     $("#BachInAMinuet").hide();
+    $("#Zimzam").hide();
 }
 
 function Arynsport(){
     $("#EyeOfTheBeholder").hide();
+}
+
+function Arabelle(){
+    $("#Zimzam").hide();
+
+}
+
+function Sandstone(){
+    $("#Zimzam").hide();
+
+}
+
+function Sonridge(){
+    $("#EyeOfTheBeholder").hide();
+    $("#Zimzam").hide();
+
 }

@@ -1,7 +1,7 @@
 :root {
     --main: #12151c;
     --primary: #661b1c;
-    --secondary: #531516;
+    --secondary: #250506;
     --tertiary: #1b222c;
     --quaternary: #191d26;
     --fontHead: 'Eagle Lake', cursive;
@@ -11,6 +11,7 @@
 
 body {
     font-family: var(--fontBody);
+    background-color: var(--main);
 }
 
 h1, h2, h3, h4, h5 {
@@ -120,13 +121,11 @@ h1, h2, h3, h4, h5 {
 	color: green;
 }
 
-.newsHead1 {
-    color: var(--tertiary);
+.newsHead1, .newsHead2 {
+    color: var(--quaternary);
+    font-weight: bolder;
 }
 
-.newsHead2 {
-    color: var(--quaternary);
-}
 
 a.tile:hover {
 	color: inherit;

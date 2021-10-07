@@ -1,0 +1,119 @@
+:root {
+    --main: white;
+    --primary: #230336;
+    --secondary: #155a2f;
+    --tertiary: rgb(116, 9, 98);
+    --quaternary: rgb(162, 0, 202);
+    --fontHead: 'Fleur De Leah', cursive;
+    --fontBody: 'Lato', sans-serif;
+}
+
+body {
+    background-color: var(--main);
+    font-family: var(--fontBody);
+}
+
+h1, h2, h3 {
+    font-family: var(--fontHead);
+}
+
+h1 {
+    font-size: 9rem;
+}
+
+h2 {
+    font-size: 3.5rem;
+}
+
+h3 {
+    font-size: 2.5rem;
+}
+
+.curved {
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.main {
+    background-color: var(--main);
+    color: black;
+}
+
+.primary {
+    background-color: var(--primary);
+    color: white;
+}
+
+.secondary {
+    background-color: var(--secondary);
+    color: white;
+}
+
+.tertiary {
+    background-color: var(--tertiary);
+    color: white;
+}
+
+.quaternary {
+    background-color: var(--quaternary);
+    color: white;
+}
+
+.navbar {
+    background-color: var(--primary);
+}
+
+.ml2 {
+    font-weight: 900;
+    font-size: 9rem;
+    color: var(--primary);
+    font-family: var(--fontHead);
+}
+
+.ml2 .letter {
+    display: inline-block;
+    line-height: 1em;
+}
+
+.primary a {
+    color: white !important;
+}
+
+.secondary a {
+    color: white !important;
+}
+
+.tertiary a {
+    color: white !important;
+}
+
+.quaternary a {
+    color: white !important;
+}
+
+.primary-text {
+    color: var(--primary)
+}
+
+.secondary-text {
+    color: var(--secondary);
+}
+
+.tertiary-text {
+    color: var(--tertiary);
+}
+
+.quaternary-text {
+    color: var(--quaternary);
+}
+
+
+hr{
+    border: 2px solid var(--primary);
+}
+
+@media only screen and (max-width: 800px) {
+    .ml2 {
+        font-size: 5em;
+    }
+}

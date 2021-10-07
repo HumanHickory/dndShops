@@ -1,8 +1,13 @@
 $(document).ready(function () {
 
     var city = getUrlParameter('city');
-    $('body').prepend(BuildHeader());
 
-    ;
+    if(city == "LastHarbor"){
+        $('body').prepend(BuildMiniHeader());
+
+    } else {
+    $('body').prepend(BuildHeader());
+    }
+    
 
 });

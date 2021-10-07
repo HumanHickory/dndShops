@@ -1,9 +1,9 @@
 :root {
-    --main: #fde827;
-    --primary: #2792F0;
-    --secondary: #13a0b3;
-    --tertiary: #50DAFE;
-    --quaternary: #CE8D4D;
+    --main: rgb(64, 0, 94);
+    --primary: #074853;
+    --secondary: #694280;
+    --tertiary: #006b96;
+    --quaternary: #1f1c19;
     --fontHead: 'Cormorant Garamond', serif;
     --fontBody: 'Lato', sans-serif;
 }
@@ -71,6 +71,8 @@ margin-top: 10vh;
     color: white;
 }
 
+
+
 .secondary {
     background-color: var(--secondary);
     color: white;
@@ -104,4 +106,18 @@ a {
 a:hover {
     color:var(--primary);
     text-decoration: none;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: white;
+    border-color: var(--primary);
+
+}
+
+.btn-primary:hover {
+    background-color: var(--tertiary);
+    color: white;
+    border-color: var(--tertiary);
+
 }

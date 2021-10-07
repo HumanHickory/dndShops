@@ -1,0 +1,62 @@
+:root {
+    --main: white;
+    --primary: black;
+    --secondary: #76b6c4;
+    --tertiary: #1da2d8;
+    --quaternary: #7fcdff;
+    --fontHead: 'Major Mono Display', monospace;
+    --fontBody: 'Nova Mono', monospace;
+}
+
+
+body {
+    background-color: var(--main);
+    font-family: var(--fontBody);
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: var(--fontHead);
+}
+
+
+.primary {
+    background-color: var(--primary);
+    color: white;
+}
+
+.secondary {
+    background-color: var(--secondary);
+    color: white;
+}
+
+.tertiary {
+    background-color: var(--tertiary);
+    color: white;
+}
+
+.quaternary {
+    background-color: var(--quaternary);
+    color: white;
+}
+
+
+.primary-text {
+    color: var(--primary)
+}
+
+.secondary-text {
+    color: var(--secondary);
+}
+
+.tertiary-text {
+    color: var(--tertiary);
+}
+
+.quaternary-text {
+    color: var(--quaternary);
+}
+
+.navbar {
+    background-color: var(--primary);
+    font-family: var(--fontBody);
+}

@@ -11,12 +11,15 @@
 
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href="../../Cities/Sandstone/Site.css" rel="stylesheet">
+    <script src="../../global.js"></script>
     <title>The Rusted Hammer</title>
+
+
 
 </head>
 
 <body class="primary">
-    <div class="container my-4">
+    <div class="container mb-4" style="margin-top: 5vh;">
         <div class="row">
             <div class="col-lg-6 my-auto">
                 <h1 style="line-height: 3.5rem;"> The <Br> Rusted <br> Hammer </h1>
@@ -38,12 +41,12 @@
             <br>
 
             <h4>Miner's Stew</h4>
-            <p>A hearty stew with steak, potatoes, carrots, turnips, and cabbage. <span class="silver">25sp</span></p>
+            <p>A hearty stew with steak, potatoes, carrots, turnips, and cabbage. <span class="silver"> 25sp</span></p>
 
             <br>
 
             <h4>Roast Rump</h4>
-            <p>A 3lb piece of meet, served with noodles and roasted carrots.<span class="gold">2gp</span></p>
+            <p>A 3lb piece of meet, served with noodles and roasted carrots.<span class="gold"> 2gp</span></p>
         </div>
     </div>
 
@@ -119,5 +122,9 @@
     </div>
 
 </body>
+
+<script>
+    $('body').prepend(BuildMiniHeader());
+</script>
 
 </html>

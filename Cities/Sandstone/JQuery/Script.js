@@ -18,6 +18,7 @@ $(document).ready(function () {
         pause: "hover",
         interval: 10000,
 
-    })
+    });
+
 
 });

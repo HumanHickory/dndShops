@@ -49,6 +49,9 @@ function EyeOfTheBeholder() {
 function Zimzam() {
     window.location.href = "../shops/Zimzam.html?city=" + CityName;
 }
+function BitsAndPieces() {
+    window.location.href = "../shops/BitsAndPieces.html?city=" + CityName;
+}
 
 
 function Abydos() {
@@ -60,15 +63,18 @@ function Abydos() {
 
 function Arynsport(){
     $("#EyeOfTheBeholder").hide();
+    $("#BitsAndPieces").hide();
 }
 
 function Arabelle(){
     $("#Zimzam").hide();
+    $("#BitsAndPieces").hide();
 
 }
 
 function Sandstone(){
     $("#Zimzam").hide();
+    $("#BitsAndPieces").hide();
 
 }
 

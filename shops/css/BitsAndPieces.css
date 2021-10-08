@@ -1,9 +1,12 @@
 :root {
     --main: white;
-    --primary: black;
-    --secondary: #76b6c4;
-    --tertiary: #019215;
+    --primary: #00205b;
+    --secondary: #6edcfa;
+    --tertiary: rgb(196, 0, 0);
     --quaternary: #7fcdff;
+    --fontBody:'Varela Round', sans-serif;
+    --fontHead:'Varela Round', sans-serif;
+
 
 }
 
@@ -58,4 +61,16 @@ h1, h2, h3, h4, h5 {
 .navbar {
     background-color: var(--primary);
     font-family: var(--fontBody);
+}
+
+.primary a {
+    color: white;
+}
+
+.curved {
+    border-radius: 3px;
+}
+
+hr {
+    border-top: 2px solid var(--primary);
 }

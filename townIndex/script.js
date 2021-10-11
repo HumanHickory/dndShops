@@ -1,4 +1,4 @@
-var cityName = "";
+var CityName = "";
 
 
 $(document).ready(function () {
@@ -11,9 +11,9 @@ $(document).ready(function () {
         Abydos();
     } else if (CityName == "Arynsport") {
         Arynsport();
-    } else if (CityName ="Sonridge"){
+    } else if (CityName =="Sonridge"){
         Sonridge();
-    }else if (CityName ="Arabelle"){
+    }else if (CityName =="Arabelle"){
         Arabelle();
     }
 });

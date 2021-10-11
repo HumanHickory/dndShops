@@ -1,11 +1,11 @@
 $(document).ready(function(){
 
-    $('body').prepend(BuildHeader());
+    $('body').prepend(BuildMiniHeader());
 
     $(function () {
         var city = getUrlParameter('city');
         if (city == "Sonridge") {
-            Sonridge();
+            Default();
         }else if (city == "Oclul") {
             Oclul();
         } else if (city == "Inburn") {
@@ -14,13 +14,16 @@ $(document).ready(function(){
             Arynsport();
         }else if (city == "Abydos") {
             Abydos();
-        } else {
+        } else if (city == "Burterran") {
+            Burterran();
+        }else {
             DefaultExclusives();
         }
     });
 });
 
 function Sonridge() {
+//Not using this one right now because of the magical items. Change the call method back to sonridge when you fix this. 
 
     var img1 = '<img src="../img/epicFlail/Sonridge/HammerOfThunder.png" />';
     img1 += '<h5>Hammer of Thunder</h5>';
@@ -202,8 +205,39 @@ function Arynsport() {
 
     var text2 = '<h5>Net</h5>';
     text2 += '<b>Damage:</b> - <br>';
-    text2 += '<b>Features:</b> Special, Thrown (5/15 <br>';
+    text2 += '<b>Features:</b> Special, Thrown (5/15) <br>';
     text2 += '<b>Notes:</b> Reroll on failure once per rest, must take new roll.';
+    text2 += '<b><span class="gold"> 50gp</span></b>';
+
+    $("#img2").html(img2);
+    $("#weaponDesc2").html(text2);
+
+}
+
+
+function Burterran() {
+
+    var img1 = '<img src="../img/epicFlail/Burterran/FireAxe.png" />';
+    img1 += '<h5>Volcanic Axe</h5>';
+
+    var text1 = '<h5>Great Axe</h5>';
+    text1 += "<b>Damage:</b> 1d12 Slashing <br>";
+    text1 += "<b>Features:</b> Heavy, Two-handed <br>";
+    text1 += "<b>Special:</b> On hit, the target must make DC 15 (Dex) save or catch fire. 1d4 fire damage per turn. Target may use an action to extingish flame. </br>";
+    text1 +="<b>Attunement Required</b></br>";
+    text1 += "<b><span class='gold'> 50gp</span></b>";
+
+    $("#img1").html(img1);
+    $("#weaponDesc1").html(text1);
+
+    var img2 = '<img src="../img/epicFlail/Burterran/WildfireScyth.png" />';
+    img2 += "<h5>Wildfire Scythe</h5>";
+
+    var text2 = '<h5>Scythe</h5>';
+    text2 += '<b>Damage:</b> 1d10 slashing <br>';
+    text2 += '<b>Features:</b> Heavy, Two-Handed, Reach <br>';
+    text2 += '<b>Special:</b> On hit, 1d12 chance (1d10 druids). Hits enemies within 20ft radius. DC12 Dex. On fail, take 2d6 fire damage. Half on success. </br>';
+    text2 += "<b>Attunement Required</b></br>";
     text2 += '<b><span class="gold"> 50gp</span></b>';
 
     $("#img2").html(img2);

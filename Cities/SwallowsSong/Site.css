@@ -1,9 +1,9 @@
 :root {
-    --main: #fbd5a2;
-    --primary: #3d0e0e;
-    --secondary: #754228;
-    --tertiary: #8cad7c;
-    --quaternary: #444c24;
+    --main: #830000;
+    --primary: #004e07;
+    --secondary: #004e07;
+    --tertiary: #028d09;
+    --quaternary: white;
     --fontHead: 'Cormorant Garamond', serif;
     --fontBody: 'Lato', sans-serif;
 }
@@ -12,6 +12,7 @@
 body {
     background-color: var(--main);
     font-family: var(--fontBody);
+    color: white;
 }
 
 h1, h2, h3, h4, h5 {
@@ -23,13 +24,15 @@ h5 {
     font-size: 1.5rem;
 }
 
-
+.tavernHead {
+margin-top: 10vh;
+} 
 
 .ml16 {
-    color: #402d2d;
+    color: white;
     padding: 40px 0;
     font-weight: 800;
-    font-size: 3em;
+    font-size: 2em;
     text-transform: uppercase;
     letter-spacing: 0.5em;
     overflow: hidden;
@@ -40,18 +43,12 @@ h5 {
     line-height: 1em;
   }
 
-.tavernHead {
-    margin-top: 5vh;
-}
-
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 800px) {
     .ml16 {
-        font-size: 2em;
+        font-size: 1.2em;
     }
 
-    .tavernHead {
-        margin-top: 12vh;
-    }
+
   }
   
 
@@ -61,25 +58,30 @@ h5 {
 	padding: 10px;
 }
 
-.primary {
-    background-color: var(--primary);
-    color: white;
+
+.main {
+    background-color: var(--main);
+    color: white !important;
 }
 
+.primary {
+    background-color: var(--primary);
+    color: white !important;
+}
 
 .secondary {
     background-color: var(--secondary);
-    color: white;
+    color: white !important;
 }
 
 .tertiary {
     background-color: var(--tertiary);
-    color: white;
+    color: white !important;
 }
 
 .quaternary {
     background-color: var(--quaternary);
-    color: white;
+    color: black !important;
 }
 
 p.firstLetter::first-letter {
@@ -102,10 +104,17 @@ a:hover {
     text-decoration: none;
 }
 
-.silver {
-    color: rgb(131, 131, 131);
+.btn-primary{
+    background-color: var(--tertiary);
+    border-color: var(--tertiary);
 }
 
-.gold {
-    color: goldenrod;
+.btn-primary:hover{
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+
+}
+
+.silver {
+    color: #A8A9AD;
 }

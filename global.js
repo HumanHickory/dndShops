@@ -93,6 +93,8 @@ function BuildMiniHeader() {
         FormattedName = "The Oyster Islands";
     } else if (CityName == "LastHarbor") {
         FormattedName = "Last Harbor";
+    }else if (CityName == "SwallowsSong") {
+        FormattedName = "Swallow's Song";
     } else {
         FormattedName = CityName;
     }

@@ -1,9 +1,9 @@
 :root {
-    --main: rgb(64, 0, 94);
-    --primary: #074853;
+    --main: rgba(0, 6, 88, 0);
+    --primary: #000d58;
     --secondary: #694280;
     --tertiary: #006b96;
-    --quaternary: #1f1c19;
+    --quaternary: white;
     --fontHead: 'Cormorant Garamond', serif;
     --fontBody: 'Lato', sans-serif;
 }
@@ -28,7 +28,7 @@ margin-top: 10vh;
 } 
 
 .ml16 {
-    color: #402d2d;
+    color: black;
     padding: 40px 0;
     font-weight: 800;
     font-size: 3em;

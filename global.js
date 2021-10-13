@@ -1,4 +1,7 @@
 
+var baseUrl = "http://dmrensdndapi.azurewebsites.net/";
+//var baseUrl = "https://localhost:44350/";
+
 function getRoot() {
     if (window.location.origin.substring(0, 4) == "file") {
         return "file:///C:/Users/Jordan/Documents/GitHub/dndShops/";

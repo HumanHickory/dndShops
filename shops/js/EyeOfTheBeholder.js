@@ -9,48 +9,76 @@ $(document).ready(function () {
         $('body').prepend(BuildHeader());
     }
 
-    if(city == "Abydos"){
+    if (city == "Abydos") {
         Abydos();
+    } else if (city == "LastHarbor") {
+        LastHarbor();
     }
 
 
 });
 
-function Abydos(){
-    getSpell(4);
-    getSpell(3);
+function Abydos() {
+    getSpell(4, "75gp");
+    getItem(74, "540gp");
+}
 
 
+function LastHarbor() {
+    getSpell(3, "75gp");
+    getItem(76, "510gp");
+    getItem(78, "5,217gp");
 
 }
 
-function getSpell(spellId){
+function getSpell(spellId, cost) {
     $.ajax({
         url: baseUrl + "Spell/" + spellId,
         type: 'GET',
         success: function (spell) {
-            var html = CreateSpellScrollItem(spell, "20gp");
+            var html = CreateSpellScrollItem(spell, cost);
+            console.log(spell);
 
             $('#uniqueItems').append(html);
         },
         error: function (request, error) {
-            alert("Failed to retrieve spell");
-
+            alert("Failed to retrieve spell.");
         }
     });
 
 };
 
-function ItemHeader(idNumber, dndBeyondLink, itemName, minorDefinition, cost) {
+function getItem(ItemId, cost) {
+    $.ajax({
+        url: baseUrl + "Item/" + ItemId,
+        type: 'GET',
+        success: function (item) {
+            var html = CreateItem(item, cost);
+            
+            $('#uniqueItems').append(html);
+        },
+        error: function (request, error) {
+            alert("Failed to retrieve item " + ItemId );
 
-    var html = '<div class="accordion black pb-3" id="accordion' + idNumber + '">'
-    html += '<div class="card z-depth-0 bordered">';
-    html += '<div class="card-header" id="headingOne' + idNumber + '">';
+        }
+    });
+}
+
+function CreateItem(item, cost) {
+
+
+    var html = '<div class="card z-depth-0 bordered">';
+    html += '<div class="card-header" id="heading' + item.id + '">';
     html += '<h5 class="mb-0">';
-    html += '<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse' + idNumber + '" aria-expanded="true" aria-controls="collapse' + idNumber + '">';
-    html += '<a href="' + dndBeyondLink + '" class="plain" target="_blank">' + itemName + '</a> <span class="spellSubtext"> ' + minorDefinition + '';
-    html += '</span><span class="blue">' + cost + '</span>';
+    html += '<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse' + item.id + '" aria-expanded="true" aria-controls="collapse' + item.id + '">';
+    html += item.name + '<span class="spellSubtext"> ' + item.rarityName + ' Magic Item';
+    html += '</span><span class="blue"> ' + cost + '</span>';
     html += '</button></h5></div>';
+
+    html += '<div id="collapse' + item.id + '" class="collapse" aria-labelledby="heading' + item.id + '" data-parent="#uniqueItems">';
+    html += '<div class="card-body">';
+    html += item.description + "<br><br> <b>Weight:</b> "  + item.weight + "lbs";
+    html += '</div></div></div>';
 
     return html;
 }
@@ -58,42 +86,43 @@ function ItemHeader(idNumber, dndBeyondLink, itemName, minorDefinition, cost) {
 function CreateSpellScrollItem(spell, cost) {
 
     var components = "";
-    
-    if(spell.isMaterial){
+
+    if (spell.isMaterial) {
         components += "M "
     }
-    if(spell.isSomatic){
+    if (spell.isSomatic) {
         components += "S "
     }
-    if(spell.isVerbal){
+    if (spell.isVerbal) {
         components += "V "
     }
-    if(components == ""){
+    if (components == "") {
         components = "-";
     }
 
     var classes = "";
 
-    $.each(spell.classes, function(i, value){
+    $.each(spell.classes, function (i, value) {
         classes += value.className + " ";
     });
 
     var html = '<div class="card z-depth-0 bordered">';
-    html += '<div class="card-header" id="heading' +  spell.id + '">';
+    html += '<div class="card-header" id="heading' + spell.id + '">';
     html += '<h5 class="mb-0">';
-    html += '<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse' +  spell.id + '" aria-expanded="true" aria-controls="collapse' + spell.id + '">';
-    html += '<a href="' + spell.dnDBeyondLink + '" class="plain" target="_blank">' + spell.name + '</a> <span class="spellSubtext"> ' + spell.levelName + ' Level Spell Scroll';
+    html += '<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse' + spell.id + '" aria-expanded="true" aria-controls="collapse' + spell.id + '">';
+    html += spell.name + '<span class="spellSubtext"> ' + spell.levelName + ' Level Spell Scroll';
     html += '</span><span class="blue"> ' + cost + '</span>';
     html += '</button></h5></div>';
 
-    html += '<div id="collapse' +  spell.id + '" class="collapse" aria-labelledby="heading' + spell.id + '" data-parent="#uniqueItems">';
+    html += '<div id="collapse' + spell.id + '" class="collapse" aria-labelledby="heading' + spell.id + '" data-parent="#uniqueItems">';
     html += '<div class="card-body">';
     html += '<b>Components:</b> ' + components + ' <br>';
     html += '<b>Range: </b>' + spell.range + '<br>';
     html += '<b>Ritual: </b>' + spell.isRitual + '<br>';
     html += ' <b>Concentration: </b> ' + spell.isConcentration + ' <br>';
-    html += '<b>Classes: </b> ' + classes + ' <br>';
-    html += spell.description;
+    html += '<b>Classes: </b> ' + classes + ' <br><br>';
+    html += spell.description + "</br></br>";
+    html += '<a href="' + spell.dnDBeyondLink + '" class="plain" target="_blank">Read More</a>';
     html += '</div></div></div>';
 
     return html;

@@ -1,27 +1,21 @@
 :root{
-    --fontBody: 'EB Garamond', serif;
-    --fontMagic: 'Great Vibes', cursive;
+    --fontBody: 'Libre Baskerville', serif;
+    --fontHeader: 'Carattere', cursive;
     --primary: #0052d4;
     --secondary: #65c7f7;
     --tertiary: #9cecfb;
+    --quadrenary: #620075;
 }
-
 
 
 body {
     font-family: var(--fontBody);
 }
 
-h1 {
-    font-size: 4.5rem;
-    color: white;
-}
 
 .magic {
-    font-family: var(--fontMagic);
-    font-size: 2.5rem;
+    font-family: var(--fontHeader);
 }
-
 
 
 .spellSubtext {
@@ -36,7 +30,6 @@ h1 {
 a.plain {
     font-weight: bold;
     color: var(--primary);
-    font-size: 1rem;
 }
 
 .header {
@@ -45,6 +38,9 @@ a.plain {
     top: 210px;
     left: 35%;
     color: white;
+    font-size: 4.5rem;
+    font-family: var(--fontHeader) !important;
+
 }
 
 .parallax {
@@ -77,16 +73,12 @@ a.plain {
     color: black;
 }
 
-p, ul {
-    font-size: 1.5rem;
-}
 
 li.noStyle {
     list-style: none;
 }
 
 a {
-    font-size: 1.5rem;
     color: var(--primary);
 }
 
@@ -111,6 +103,11 @@ a {
     text-shadow: 4px 4px 10px rgba(255, 255, 255, .4);
 }
 
+.nav-link.subNav{
+    font-size: 2rem;
+    font-family: var(--fontHeader) !important;
+}
+
 .primaryBg {
     background-image: radial-gradient(var(--tertiary), var(--secondary), var(--primary));
 }
@@ -119,7 +116,6 @@ a {
     border: none;
     background-color: rgba(0, 0, 0, 0) !important;
     font-weight: bold;
-    text-decoration: underline double;
 }
 
 .nav-link:hover {
@@ -127,26 +123,16 @@ a {
     color: white;
 }
 
+.card-body b {
+    color: var(--quadrenary);
+}
+
 @media only screen and (max-width: 1400px) and (min-width: 1025px) {
-    p, a {
-        font-size: 1.7rem !important;
-    }
+
 }
 
 @media only screen and (max-device-width: 1366px) {
     .parallax {
         background-attachment: scroll;
-    }
-
-    a {
-        font-size: 2rem;
-    }
-
-    p {
-        font-size: 2rem;
-    }
-
-    h3 {
-        font-size: 2.5rem;
     }
 }

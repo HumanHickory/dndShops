@@ -7,7 +7,7 @@ $(document).ready(function () {
     CityName = getUrlParameter('city');
     $('#intro').text("Welcome to " + CityName);
 
-    if(getRoot() != "https://www.avyngaard.shop/"){
+    if(getRoot() == "https://www.avyngaard.shop/"){
        // $("#abydos").hide();
         $("#arabelle").hide();
         $("#arynsport").hide();
@@ -18,7 +18,7 @@ $(document).ready(function () {
         $("#sonridge").hide();
         //$("#rivvenastorp").hide();
        // $("#swallowsSong").hide();
-    }
+    } 
 
     if (CityName == "Abydos") {
         Abydos();

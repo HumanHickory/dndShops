@@ -6,6 +6,7 @@
     --quaternary: black;
     --fontHead: 'Major Mono Display', monospace;
     --fontBody: 'Nova Mono', monospace;
+    --btnColor: #daa520;
 }
 
 
@@ -97,4 +98,9 @@ a {
 a:hover {
     color:var(--primary);
     text-decoration: none;
+}
+
+.btn {
+    background-color: var(--btnColor);
+    border-color: var(--btnColor);
 }

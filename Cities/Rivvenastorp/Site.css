@@ -1,0 +1,100 @@
+:root {
+    --main: white;
+    --primary: black;
+    --secondary:black;
+    --tertiary: black;
+    --quaternary: black;
+    --fontHead: 'Major Mono Display', monospace;
+    --fontBody: 'Nova Mono', monospace;
+}
+
+
+body {
+    background-color: var(--main);
+    font-family: var(--fontBody);
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: var(--fontHead);
+    font-weight: bold;
+}
+
+h5 {
+    font-size: 1.5rem;
+}
+
+.tavernHead {
+margin-top: 10vh;
+} 
+
+.ml16 {
+    color: #402d2d;
+    padding: 40px 0;
+    font-weight: 800;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    overflow: hidden;
+  }
+  
+  .ml16 .letter {
+    display: inline-block;
+    line-height: 1em;
+  }
+
+  @media only screen and (max-width: 800px) {
+    .ml16 {
+        font-size: 2em;
+    }
+  }
+  
+.curved {
+    border-radius: 5px;
+	padding: 10px;
+}
+
+
+.main {
+    background-color: var(--main);
+    color: black;
+}
+
+.primary {
+    background-color: var(--primary);
+    color: white;
+}
+
+.secondary {
+    background-color: var(--secondary);
+    color: white;
+}
+
+.tertiary {
+    background-color: var(--tertiary);
+    color: white;
+}
+
+.quaternary {
+    background-color: var(--quaternary);
+    color: white;
+}
+
+p.firstLetter::first-letter {
+    font-size: 200%;
+    font-family: var(--fontHead);
+}
+
+.navbar {
+    background-color: var(--primary);
+}
+
+a {
+    background-color: inherit !important;
+    border: none;
+    color: white;
+}
+
+a:hover {
+    color:var(--primary);
+    text-decoration: none;
+}

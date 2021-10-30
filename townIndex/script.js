@@ -8,7 +8,7 @@ $(document).ready(function () {
     $('#intro').text("Welcome to " + CityName);
 
     if(getRoot() != "https://www.avyngaard.shop/"){
-        $("#abydos").hide();
+       // $("#abydos").hide();
         $("#arabelle").hide();
         $("#arynsport").hide();
         $("#burterran").hide();
@@ -16,7 +16,8 @@ $(document).ready(function () {
         $("#oysterIslands").hide();
         $("#sandstone").hide();
         $("#sonridge").hide();
-        $("#swallowsSong").hide();
+        //$("#rivvenastorp").hide();
+       // $("#swallowsSong").hide();
     }
 
     if (CityName == "Abydos") {

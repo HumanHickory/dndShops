@@ -7,6 +7,8 @@ $(document).ready(function () {
     CityName = getUrlParameter('city');
     $('#intro').text("Welcome to " + CityName);
 
+
+    
     if(getRoot() == "https://www.avyngaard.shop/"){
        // $("#abydos").hide();
         $("#arabelle").hide();

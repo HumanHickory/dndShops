@@ -1,0 +1,84 @@
+:root {
+    --main: white;
+    --primary: #169136;
+    --secondary:#311691;
+    --tertiary: #daa520;
+    --quaternary: #004206;
+    --fontHead: 'Niconne', cursive;
+    --fontBody: 'Merriweather', serif;
+
+}
+
+
+body {
+    background-color: var(--main);
+    font-family: var(--fontBody);
+}
+
+h1, h2, h3, h5, h4 {
+    font-family: var(--fontHead);
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+h4 {
+    font-size: 2.5rem;
+}
+
+h5 {
+    font-size: 2rem;
+}
+
+.curved {
+    border-radius: 5px;
+	padding: 10px;
+}
+
+
+.primary {
+    background-color: var(--primary);
+    color: white;
+}
+
+.secondary {
+    background-color: var(--secondary);
+    color: white;
+}
+
+.tertiary {
+    background-color: var(--tertiary);
+    color: black;
+}
+
+.tertiary .currency {
+    color: white;
+}
+
+.quaternary {
+    background-color: var(--quaternary);
+    color: white;
+}
+
+.currency{
+    color: black;
+} 
+
+table {
+    color: black;
+    margin-top: 10px;
+    background: white;
+}
+
+table, th, td {
+    border: 1px solid black;
+  }
+
+  td, th {
+      padding: 2px 9px; 
+  }
+
+  th {
+      text-align: center;
+  }

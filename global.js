@@ -61,7 +61,7 @@ function BuildHeader() {
     nav += "</a>";
     nav += "<div class='dropdown-menu' aria-labelledby='navbarDropdown'>";
     nav += "<a class='dropdown-item' href='" + root + "/townIndex/index.html?city=" + CityName + "'>Shopping</a>";
-    nav += "<a class='dropdown-item' href='" + root + "shops/taverns/" + Tavern + ".html?city='" + CityName + ">Eats and Drinks</a>";
+    nav += "<a class='dropdown-item' href='" + root + "shops/taverns/" + Tavern + ".html?city=" + CityName + "'>Eats and Drinks</a>";
     nav += "<a class='dropdown-item' href='" + root + "Cities/" + CityName + "/index.html?city=" + CityName + "#helpWanted'>Help Wanted</a>";
     nav += "</div>";
     nav += "</li>";
@@ -124,7 +124,7 @@ function BuildMiniHeader() {
     nav += "<div class='collapse navbar-collapse flex-grow-1 text-right' id='myNavbar'>";
     nav += "<ul class='navbar-nav ml-auto flex-nowrap'>";
     nav += "<li class='nav-item'>";
-    nav += "<a href='" + root + "index.html' class='nav-link m-2 menu-item'>Town Directory</a>";
+    nav += "<a href='" + root + "'class='nav-link m-2 menu-item'>Town Directory</a>";
     nav += "</li>";
     nav += "</ul>";
     nav += "</div>";
@@ -146,5 +146,7 @@ function GetTavern(CityName) {
         return "TheSaltyParrot_Arynsport"
     } else if (CityName == "Oclul") {
         return "WindyHyena_Oclul";
+    } else if (CityName == "Arabelle"){
+        return "HillGiant_Arabelle";
     }
 }

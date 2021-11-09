@@ -3,7 +3,7 @@
     --primary: #230336;
     --secondary: #155a2f;
     --tertiary: rgb(116, 9, 98);
-    --quaternary: rgb(162, 0, 202);
+    --quaternary: rgb(17, 170, 132);
     --fontHead: 'Fleur De Leah', cursive;
     --fontBody: 'Lato', sans-serif;
 }
@@ -63,36 +63,28 @@ h3 {
     background-color: var(--primary);
 }
 
-.ml2 {
-    font-weight: 900;
-    font-size: 9rem;
-    color: var(--primary);
-    font-family: var(--fontHead);
-}
-
-.ml2 .letter {
-    display: inline-block;
-    line-height: 1em;
+.carousel-item a {
+    color: var(--quaternary);
 }
 
 .primary a {
-    color: white !important;
+    color: white;
 }
 
 .secondary a {
-    color: white !important;
+    color: white;
 }
 
 .tertiary a {
-    color: white !important;
+    color: white;
 }
 
 .quaternary a {
-    color: white !important;
+    color: white;
 }
 
 .primary-text {
-    color: var(--primary)
+    color: var(--primary);
 }
 
 .secondary-text {
@@ -112,8 +104,7 @@ hr{
     border: 2px solid var(--primary);
 }
 
-@media only screen and (max-width: 800px) {
-    .ml2 {
-        font-size: 5em;
-    }
+.carousel-indicators li{
+    background-color: var(--primary);
 }
+

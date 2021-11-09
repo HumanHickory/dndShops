@@ -1,9 +1,12 @@
+var showReal = false;
+
+
 $(document).ready(function () {
     $('body').prepend(BuildHeader());
+    $("#thanksForInput").hide();
 
-    // Wrap every letter in a span
-    var textWrapper = document.querySelector('.ml2');
-    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+    ToggleRealGloomy(showReal);
 
     anime.timeline({ loop: false })
         .add({
@@ -22,5 +25,15 @@ $(document).ready(function () {
         interval: 10000,
     });
 
-
 });
+
+function ToggleRealGloomy(showReal){
+    if(!showReal){
+        $(".real").hide();
+        $(".gloomy").show();
+    } else {
+        $(".real").show();
+        $(".gloomy").hide();
+    }
+}
+

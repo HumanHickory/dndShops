@@ -16,6 +16,8 @@ $(document).ready(function(){
             Abydos();
         } else if (city == "Burterran") {
             Burterran();
+        }else if (city == "Kamininari") {
+            Kamininari();
         }else {
             DefaultExclusives();
         }
@@ -114,6 +116,32 @@ function Inburn() {
     text2 += '<b>Features:</b> Heavy <br>';
     text2 += '<b>Notes:</b> On crit, will also do 1d10 piercing damage.';
     text2 += '<b><span class="gold"> 50gp</span></b>';
+
+    $("#img2").html(img2);
+    $("#weaponDesc2").html(text2);
+}
+
+function Kamininari() {
+
+    var img1 = '<img src="../../img/epicFlail/Kamininari/LightningsWrath.png" />';
+    img1 += "<h5>Lightning's Wrath</h5>";
+
+    var text1 = "<h5>Trident</h5>";
+    text1 += "<b>Damage:</b> 1d6 Piercing + 2d6 Lightning <br>";
+    text1 += "<b>Features:</b> Throw(20/60), Finesse   <br>";
+    text1 += "<b><span class='gold'> 50gp</span></b>";
+
+    $("#img1").html(img1);
+    $("#weaponDesc1").html(text1);
+
+    var img2 = '<img src="../../img/epicFlail/Kamininari/StormSpear.png" />';
+    img2 += "<h5>Storm Spear</h5>";
+
+    var text2 = '<h5>Spear</h5>';
+    text2 += '<b>Damage:</b> 1d6 Piercing <br>';
+    text2 += '<b>Features:</b> Versatile(1d8), Thrown(20/60) <br>';
+    text2 += '<b>Notes:</b> On command word, spear turns into lighting and shoots 120ft in a straight line. Anyone in line must make a DC 13 Dex throw or take 4d6 lightning. Half on successful throw. Will then turn back into spear. Can use 2x per day.';
+    text2 += '<b><span class="gold"> 45gp</span></b>';
 
     $("#img2").html(img2);
     $("#weaponDesc2").html(text2);

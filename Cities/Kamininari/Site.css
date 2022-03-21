@@ -1,0 +1,117 @@
+:root {
+    --main: #063474;
+    --primary: #c4eafc;
+    --secondary: #7185b7;
+    --tertiary: #2c3b6a;
+    --quaternary: #6f6e92;
+    --fontHead: 'Cormorant Garamond', serif;
+    --fontBody: 'Lato', sans-serif;
+}
+
+
+body {
+    background-color: var(--main);
+    font-family: var(--fontBody);
+    color: white;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: var(--fontHead);
+    font-weight: bold;
+}
+
+h5 {
+    font-size: 1.5rem;
+}
+
+.tavernHead {
+margin-top: 10vh;
+} 
+
+.ml16 {
+    color: white;
+    padding: 40px 0;
+    font-weight: 800;
+    font-size: 3em;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    overflow: hidden;
+  }
+  
+  .ml16 .letter {
+    display: inline-block;
+    line-height: 1em;
+  }
+
+  @media only screen and (max-width: 800px) {
+    .ml16 {
+        font-size: 2em;
+    }
+  }
+  
+.curved {
+    border-radius: 5px;
+	padding: 10px;
+}
+
+
+.main {
+    background-color: var(--main);
+    color: white;
+}
+
+.primary {
+    background-color: var(--primary);
+    color: black;
+}
+
+.secondary {
+    background-color: var(--secondary);
+    color: black;
+}
+
+.tertiary {
+    background-color: var(--tertiary);
+    color: black;
+}
+
+.quaternary {
+    background-color: var(--quaternary);
+    color: black;
+}
+
+p.firstLetter::first-letter {
+    font-size: 200%;
+    font-family: var(--fontHead);
+}
+
+.btn-primary {
+    color: var(--main);
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.navbar {
+    background-color: var(--primary);
+    color: black;
+
+}
+
+.navbar-brand, 
+.nav-link {
+    color: black !important;
+
+}
+
+a {
+    background-color: inherit !important;
+    border: none;
+    color: white;
+}
+
+
+
+a:hover {
+    color:var(--primary);
+    text-decoration: none;
+}

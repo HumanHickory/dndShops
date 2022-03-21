@@ -5,12 +5,22 @@ $(document).ready(function () {
     var city = getUrlParameter('city');
     $('body').prepend(BuildHeader());
 
-
    if(city == "Sonridge"){ 
     Sonridge();
+   } else if(city == "Abydos"){ 
+    Abydos();
    }
 
 });
+
+function Abydos(){
+    var mountHtml = WarHorse();
+    mountHtml += RidingHorse();
+    mountHtml += Camel();
+
+    $('#mounts').html(mountHtml);
+
+}
 
 function Sonridge() {
     var mountHtml = WarHorse();
@@ -22,8 +32,8 @@ function Sonridge() {
 
     $('#mounts').html(mountHtml);
 
-    var petStory = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
-    var petHtml = CreatePets("mastiff.jpg", "Carl", petStory, "20gp");
+    var petStory = "Toxin is a giant cave spider, found in the underdark. He is about the size of a normal human hand. Mildly aggressive and can produce a paralyzing venom, but it takes a whole day to produce more. It should be noted that sometimes the venom has been known to paralyze the lungs and heart as well, so buyer beware.";
+    var petHtml = CreatePets("caveSpider.jpg", "Toxin", petStory, "20gp");
 
     $('#pets').html(petHtml);
 }
@@ -32,6 +42,8 @@ function Arynsport(){
     
     $("#storeName").text("A Load of Ship");
 }
+
+
 
 
 function CreateMounts(imageName, mountName, cost, speed, capacity) {

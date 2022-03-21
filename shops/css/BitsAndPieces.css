@@ -1,9 +1,9 @@
 :root {
     --main: white;
     --primary: #00205b;
-    --secondary: #6edcfa;
-    --tertiary: rgb(196, 0, 0);
-    --quaternary: #7fcdff;
+    --secondary: #76F5B0;
+    --tertiary: #e08a09;
+    --quaternary:#76F5B0;
     --fontBody:'Varela Round', sans-serif;
     --fontHead:'Varela Round', sans-serif;
 

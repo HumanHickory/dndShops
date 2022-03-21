@@ -1,317 +1,183 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head runat="server">
-
-
-
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="styles.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-<link href="https://fonts.googleapis.com/css?family=Cardo:400,700|Cinzel:400,700|Didact+Gothic|Hammersmith+One|Mitr|Prata&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Cardo:400,700|Cinzel:400,700|Didact+Gothic|Hammersmith+One|Mitr|Prata&display=swap"
+        rel="stylesheet">
 
     <title>Town Directory</title>
-	
-	<style>
 
-body {
-	background-color: #d9d9d9;
-}	
-
-h1, h2, h3, h4, h5 {
-	font-family: 'Cinzel', serif;
-}
-
-ul {
-	list-style: none;
-	  padding-left: 0;
-}
-
-.test {
-	border: 2px solid red;
-}
-.wrapper {
-	text-align: center;
-	margin-top: 2rem;
-}
-.img-holder {
-	background: #ECE9E6;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	padding: .5rem;
-	box-shadow: 5px 5px 10px #888888;
-
-}
-.img-holder > img {
-	width: 80%;
-	height: 80%;
-}
-
-a {
-	color:  black;
-}
-
-a:hover {
-	color:  black;
-
-}
-
-.img-holder:hover {
-	box-shadow: 10px 10px 10px #888888;
-	transition: box-shadow .3s;
-}
-
-.hero-header-container { 
-	background: url("img/hero/townDirectory.jpg") no-repeat center; 
-	background-size: cover; 
-	height: 100vh; 
-	position: relative;  
-	}
-	
-.hero-header-container:before {
-	background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0));
-	content: "";
-	position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-}
-
-
-
-.headerText {
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-	}
-	
-h1 {
-	font-size: 7rem;
-
-}	
-
-@keyframes pop-in {
-  0% {
-    opacity: 0;
-    transform: translateY(-4rem) scale(.8);
-  }
-  100% {
-    opacity: 1;
-    transform: none;
-  }
-}
-
-@keyframes rotate-up {
-  100% {
-    transform: rotateZ(-4deg);
-  }
-}
-
-.animate-pop-in {
-animation: pop-in .6s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;  
-opacity: 0;
-
-}
-.header-title {
-  animation-delay: .5s;
-}
-
-.header-title2 {
-	animation-delay: .7s;
-}
-
-.header-subtitle {
-  animation-delay: .9s;
-}
-
-header {
-   align-items: center; 
-   display: block;  
-   overflow: hidden; 
-   position: relative;
-   transform-style: preserve-3d;
-   perspective: 100px; 
-
-   color:cadetblue;
-   text-shadow: 2px 2px 4px white;
-}
-
-header:after {
-  animation: rotate-up .5s .5s cubic-bezier(0, 0.5, 0, 1) forwards;
-  background: #d9d9d9;
-  content: "";
-  height: 40rem;
-  left: -5%;
-  position: absolute;
-    right: -5%;
-    top: 90%;
-  transform-origin: 0 0;
-  z-index: 0;
-}
-
-
-.rotatingText {
-	color: #f2d200;
-	}
-
-
-	</style>
 </head>
+
 <body>
 
-<header>
-	<div class="hero-header-container">
-		<div class="headerText">
-            <h1 class="header-title animate-pop-in"> Avyngäard </h1>
-			<h1 class="header-title2 animate-pop-in"> Town Directory </h1>
-			<h2 class="header-subtitle animate-pop-in"> Welcome to <span class="rotatingText" id="rotatingText">Avyngäard </span></h2>
-		</div>
-	</div>
-</header>
-
-<div class="container">
-    <div class="text-center row pb-5">
-
-        <h2 class="col-12">
-            Visit Town or City
-        </h2>
-
-        <a class="wrapper col-6 col-xl-3" id="abydos" data-aos="zoom-in" data-aos-delay="100" href="Cities/Abydos/index.html?city=Abydos">
-            <div class="img-holder">
-                <img src="img/icons/abydos.jpg" />
-
-                <div class="hidden text-center pt-4 pb-3" id="hidden3">
-                    <h5 class="link"> Abydos </h5>
-                    <p>Abydanisian Desert</p>
-                </div>
+    <header>
+        <div class="hero-header-container">
+            <div class="headerText">
+                <h1 class="header-title animate-pop-in"> Avyngäard </h1>
+                <h1 class="header-title2 animate-pop-in"> Town Directory </h1>
+                <h2 class="header-subtitle animate-pop-in"> Welcome to <span class="rotatingText"
+                        id="rotatingText">Avyngäard </span></h2>
             </div>
-        </a>
+        </div>
+    </header>
 
-        <a class="wrapper col-6 col-xl-3" id="arabelle" data-aos="zoom-in" data-aos-delay="100" href="Cities/Arabelle/index.html?city=Arabelle">
-            <div class="img-holder">
-                <img src="img/icons/arabelle.jpg" />
+    <div class="container">
+        <div class="text-center row pb-5">
 
-                <div class="hidden text-center pt-4 pb-3" id="hidden3">
-                    <h5 class="link"> Arabelle </h5>
-                    <p>Caster Hills</p>
+            <h2 class="col-12">
+                Visit Town or City
+            </h2>
+
+            <a class="wrapper col-6 col-xl-3" id="abydos" data-aos="zoom-in" data-aos-delay="100"
+                href="Cities/Abydos/index.html?city=Abydos">
+                <div class="img-holder">
+                    <img src="img/icons/abydos.jpg" />
+
+                    <div class="hidden text-center pt-4 pb-3" id="hidden3">
+                        <h5 class="link"> Abydos </h5>
+                        <p>Abydanisian Desert</p>
+                    </div>
                 </div>
-            </div>
-        </a>
+            </a>
 
-        <a class="wrapper col-6 col-xl-3" id="arynsport" data-aos="zoom-in" data-aos-delay="100" href="Cities/Arynsport/index.html?city=Arynsport">
-            <div class="img-holder">
-                <img src="img/icons/arynsport.jpg" />
+            <a class="wrapper col-6 col-xl-3" id="arabelle" data-aos="zoom-in" data-aos-delay="100"
+                href="Cities/Arabelle/index.html?city=Arabelle">
+                <div class="img-holder">
+                    <img src="img/icons/arabelle.jpg" />
 
-                <div class="hidden text-center pt-4 pb-3" id="hidden3">
-                    <h5 class="link"> Arynsport </h5>
-                    <p>Pearlshaw Ocean Coast</p>
+                    <div class="hidden text-center pt-4 pb-3" id="hidden3">
+                        <h5 class="link"> Arabelle </h5>
+                        <p>Caster Hills</p>
+                    </div>
                 </div>
-            </div>
-        </a>
+            </a>
 
-        <a class="wrapper col-6 col-xl-3" id="burterran" data-aos="zoom-in" data-aos-delay="100" href="Cities/Burterran/index.html?city=Burterran">
-            <div class="img-holder">
-                <img src="img/icons/burterran.jpg" />
+            <a class="wrapper col-6 col-xl-3" id="arynsport" data-aos="zoom-in" data-aos-delay="100"
+                href="Cities/Arynsport/index.html?city=Arynsport">
+                <div class="img-holder">
+                    <img src="img/icons/arynsport.jpg" />
 
-                <div class="hidden text-center pt-4 pb-3" id="hidden3">
-                    <h5 class="link">Burterran</h5>
-                    <p>Pearlshaw Ocean</p>
+                    <div class="hidden text-center pt-4 pb-3" id="hidden3">
+                        <h5 class="link"> Arynsport </h5>
+                        <p>Pearlshaw Ocean Coast</p>
+                    </div>
                 </div>
-            </div>
-        </a>
+            </a>
 
-        <a class="wrapper col-6 col-xl-3" id="inburn" data-aos="zoom-in" data-aos-delay="100" href="Cities/Inburn/index.html?city=Inburn">
-            <div class="img-holder">
-                <img src="img/icons/Inburn.jpg">
-                <div class="hidden text-center pt-4 pb-3" id="hidden1">
-                    <h5 class="link"> Inburn </h5>
-                    <p>The Dread Marsh</p>
+            <a class="wrapper col-6 col-xl-3" id="burterran" data-aos="zoom-in" data-aos-delay="100"
+                href="Cities/Burterran/index.html?city=Burterran">
+                <div class="img-holder">
+                    <img src="img/icons/burterran.jpg" />
+
+                    <div class="hidden text-center pt-4 pb-3" id="hidden3">
+                        <h5 class="link">Burterran</h5>
+                        <p>Pearlshaw Ocean</p>
+                    </div>
                 </div>
-            </div>
-        </a>
+            </a>
 
-        <a class="wrapper col-6 col-xl-3" id="lastHarbor" data-aos="zoom-in" data-aos-delay="100" href="Cities/LastHarbor/index.html?city=LastHarbor">
-            <div class="img-holder">
-                <img src="img/icons/lastHarbor.jpg" />
-
-                <div class="hidden text-center pt-4 pb-3" id="hidden3">
-                    <h5 class="link">Last Harbor </h5>
-                    <p>Pearlshaw Ocean</p>
+            <a class="wrapper col-6 col-xl-3" id="inburn" data-aos="zoom-in" data-aos-delay="100"
+                href="Cities/Inburn/index.html?city=Inburn">
+                <div class="img-holder">
+                    <img src="img/icons/Inburn.jpg">
+                    <div class="hidden text-center pt-4 pb-3" id="hidden1">
+                        <h5 class="link"> Inburn </h5>
+                        <p>The Dread Marsh</p>
+                    </div>
                 </div>
-            </div>
-        </a>
+            </a>
 
-        <a class="wrapper col-6 col-xl-3" id="oclul" data-aos="zoom-in" data-aos-delay="100" href="Cities/Oclul/index.html?city=Oculul">
-            <div class="img-holder">
-                <img src="img/icons/oclul.jpg">
-                <div class="hidden text-center pt-4 pb-3" id="hidden2">
-                    <h5 class="link"> Oclul </h5>
-                    <p>Barren Badlands</p>
+            <a class="wrapper col-6 col-xl-3" id="lastHarbor" data-aos="zoom-in" data-aos-delay="100"
+                href="Cities/LastHarbor/index.html?city=LastHarbor">
+                <div class="img-holder">
+                    <img src="img/icons/lastHarbor.jpg" />
+
+                    <div class="hidden text-center pt-4 pb-3" id="hidden3">
+                        <h5 class="link">Last Harbor </h5>
+                        <p>Pearlshaw Ocean</p>
+                    </div>
                 </div>
-            </div>
-        </a>
+            </a>
 
-        <a class="wrapper col-6 col-xl-3" id="oysterIslands" data-aos="zoom-in" data-aos-delay="100" href="Cities/OysterIslands/index.html?city=OysterIslands">
-            <div class="img-holder">
-                <img src="img/icons/oysterIslands.jpg" />
-
-                <div class="hidden text-center pt-4 pb-3" id="hidden3">
-                    <h5 class="link">Oyster Islands </h5>
-                    <p>Pearlshaw Ocean</p>
+            <a class="wrapper col-6 col-xl-3" id="oclul" data-aos="zoom-in" data-aos-delay="100"
+                href="Cities/Oclul/index.html?city=Oculul">
+                <div class="img-holder">
+                    <img src="img/icons/oclul.jpg">
+                    <div class="hidden text-center pt-4 pb-3" id="hidden2">
+                        <h5 class="link"> Oclul </h5>
+                        <p>Barren Badlands</p>
+                    </div>
                 </div>
-            </div>
-        </a>
+            </a>
 
-        
-        <a class="wrapper col-6 col-xl-3" id="rivvenastorp" data-aos="zoom-in" data-aos-delay="100" href="Cities/Rivvenastorp/index.html?city=Rivvenastorp">
-            <div class="img-holder">
-                <img src="img/icons/Rivvenastorp.jpg" />
+            <a class="wrapper col-6 col-xl-3" id="oysterIslands" data-aos="zoom-in" data-aos-delay="100"
+                href="Cities/OysterIslands/index.html?city=OysterIslands">
+                <div class="img-holder">
+                    <img src="img/icons/oysterIslands.jpg" />
 
-                <div class="hidden text-center pt-4 pb-3" id="hidden3">
-                    <h5 class="link">Rivvenastorp</h5>
-                    <p>Silent Plains</p>
+                    <div class="hidden text-center pt-4 pb-3" id="hidden3">
+                        <h5 class="link">Oyster Islands </h5>
+                        <p>Pearlshaw Ocean</p>
+                    </div>
                 </div>
-            </div>
-        </a>
+            </a>
 
-        <a class="wrapper col-6 col-xl-3" id="sandstone" data-aos="zoom-in" data-aos-delay="100" href="Cities/Sandstone/index.html?city=Sandstone">
-            <div class="img-holder">
-                <img src="img/icons/sandstone.jpg">
-                <div class="hidden text-center pt-4 pb-3" id="hidden2">
-                    <h5 class="link"> Sandstone </h5>
-                    <p>Abydanisian Desert</p>
+
+            <a class="wrapper col-6 col-xl-3" id="rivvenastorp" data-aos="zoom-in" data-aos-delay="100"
+                href="Cities/Rivvenastorp/index.html?city=Rivvenastorp">
+                <div class="img-holder">
+                    <img src="img/icons/Rivvenastorp.jpg" />
+
+                    <div class="hidden text-center pt-4 pb-3" id="hidden3">
+                        <h5 class="link">Rivvenastorp</h5>
+                        <p>Silent Plains</p>
+                    </div>
                 </div>
-            </div>
-        </a>
-        
-        <a class="wrapper col-6 col-xl-3" id="sonridge" data-aos="zoom-in" data-aos-delay="100" href="Cities/Sonridge/index.html?city=Sonridge">
-            <div class="img-holder">
-                <img src="img/icons/sonridge.jpg" />
+            </a>
 
-                <div class="hidden text-center pt-4 pb-3" id="hidden3">
-                    <h5 class="link"> Sonridge City </h5>
-                    <p>Coalfell Plains</p>
+            <a class="wrapper col-6 col-xl-3" id="sandstone" data-aos="zoom-in" data-aos-delay="100"
+                href="Cities/Sandstone/index.html?city=Sandstone">
+                <div class="img-holder">
+                    <img src="img/icons/sandstone.jpg">
+                    <div class="hidden text-center pt-4 pb-3" id="hidden2">
+                        <h5 class="link"> Sandstone </h5>
+                        <p>Abydanisian Desert</p>
+                    </div>
                 </div>
-            </div>
-        </a>
+            </a>
 
-        <a class="wrapper col-6 col-xl-3" id="swallowsSong" data-aos="zoom-in" data-aos-delay="100" href="Cities/SwallowsSong/index.html?city=SwallowsSong">
-            <div class="img-holder">
-                <img src="img/icons/swallowsSong.jpg" />
+            <a class="wrapper col-6 col-xl-3" id="sonridge" data-aos="zoom-in" data-aos-delay="100"
+                href="Cities/Sonridge/index.html?city=Sonridge">
+                <div class="img-holder">
+                    <img src="img/icons/sonridge.jpg" />
 
-                <div class="hidden text-center pt-4 pb-3" id="hidden3">
-                    <h5 class="link"> Swallow's Song </h5>
-                    <p>Silent Plains</p>
+                    <div class="hidden text-center pt-4 pb-3" id="hidden3">
+                        <h5 class="link"> Sonridge City </h5>
+                        <p>Coalfell Plains</p>
+                    </div>
                 </div>
-            </div>
-        </a>
-        
+            </a>
+
+            <a class="wrapper col-6 col-xl-3" id="swallowsSong" data-aos="zoom-in" data-aos-delay="100"
+                href="Cities/SwallowsSong/index.html?city=SwallowsSong">
+                <div class="img-holder">
+                    <img src="img/icons/swallowsSong.jpg" />
+
+                    <div class="hidden text-center pt-4 pb-3" id="hidden3">
+                        <h5 class="link"> Swallow's Song </h5>
+                        <p>Silent Plains</p>
+                    </div>
+                </div>
+            </a>
 
 
 
@@ -319,68 +185,70 @@ header:after {
 
 
 
+
+        </div>
     </div>
-</div>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="global.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="global.js"></script>
 
-<script>
-
-
-$(document).ready(function(){
-    if(getRoot() == "https://www.avyngaard.shop/"){
-        //$("#abydos").hide();
-        $("#arabelle").hide();
-        //$("#arynsport").hide();
-        $("#burterran").hide();
-        //$("#lastHarbor").hide();
-        //$("#oysterIslands").hide();
-        $("#sandstone").hide();
-        $("#sonridge").hide();
-        //$("#swallowsSong").hide();
-        $("#inburn").hide();
-        $("#oclul").hide();
-        //$("#rivvenastorp").hide();
-    }
+    <script>
 
 
-var rt = $('#rotatingText');
-var i = 1;
+        $(document).ready(function () {
+            if (getRoot() == "https://avyngaard.shop/") {
+                //$("#abydos").hide();
+                $("#arabelle").hide();
+                //$("#arynsport").hide();
+                $("#burterran").hide();
+                //$("#lastHarbor").hide();
+                //$("#oysterIslands").hide();
+                $("#sandstone").hide();
+                $("#sonridge").hide();
+                //$("#swallowsSong").hide();
+                $("#inburn").hide();
+                $("#oclul").hide();
+                //$("#rivvenastorp").hide();
+            }
 
-while (i < 40) {
-	rt.fadeOut(3000, function(){
-	rt.text("Sonridge City").css('color', 'darkcyan')
-    }).fadeIn(3000);
 
-    rt.fadeOut(3000, function () {
-        rt.text("Arynsport").css('color', 'aqua')
-    }).fadeIn(3000);
+            var rt = $('#rotatingText');
+            var i = 1;
 
-    rt.fadeOut(3000, function () {
-        rt.text("Swallow's Song").css('color', 'green')
-    }).fadeIn(3000);
+            while (i < 40) {
+                rt.fadeOut(3000, function () {
+                    rt.text("Sonridge City").css('color', 'darkcyan')
+                }).fadeIn(3000);
 
-    rt.fadeOut(3000, function () {
-        rt.text("Abydos").css('color', 'darkred')
-    }).fadeIn(3000);
+                rt.fadeOut(3000, function () {
+                    rt.text("Arynsport").css('color', 'aqua')
+                }).fadeIn(3000);
 
-	rt.fadeOut(3000, function(){
-	rt.text("Inburn").css('color', 'limegreen')
-    }).fadeIn(3000);
+                rt.fadeOut(3000, function () {
+                    rt.text("Swallow's Song").css('color', 'green')
+                }).fadeIn(3000);
 
-    
-	rt.fadeOut(3000, function(){
-	rt.text("Oclul").css('color', 'khaki')
-	}).fadeIn(3000);
-	
-	rt.fadeOut(3000, function(){
-	rt.text("D&D Shops").css('color', '#f2d200')
-	}).fadeIn(3000);
+                rt.fadeOut(3000, function () {
+                    rt.text("Abydos").css('color', 'darkred')
+                }).fadeIn(3000);
 
-	i++;
-	
-	}
-});
-</script>
+                rt.fadeOut(3000, function () {
+                    rt.text("Inburn").css('color', 'limegreen')
+                }).fadeIn(3000);
+
+
+                rt.fadeOut(3000, function () {
+                    rt.text("Oclul").css('color', 'khaki')
+                }).fadeIn(3000);
+
+                rt.fadeOut(3000, function () {
+                    rt.text("D&D Shops").css('color', '#f2d200')
+                }).fadeIn(3000);
+
+                i++;
+
+            }
+        });
+    </script>
 </body>
+
 </html>

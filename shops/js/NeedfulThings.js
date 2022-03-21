@@ -19,7 +19,7 @@ function getItem(ItemId) {
             $('#needfulThings').append(html);
         },
         error: function (request, error) {
-            alert("Failed to retrieve item " + ItemId);
+            console.log("Failed to retrieve item " + ItemId);
 
         }
     });

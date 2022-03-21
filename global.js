@@ -1,5 +1,5 @@
 
-var baseUrl = "http://dmrensdndapi.azurewebsites.net/";
+var baseUrl = "https://dmrensdndapi.azurewebsites.net/";
 //var baseUrl = "https://localhost:44350/";
 
 function getRoot() {

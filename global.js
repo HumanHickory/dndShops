@@ -53,7 +53,7 @@ function BuildHeader() {
     nav += " <ul class='navbar-nav mr-auto'>";
 
     nav += "<li class='nav-item active'>";
-    if(isProd)
+    if(!isProd)
         nav += "<a class='nav-link' href='" + root + "index.html'>Town Directory</a>";
     else
         nav += "<a class='nav-link' href='" + root + "'>Town Directory</a>";
@@ -88,10 +88,10 @@ function BuildHeader() {
     nav += "<div class='collapse navbar-collapse flex-grow-1 text-right' id='myNavbar'>";
     nav += "<ul class='navbar-nav ml-auto flex-nowrap'>";
     nav += "<li class='nav-item'>";
-    if(isProd)
-    nav += "<a href='" + root + "index.html' class='nav-link m-2 menu-item'>Town Directory</a>";
+    if(!isProd)
+        nav += "<a href='" + root + "index.html' class='nav-link m-2 menu-item'>Town Directory</a>";
     else
-    nav += "<a href='" + root + "' class='nav-link m-2 menu-item'>Town Directory</a>";
+        nav += "<a href='" + root + "' class='nav-link m-2 menu-item'>Town Directory</a>";
 
     nav += "</li>";
     nav += "</ul>";

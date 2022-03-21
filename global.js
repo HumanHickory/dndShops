@@ -6,7 +6,15 @@ function getRoot() {
     if (window.location.origin.substring(0, 4) == "file") {
         return "file:///C:/Users/Jordan/Documents/GitHub/dndShops/";
     } else {
-        return "https://www.avyngaard.shop/";
+        return "https://avyngaard.shop/";
+    }
+}
+
+function IsProd() {
+    if (window.location.origin.substring(0, 4) == "file") {
+        return false;
+    } else {
+        return true;
     }
 }
 
@@ -32,6 +40,7 @@ function BuildHeader() {
     var CityName = getUrlParameter('city');
     var Tavern = GetTavern(CityName);
     var root = getRoot();
+    var isProd = IsProd();
 
 
     var nav = "<nav class='navbar fixed-top navbar-expand-lg navbar-dark'>";
@@ -44,7 +53,12 @@ function BuildHeader() {
     nav += " <ul class='navbar-nav mr-auto'>";
 
     nav += "<li class='nav-item active'>";
-    nav += "<a class='nav-link' href='" + root + "index.html'>Town Directory</a>";
+    if(isProd)
+        nav += "<a class='nav-link' href='" + root + "index.html'>Town Directory</a>";
+    else
+        nav += "<a class='nav-link' href='" + root + "'>Town Directory</a>";
+
+
     nav += " </li>";
     nav += "<li class='nav-item'>";
     nav += "<a class='nav-link' href='" + root + "Cities/" + CityName + "/government.html?city=" + CityName + "'>Government</a>";
@@ -74,7 +88,11 @@ function BuildHeader() {
     nav += "<div class='collapse navbar-collapse flex-grow-1 text-right' id='myNavbar'>";
     nav += "<ul class='navbar-nav ml-auto flex-nowrap'>";
     nav += "<li class='nav-item'>";
+    if(isProd)
     nav += "<a href='" + root + "index.html' class='nav-link m-2 menu-item'>Town Directory</a>";
+    else
+    nav += "<a href='" + root + "' class='nav-link m-2 menu-item'>Town Directory</a>";
+
     nav += "</li>";
     nav += "</ul>";
     nav += "</div>";

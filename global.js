@@ -52,11 +52,11 @@ function BuildHeader() {
     nav += "<div class='collapse navbar-collapse' id='navbarSupportedContent'>";
     nav += " <ul class='navbar-nav mr-auto'>";
 
-    nav += "<li class='nav-item active'>";
-    if(!isProd)
-        nav += "<a class='nav-link' href='" + root + "index.html'>Town Directory</a>";
-    else
-        nav += "<a class='nav-link' href='" + root + "'>Town Directory</a>";
+    // nav += "<li class='nav-item active'>";
+    // if(!isProd)
+    //     nav += "<a class='nav-link' href='" + root + "index.html'>Town Directory</a>";
+    // else
+    //     nav += "<a class='nav-link' href='" + root + "'>Town Directory</a>";
 
 
     nav += " </li>";
@@ -74,7 +74,7 @@ function BuildHeader() {
     nav += "Explore";
     nav += "</a>";
     nav += "<div class='dropdown-menu' aria-labelledby='navbarDropdown'>";
-    nav += "<a class='dropdown-item' href='" + root + "/townIndex/index.html?city=" + CityName + "'>Shopping</a>";
+    nav += "<a class='dropdown-item' href='" + root + "/ShopDirectory/index.html?city=" + CityName + "'>Shopping</a>";
     nav += "<a class='dropdown-item' href='" + root + "shops/taverns/" + Tavern + ".html?city=" + CityName + "'>Eats and Drinks</a>";
     nav += "<a class='dropdown-item' href='" + root + "Cities/" + CityName + "/index.html?city=" + CityName + "#helpWanted'>Help Wanted</a>";
     nav += "</div>";
@@ -121,6 +121,7 @@ function BuildMiniHeader() {
     }
 
     var root = getRoot();
+    var isProd = IsProd();
 
 
     var nav = "<nav class='navbar fixed-top navbar-expand-lg navbar-dark'>";
@@ -134,7 +135,7 @@ function BuildMiniHeader() {
     nav += " <ul class='navbar-nav mr-auto'>";
 
     nav += "<li class='nav-item active'>";
-    nav += "<a class='nav-link' href='" + root + "index.html'>Town Directory</a>";
+   // nav += "<a class='nav-link' href='" + root + "index.html'>Town Directory</a>";
     nav += "</li>";
     nav += "</ul>";
     nav += "</div>";
@@ -142,7 +143,12 @@ function BuildMiniHeader() {
     nav += "<div class='collapse navbar-collapse flex-grow-1 text-right' id='myNavbar'>";
     nav += "<ul class='navbar-nav ml-auto flex-nowrap'>";
     nav += "<li class='nav-item'>";
+    
+    if(!isProd)
+    nav += "<a href='" + root + "index.html' class='nav-link m-2 menu-item'>Town Directory</a>";
+        else
     nav += "<a href='" + root + "'class='nav-link m-2 menu-item'>Town Directory</a>";
+
     nav += "</li>";
     nav += "</ul>";
     nav += "</div>";

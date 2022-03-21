@@ -97,7 +97,7 @@ $(document).ready(function () {
 function Sonridge() {
 
     var content1 = '<div class="img-holder">';
-    content1 += '<img src="../img/Armor/breastplateGirl.png"  id="img1">';
+    content1 += '<img src="../../img/Armor/breastplateGirl.png"  id="img1">';
     content1 += '<div class="hidden text-center" id="hidden1">';
     content1 += '<ul>';
     content1 += '<li><b>AC:</b> 14 + Dex</li>';
@@ -110,7 +110,7 @@ function Sonridge() {
     $("#1").html(content1);
 
     var content2 = '<div class="img-holder">';
-    content2 += '<img src="../img/Armor/fullplateMan.png" id="img2">';
+    content2 += '<img src="../../img/Armor/fullplateMan.png" id="img2">';
     content2 += '<div class="hidden text-center" id="hidden2">';
     content2 += '<ul>';
     content2 += '<li><b>AC:</b> 18</li>';
@@ -128,7 +128,7 @@ function Sonridge() {
 
 function Arynsport() {
     var content1 = '<div class="img-holder">';
-    content1 += '<img src="../img/Armor/Arynsport/breastplateGirl.png"  id="img1">';
+    content1 += '<img src="../../img/Armor/Arynsport/breastplateGirl.png"  id="img1">';
     content1 += '<div class="hidden text-center" id="hidden1">';
     content1 += '<ul>';
     content1 += '<li><b>AC:</b> 14 + Dex</li>';
@@ -141,7 +141,7 @@ function Arynsport() {
     $("#1").html(content1);
 
     var content2 = '<div class="img-holder">';
-    content2 += '<img src="../img/Armor/Arynsport/fullplateMan.png" id="img2">';
+    content2 += '<img src="../../img/Armor/Arynsport/fullplateMan.png" id="img2">';
     content2 += '<div class="hidden text-center" id="hidden2">';
     content2 += '<ul>';
     content2 += '<li><b>AC:</b> 18</li>';
@@ -157,7 +157,7 @@ function Arynsport() {
 
 
     var content3 = '<div class="img-holder">';
-    content3 += '<img src="../img/Armor/Arynsport/SailorPirate.png" id="img3">';
+    content3 += '<img src="../../img/Armor/Arynsport/SailorPirate.png" id="img3">';
     content3 += '<div class="hidden text-center" id="hidden3">';
     content3 += '<ul>';
     content3 += '<li><b>AC:</b> AC 11 + dex</li>';
@@ -173,7 +173,7 @@ function Arynsport() {
 
 function Abydos() {
     var content1 = '<div class="img-holder">';
-    content1 += '<img src="../img/Armor/Abydos/boneShield.png"  id="img1">';
+    content1 += '<img src="../../img/Armor/Abydos/boneShield.png"  id="img1">';
     content1 += '<div class="hidden text-center" id="hidden1">';
     content1 += '<ul>';
     content1 += '<li><b>AC:</b> +2</li>';
@@ -186,7 +186,7 @@ function Abydos() {
     $("#1").html(content1);
 
     var content2 = '<div class="img-holder">';
-    content2 += '<img src="../img/Armor/Abydos/dragonSkull.png" id="img2">';
+    content2 += '<img src="../../img/Armor/Abydos/dragonSkull.png" id="img2">';
     content2 += '<div class="hidden text-center" id="hidden2">';
     content2 += '<ul>';
     content2 += '<li><b>AC:</b> +2</li>';
@@ -201,7 +201,7 @@ function Abydos() {
 
 
     var content3 = '<div class="img-holder">';
-    content3 += '<img src="../img/Armor/Abydos/desertClothing.png" id="img3">';
+    content3 += '<img src="../../img/Armor/Abydos/desertClothing.png" id="img3">';
     content3 += '<div class="hidden text-center" id="hidden3">';
     content3 += '<ul>';
     content3 += '<li><b>AC:</b> AC 11 + dex</li>';
@@ -219,7 +219,7 @@ function Abydos() {
 
 function DefaultExclusives() {
     var content1 = '<div class="img-holder">';
-    content1 += '<img src="../img/Armor/breastplateGirl.png"  id="img1">';
+    content1 += '<img src="../../img/Armor/breastplateGirl.png"  id="img1">';
     content1 += '<div class="hidden text-center" id="hidden1">';
     content1 += '<ul>';
     content1 += '<li><b>AC:</b> 14 + Dex</li>';
@@ -232,7 +232,7 @@ function DefaultExclusives() {
     $("#1").html(content1);
 
     var content2 = '<div class="img-holder">';
-    content2 += '<img src="../img/Armor/fullplateMan.png" id="img2">';
+    content2 += '<img src="../../img/Armor/fullplateMan.png" id="img2">';
     content2 += '<div class="hidden text-center" id="hidden2">';
     content2 += '<ul>';
     content2 += '<li><b>AC:</b> 18</li>';

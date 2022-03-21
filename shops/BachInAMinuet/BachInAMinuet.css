@@ -1,0 +1,57 @@
+body {
+    font-family: 'Vollkorn SC', serif;
+}
+
+.none {
+    font-family: 'Vollkorn SC', serif;
+    font-family: 'Lancelot', cursive;
+}
+
+.center .slick-center h3 {
+    color: #e67e22;
+}
+
+.test {
+    border: 2px solid red;
+}
+
+.slick-prev:before, .slick-next:before {
+    display: none;
+}
+
+.verticalCenter {
+    top: 12%;
+}
+
+h1 {
+    font-size: 4em;
+    margin-bottom: .2em;
+    margin-top: .2em;
+}
+
+ul, .ul, li, .li {
+    list-style-type: none;
+    text-align: left;
+    font-size: 1.2em;
+}
+
+.ulsmall {
+    font-size: .7em;
+}
+
+@media only screen and (max-width: 400px) {
+
+    ul, .ul, li, .li {
+        list-style-type: none;
+        text-align: left;
+        font-size: 1em;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+}

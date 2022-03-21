@@ -49,7 +49,7 @@ function Arynsport(){
 function CreateMounts(imageName, mountName, cost, speed, capacity) {
     var html = '<div class="col-lg-4">';
 
-    html += '<img src="../img/stables/' + imageName + '" width="100%">';
+    html += '<img src="../../img/stables/' + imageName + '" width="100%">';
     html += '<h5 class="mt-3">' + mountName + '</h5>';
     html += '<p><b>Cost: </b>' + cost + '</p>';
     html += '<p><b>Speed: </b>' + speed + ' </p>';
@@ -60,7 +60,7 @@ function CreateMounts(imageName, mountName, cost, speed, capacity) {
 
 function CreatePets(imageName, petsName, story, cost){
     var html = '<div class="col-lg-6">';
-    html += '<img src="../img/stables/' + imageName + '" width="100%">';
+    html += '<img src="../../img/stables/' + imageName + '" width="100%">';
     html += '</div><div class="col-lg-6 primary">';
     html += ' <h2 class="text-center mt-3 secondary-text"><b>' + petsName +'</b></h2>';
     html += '<p>' + story +'</p>';

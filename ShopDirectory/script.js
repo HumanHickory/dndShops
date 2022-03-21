@@ -34,38 +34,38 @@ $(document).ready(function () {
 });
 
 function EpicFlail() {
-    window.location.href = "../shops/EpicFlail.html?city=" + CityName;
+    window.location.href = "../shops/EpicFlail/EpicFlail.html?city=" + CityName;
 }
 
 function ThroinsGauntlet() {
-    window.location.href = "../shops/ThroinsGauntlet.html?city=" + CityName;
+    window.location.href = "../shops/RicochetArmaments/Ricochet.html?city=" + CityName;
 }
 
 function GnomeDepot() {
-    window.location.href = "../shops/GnomeDepot.html?city=" + CityName;
+    window.location.href = "../shops/GnomeDepot/GnomeDepot.html?city=" + CityName;
 }
 
 function VictoriousSecret() {
-    window.location.href = "../shops/VictoriousSecret.html?city=" + CityName;
+    window.location.href = "../shops/VictoriousSecret/VictoriousSecret.html?city=" + CityName;
 }
 
 function FiveFingers() {
-    window.location.href = "../shops/FiveFinger's.html?city=" + CityName;
+    window.location.href = "../shops/FiveFingers/FiveFinger's.html?city=" + CityName;
 }
 
 function BachInAMinuet() {
-    window.location.href = "../shops/BachInAMinuet.html?city=" + CityName;
+    window.location.href = "../shops/BachInAMinuet/BachInAMinuet.html?city=" + CityName;
 }
 
 function EyeOfTheBeholder() {
-    window.location.href = "../shops/EyeOfTheBeholder.html?city=" + CityName;
+    window.location.href = "../shops/EyeOfTheBeholder/EyeOfTheBeholder.html?city=" + CityName;
 }
 
 function Zimzam() {
-    window.location.href = "../shops/Zimzam.html?city=" + CityName;
+    window.location.href = "../shops/Zimzam/Zimzam.html?city=" + CityName;
 }
 function BitsAndPieces() {
-    window.location.href = "../shops/BitsAndPieces.html?city=" + CityName;
+    window.location.href = "../shops/BitsAndPieces/BitsAndPieces.html?city=" + CityName;
 }
 
 

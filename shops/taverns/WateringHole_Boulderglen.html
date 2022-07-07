@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Eagle+Lake&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+    <style>
+
+        :root {
+            --main: #c1fac4;
+            --primary: #246908;
+            --secondary: #dd8928;
+            --tertiary: #a37db3;
+            --quaternary: #CE8D4D;
+            --fontHead: 'Eagle Lake', cursive;
+            --fontBody: 'Nunito', sans-serif;
+        }
+
+
+
+
+        body {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.7rem;
+            background: var(--main);
+            color: black;
+        }
+
+        #header {
+            position: absolute;
+            z-index: 1000;
+            top: 210px;
+            left: 25%;
+            color: black;
+            text-shadow: 2px 3px 2px gray;
+        }
+
+        hr {
+            border: 8px solid var(--primary);
+            margin-top: 0px;
+        }
+
+        .h3, h3 {
+            color: white;
+        }
+
+        .col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+            padding-right: 0 !important;
+            padding-left: 0 !important;
+        }
+
+        a {
+            color: rgb(18, 54, 18);
+        }
+
+            a:hover {
+                color: var(--secondary);
+                text-decoration: none;
+            }
+
+        .backdrop {
+            background-color: rgba(255, 255, 255, .7);
+            padding-top: .6em;
+            padding-bottom: .4em;
+        }
+
+        h1, .h1 {
+            font-size: 6rem !important;
+        }
+
+        h2, .h2 {
+            font-size: 3rem !important;
+        }
+
+        .parallax {
+            background-image: url("../../img/hero/boulderglen-tavern.jpg");
+            height: 600px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .test {
+            border: 2px solid red;
+        }
+
+        .primary {
+            color: var(--primary);
+        }
+
+        .secondary {
+            color: var(--secondary);
+        }
+
+        .secondaryBG {
+            background-color: var(--secondary);
+        }
+
+
+        .tertiary {
+            color: var(--tertiary);
+        }
+
+        .tertiaryBG {
+            background-color: var(--tertiary);
+        }
+
+        @media only screen and (max-width: 1400px) and (min-width: 1025px) {
+            .laptop {
+                font-size: 1.2rem !important;
+            }
+        }
+
+        @media only screen and (max-width: 1024px) {
+            #header {
+                left: 15%;
+            }
+        }
+
+        .col-xs-5ths,
+        .col-sm-5ths,
+        .col-md-5ths,
+        .col-lg-5ths {
+            position: relative;
+            min-height: 1px;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+        .col-xs-5ths {
+            width: 20%;
+            float: left;
+        }
+
+        @media (min-width: 768px) {
+            .col-sm-5ths {
+                width: 20%;
+                float: left;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .col-md-5ths {
+                width: 20%;
+                float: left;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .col-lg-5ths {
+                width: 20%;
+                float: left;
+            }
+        }
+    </style>
+
+
+
+    <title>The Watering Hole</title>
+</head>
+<body>
+
+    <h1 id="header">The Watering Hole</h1>
+    <div class="parallax"></div>
+
+    <hr />
+
+    <div class="container">
+        <div class="row text-center">
+
+            <a class="col-4" href="#Specialties">
+                Specialties
+            </a>
+            <a class="col-4" href="#Soups">
+                Soups and Bakery
+            </a>
+            <a class="col-4" href="#drinks">
+                Beverages
+            </a>
+
+        </div>
+        <div class="row">
+
+
+
+            <h2 class="col-12 my-4" id="Specialties"> Specialties </h2>
+
+            <div class="col-5 d-none d-xl-block" data-aos="fade-right">
+                <img src="../../img/food/porkPies.jpg" style="width: 75%;" />
+            </div>
+
+
+            <div class="col-xl-7 col-12" data-aos="fade-left">
+                <div class="col-12">
+                    <b>Laughingflow's Pork Pies</b> <span class="primary">5 cp</span>
+                </div>
+                <div class="col-12">
+                    <small>Delicious pork pies with home grown mashed potatoes made by the Laughingflow family. </small>
+                </div>
+
+                <div class="col-12 mt-3">
+                    <b>Smoothfoot Mushroom Toast </b> <span class="primary">2 cp</span>
+                </div>
+                <div class="col-12">
+                    <small>Fresh wild mushrooms on home baked 1" thick toast made by the Smoothfood family </small>
+                </div>
+
+                <div class="col-12 mt-3">
+                    <b>Springcobble Sausage and Carrots</b><span class="primary"> 10 cp</span>
+                </div>
+                <div class="col-12">
+                    <small>From the springcobble family, stuffed pork sausages with thyme, and carmelized carrots. </small>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <div class="container-fluid mt-4  d-xl-none">
+        <div class="col-12">
+            <img src="../../img/food/porkPiesMobile.jpg" style="width: 100%;" />
+        </div>
+    </div>
+
+
+    <div class="container-fluid mt-xl-5 pb-xl-4 secondaryBG">
+
+        <div class="row text-center">
+
+
+            <h2 class="col-12 my-4" id="Soups"> Soup and Salad </h2>
+
+            <div class="col-4 offset-2 mb-3" data-aos="fade-right">
+                <h3 class="col-12"><b>Soup</b></h3>
+                <div class="col-12 mt-3">
+                    <b>Warmeyes Potato Leek Soup</b><span style="Color: black"> 2 cp</span>
+                </div>
+                <div class="col-12">
+                    <small>A creamy potato soup with a hint of leek and fenugreek.</small>
+                </div>
+                <div class="col-12 mt-3">
+                    <b>Autumnhallow Beer Cheese Soup </b><span style="Color: black"> 3 cp</span>
+                </div>
+                <div class="col-12">
+                    <small> A very rich soup that may get outsiders tipsy.</small>
+                </div>
+                <div class="col-12 mt-3">
+                    <b>Swiftwillow White Bean Lemon Soup </b><span style="Color: black"> 5 cp</span>
+                </div>
+                <div class="col-12">
+                    <small>White beans, carrots, green, rosemarry, and a whole roasted chicken leg in a creamy lemon broth.</small>
+                </div>
+
+            </div>
+
+            <div class="col-4 mb-3" data-aos="fade-left">
+                <h3 class="col-12"><b>Salad</b></h3>
+
+                <div class="col-12 mt-3">
+                    <b>Proudbloom Fresh Orchard Salad </b><span style="Color: black"> 4 cp</span>
+                </div>
+                <div class="col-12">
+                    <small>Mixed greens topped with clementines and pear slices, with a home made raspberry vinagrette.</small>
+                </div>
+
+                <div class="col-12 mt-3">
+                    <b>Bramblefound Peach and Tomato Salad</b><span style="Color: black"> 4 cp</span>
+                </div>
+                <div class="col-12">
+                    <small>Oil and Herb soaked tomatoes on a bed of honey peaches, topped with basil and a side of humus. Add homemade bread for 1 cp</small>
+                </div>
+
+                <div class="col-12 mt-3">
+                    <b>Stoutbough Meat Salad</b><span style="Color: black"> 2 cp</span>
+                </div>
+                <div class="col-12">
+                    <small>Mixed greens topped with a chicken thigh and 2 pork sausages.</small>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+  
+
+
+    <div class="container-fluid pb-5 tertiaryBG ">
+        <div class="row">
+            <div class="text-center col-12">
+                <h2 class="col-12 my-4" id="drinks"> Beverages </h2>
+            </div>
+            <div class="col-xl-3 offset-xl-1 col-8 offset-2 text-justify" style="font-size: .8em;">
+                <h3 class="col-12 mt-5 mt-3"><b>Ale</b> <span class="primary"> 1 cp / pint</span></h3>
+                <div class="col-12"><b>Glowmantle Wheat</b><small> A light wheatbeer with hints of orange and pear. <i>Boulderglen</i></small></div>
+                <div class="col-12"><b>Higheyes' Shenanigans</b><small> A bitter pale ale with a high alcohol content. <i>Boulderglen</i></small></div>
+                <div class="col-12"><b>Luiren's Best</b><small> This hefty stout is as black as ink and thick. It has a sweet flavor and frothy head. <i>Boulderglen</i></small></div>
+            </div>
+            <div class="col-xl-3 ml-xl-5 col-8 offset-2 text-justify" style="font-size: .8em;">
+                <h3 class="col-12 mt-5 mt-3"><b>Ale</b> <span class="primary"> 1 cp / pint</span></h3>
+                <div class="col-12"><b>Honeypot Pine Dew</b><small> A halfling mead with a light honey and oak taste  <i>Boulderglen</i></small></div>
+                <div class="col-12"><b>Raventop Red Ale</b><small> A spiced ale unlike any ale you've ever had. <i>Boulderglen</i></small></div>
+                <div class="col-12"><b>Cherrypot Cider</b><small> A pear cider that leaves the mouth tingling. <i>Boulderglen</i></small></div>
+                
+            </div>
+
+            <div class="col-xl-3 ml-xl-5  col-8 offset-2 text-justify" style="font-size: .8em;">
+                <h3 class="col-12 mt-5 mt-3"><b>Imported Ale</b> <span class="primary"> 2 cp / pint</span></h3>
+                <div class="col-12"><b>Elminster's Choice</b><small> A dark, cloudy beer with a heavy head and a smoky aftertaste. <i>Sonridge</i></small></div>
+                <div class="col-12"><b>Bitter Black </b><small> A heavy stout. Served at cellar temperature, it is jet black with a dark brown head of foam. <i>Sonridge</i> </small></div>
+                <div class="col-12"><b>Caster's Disaster </b><small> An ale once made in Arabelle, now brewed in Boulderglen. Occasionally has interesting effects on the drinker, but we've tried to work that out. <i>Boulderglen/Arabelle</i> </small></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+
+    </script>
+
+</body>
+
+
+</html>

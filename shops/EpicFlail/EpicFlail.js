@@ -144,7 +144,19 @@ function Kamininari() {
     text2 += '<b><span class="gold"> 45gp</span></b>';
 
     $("#img2").html(img2);
-    $("#weaponDesc2").html(text2);
+    $("#weaponDesc2").html(text2);    
+    
+    var img3 = '<img src="../../img/epicFlail/Kamininari/ArzagniriksDagger.png" />';
+    img3 += "<h5>Arzagnirik's Dagger</h5>";
+
+    var text3 = '<h5>Dagger</h5>';
+    text3 += '<b>Damage:</b> 2d4 Piercing <br>';
+    text3 += '<b>Features:</b> Thrown(20/60), Light <br>';
+    text3 += '<b>Notes:</b> Made of red glass from the Valley of the Gods, it is incredibly rare outside of Kamininari.';
+    text3 += '<b><span class="gold"> 5gp</span></b>';
+
+    $("#img3").html(img3);
+    $("#weaponDesc3").html(text3);
 
 }
 

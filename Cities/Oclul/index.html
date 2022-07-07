@@ -1,6 +1,7 @@
 ﻿<!doctype html>
 
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
 
@@ -9,14 +10,22 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 
+
+    <script src="../../global.js"></script>
+    <script src="JQuery/Script.js"></script>
     <link rel="stylesheet" href="Site.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oclul</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
 
-    <link href="https://fonts.googleapis.com/css?family=BioRhyme+Expanded|IM+Fell+Double+Pica+SC|Macondo|Molle:400i|Noto+Sans+JP|Nova+Oval|Nova+Script|Poppins|Solway&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,700&family=Lato&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/75675e6492.js" crossorigin="anonymous"></script>
+
 
 </head>
 
@@ -24,174 +33,162 @@
 
     <!------------------------------------------------- Hero IMG ---------------------------------------------->
 
-    <div class="container" style="margin-top: 5vh; margin-bottom: 5vh;">
-        <div class="heroImg">
-            <div class="imgText">
-                Oclul
+    <div class="main">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="text-center" style="margin-top: 50%;">
+                    <h1 class="ml16">Oclul</h1>
+                </div>
+            </div>
+            <div class="col-lg-8 d-none d-lg-block">
+                <img src="CityImg/CityImg.jpg" alt="Oclul City Image" width="100%" height="600">
             </div>
         </div>
     </div>
 
-    <!------------------------------------------------- TILES ---------------------------------------------->
-    <div class="container my-5">
-        <div class="row">
-
-            <a class="col-lg-4 px-2 mt-3 tile" href="..\..\townIndex\Oclul.html">
-                <div class="col-12 directoryButton primary">
-                    <h2>Shopping</h2>
-                    <p>Local vendors for all your needs.</p>
+    <!------------------------------------------------- Center Nav ---------------------------------------------->
+    <div class="tertiary">
+        <div class="container pt-5">
+            <div class="row">
+                <div class="col-lg-3 col-6 text-center">
+                    <a href="#history">
+                        <span style="font-size: 48px;">
+                            <i class="fas fa-book-open"></i>
+                        </span>
+                        <h5>Oclul</h5>
+                        <p>Read more about the Desert City</p>
+                    </a>
                 </div>
-            </a>
 
-            <a class="col-lg-4 px-2 mt-3 tile" href="..\..\shops\taverns\WindyHyena_Oclul.html">
-                <div class="col-12 directoryButton secondary">
-                    <h2>Eats and Drinks</h2>
-                    <p>Enjoy our one tavern and inn.</p>
+
+                <div class="col-lg-3 col-6 text-center">
+                    <a href="#government">
+                        <span style="font-size: 48px;">
+                            <i class="fas fa-flag"></i>
+                        </span>
+                        <h5>The Thri-Kreen</h5>
+                        <p>Read more about Oclul's Residents</p>
+                    </a>
                 </div>
-            </a>
 
-            <a class="col-lg-4 px-2 mt-3 tile" href="#helpWanted">
-                <div class="col-12 directoryButton tertiary">
-                    <h2>Help Wanted</h2>
-                    <p>Help the city of Oclul.</p>
+                <div class="col-lg-3 col-6 text-center">
+                    <a href="#news">
+                        <span style="font-size: 48px;">
+                            <i class="fas fa-newspaper"></i>
+                        </span>
+                        <h5>News</h5>
+                        <p>Local News</p>
+                    </a>
                 </div>
-            </a>
 
-            <a class="col-lg-4 px-2 mt-3 tile" href="News.html">
-                <div class="col-12 directoryButton secondary">
-                    <h2>News</h2>
-                    <p>Read up on current happenings.</p>
-                </div>
-            </a>
-
-            <a class="col-lg-4 px-2 mt-3 tile" href="#history">
-                <div class="col-12 directoryButton quaternary">
-                    <h2>History</h2>
-                    <p>Read about the history of Oclul.</p>
-                </div>
-            </a>
-
-        </div>
-    </div>
-
-
-    <!------------------------------------------------- CURRENT NEWS ---------------------------------------------->
-
-    <div class="quaternary banner container">
-        <div class="row">
-            <h1 class="col-12"> Current News </h1>
-        </div>
-    </div>
-
-    <div class="container mt-3">
-        <div class="row">
-
-            <div class="col-lg-4 my-1">
-                <div class="whiteBG">
-                    <h3>No New News</h3>
-                    <hr>
-                    <p> Please Check Back Later. </p>
+                <div class="col-lg-3 col-6 text-center">
+                    <a href="..\..\shops\taverns\WindyHyena_Oclul.html?city=Oclul">
+                        <span style="font-size: 48px;">
+                            <i class="fas fa-wine-bottle"></i>
+                        </span>
+                        <h5>Windy Hyena</h5>
+                        <p>Tavern and Inn</p>
+                    </a>
                 </div>
             </div>
-
-            <!--<div class="col-lg-4 my-1">
-        <div class="whiteBG">
-            <p class="purple">Swamp Digest</p>
-            <h3>Destruction of City Property</h3>
-            <hr>
-            <p> The city has been once again attacked by those mysterious hyenas. </p>
-            <div class="text-right">
-                <a href="News.html#News1">Read More</a>
-            </div>
-        </div>
-    </div>-->
-
-
-
-
         </div>
     </div>
 
-    <!------------------------------------------------- HELP WANTED ---------------------------------------------->
+    <!------------------------------------------------- History ---------------------------------------------->
 
-    <div class="tertiary banner container" id="helpWanted" style="margin-top: 15vh;">
-        <div class="row">
-            <h1 class="col-12"> Help Wanted </h1>
-        </div>
-    </div>
-
-    <div class="container my-3">
-        <div class="row">
-
-            <div class="col-lg-4 mt-3 mt-lg-0">
-                <div class="whiteBG">
-                    <h3> Froghemoth Foam </h3>
-                    <hr>
-                    <p> In need of froghemoth foam. Froghemoth are extremly rare and the foam is <b>unusually difficult to extract and usually ends in disappointment</b>. Will pay <span class="gold">1000gp per vial. </span></p>
-                    <p>Come see me at Eye of the Beholder.</p>
-                </div>
-            </div>
-
-            <div class="col-lg-4 mt-3 mt-lg-0">
-                <div class="whiteBG">
-                    <h3> Sweet Beer</h3>
-                    <hr>
-                    <p>
-                        The monks of the Desert Temple made a sweet beer. Most caskets have been lost for centuries. Will pay <span class="gold">300gp</span> to whoever will bring back the recipe,
-                        plus free sweet beer for life.
-                    </p>
-                    <p>Come see me at the Windy Hyena.</p>
-
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <!------------------------------------------------- HISTORY ---------------------------------------------->
-    <div class="primary banner container" style="margin-top: 15vh;" id="history">
-        <div class="row">
-            <h1 class="col-12"> History </h1>
-        </div>
-    </div>
-
-    <div class="container my-3">
-        <div class="row">
-            <div class="col-12 whiteBG">
-                <p class="firstLetter">
-                    The city of Oclul was originally the home to a dry grassland people, but the heat of the sun over many centuries converted the grassland into a wasteland, and then into a desert.
-                    However, the soft, loose sand is only a few inches thick before reaching a hard, moldable earth.
-
-                </p>
-                <p class="firstLetter">
-                    Mahvo Grassfire was a brilliant traveling merchant whose frequently travelled from Sonridge, the Mining City, to Abydos, the Tiefling Village. One day, on his journey, his foot was swallowed by the sand. 
-                    When he managed to pull his foot out, it was covered in egg shells and green goo. After some exhausting digging, Mahvo came across an abanoned clutch of thri-kreen eggs. 
+    <div class="container my-5 text-center" id="history">
+        <h2>Oclul</h3>
+            <p>
+                The city of Oclul was originally the home to a dry grassland people, but the heat of the sun over many centuries
+                    converted the grassland into a wasteland, and then into a desert. However, the soft, loose sand is only a few inches thick before reaching a hard, moldable earth.
+            </p>
+            <div id="extendedHistory">
+                <p>
+                    Mahvo Grassfire was a brilliant traveling merchant whose frequently travelled from Sonridge, the Mining City, to Abydos, 
+                    the Tiefling Village. One day, on his journey, his foot was swallowed by the sand. When he managed to pull his foot out, it was 
+                    covered in egg shells and green goo. After some exhausting digging, Mahvo came across an abanoned clutch of thri-kreen eggs. 
                     Knowing the abandoned village of Oclul was close by, he transported all the eggs to the village and reburied them in the cracking domes.
-                 
                 </p>
-
-                <p class="firstLetter">
-                    The first clutch of eggs only produced about 6 thri-kreen. Mahvo immediately began providing the tiny insects with meat and well water, encouraging them to accept this as their home. 
-                    Not knowing any differently, the baby insects accepted this as their life. Over time, their numbers began to multiple.
-               </p>
-
-                <p class="firstLetter">
-                    Although Mahvo will occasionally still trade with other civilizations himself, he much prefers to have others come to him, and trade within the city of Oclul. Many traders and 
-                    merchants are excited to see the city, since the Thri-kreen are rarely seen elsewhere. 
+                <p>
+                    The first clutch of eggs only produced about 6 thri-kreen. Mahvo immediately began providing the tiny insects with meat and well water, 
+                    encouraging them to accept this as their home. Not knowing any differently, the baby insects accepted this as their life. Over time, their numbers 
+                    began to multiple.
                 </p>
+                <p>
+                    Although Mahvo will occasionally still trade with other civilizations himself, he much prefers to have others come to him, and trade within the 
+                    city of Oclul. Many traders and merchants are excited to see the city, since the Thri-kreen are rarely seen elsewhere.
+                </p>            
+            </div>
 
+            <button id="keepReadingBtn" class="btn btn-primary mt-3">Keep Reading</button>
+    </div>
+
+
+    </div>
+
+    <div class="container py-5 primary curved text-center">
+        <h5>Magic is neither here nor there</h5>
+    </div>
+
+
+    <div class="container pt-5 " id="government">
+        <h2>Thri-Kreen</h2>
+        <div class="row">
+            <div class="col-lg-7">
+                <p>
+                    A thri-kreen resemble a giant praying mantis, bipedal and standing 4.5–7 feet
+                    high and weighing 100–375 pounds; a full-grown adult averages at 6 feet
+                    and 200 pounds. They have exoskeletons over their entire bodies. They have six limbs protruding 
+                    from their thorax: two for walking and four for use as arms, ending in four-fingered claw-like hands capable of tool- and weapon-use. 
+                    Their insectoid heads have two black, multi-faceted compound eyes; two small antennae sprouting from the top; 
+                    and a complex jaw structure with large sharp mandibles. It is extremely difficult to distinguish the males and females.
+
+                </p>
+                <p>
+                    Thought to be extinct in Avyngaard, Oclul is the only place where Thri-Kreen are born and raised. It is incredibly rare for a Thri-Kreen
+                    to leave Oclul.
+                </p>
+            </div>
+            <div class="col-lg-5 mb-3">
+                <img src="CityImg/CityImg2.jpg" width="100%">
             </div>
         </div>
     </div>
 
+    <div class="secondary" id="news">
+        <div class="container pt-5">
+            <div class="text-center">
+                <h2>News</h2>
+            </div>
 
-    <script src="JQuery/Script.js"></script>
-    <script>
+            <div id="carouselContent" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselContent" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselContent" data-slide-to="1"></li>
+                    <li data-target="#carouselContent" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active justified p-4">
+                        <h3>Sweet Beer</h3>
+                        <p>
+                            The monks of the Desert Temple made a sweet beer. Most caskets have been lost for centuries. 
+                            Will pay 300gp to whoever will bring back the recipe, plus free sweet beer for life. Come see me, Ambertail, at the Windy Hyena.
+                        </p>
+                
+                    </div>
+                    <div class="carousel-item justified p-4">
+                        <h3>Clutch of Eggs to hatch soon</h3>
+                        <p>
+                            We are pleased to announce a new clutch of 18 eggs that will be hatching within the moon. 
+                            Please join us at the well to welcome the newest members of our species to the world, when they arrive.
+                        </p>
+ 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-
-    </script>
 </body>
+
 </html>
-
-
-

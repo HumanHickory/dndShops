@@ -5,7 +5,7 @@ $(document).ready(function(){
     $(function () {
         var city = getUrlParameter('city');
         if (city == "Sonridge") {
-            Default();
+            Sonridge();
         }else if (city == "Oclul") {
             Oclul();
         } else if (city == "Inburn") {

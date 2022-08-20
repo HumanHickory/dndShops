@@ -97,30 +97,30 @@ $(document).ready(function () {
 function Sonridge() {
 
     var content1 = '<div class="img-holder">';
-    content1 += '<img src="../../img/Armor/breastplateGirl.png"  id="img1">';
+    content1 += '<img src="../../img/Armor/Sonridge/DrowLeatherArmor.png"  id="img1">';
     content1 += '<div class="hidden text-center" id="hidden1">';
     content1 += '<ul>';
     content1 += '<li><b>AC:</b> 14 + Dex</li>';
-    content1 += '<li>(max dex = 2)</li>';
     content1 += '<li>Light Armor</li>';
-    content1 += '<li></li><li></li></ul></div></div>';
-    content1 += '<h5>TBD </h5>';
-    content1 += '<p> 450gp </p>';
+    content1 += '<li>Add +2 to stealth when in the dark</li><li></li></ul></div></div>';
+    content1 += '<h5>Drow Armor </h5>';
+    content1 += '<p> 200gp </p>';
 
     $("#1").html(content1);
 
     var content2 = '<div class="img-holder">';
-    content2 += '<img src="../../img/Armor/fullplateMan.png" id="img2">';
+    content2 += '<img src="../../img/Armor/Sonridge/AnimatedArmor.png" id="img2">';
     content2 += '<div class="hidden text-center" id="hidden2">';
     content2 += '<ul>';
     content2 += '<li><b>AC:</b> 18</li>';
     content2 += '<li>Heavy Armor</li>';
     content2 += '<li><b>Stealth Disadvantage!</b></li>';
     content2 += '<li>Strength Requirement: 15</li>';
-    content2 += '<li>Resistance to nacrotic damage</li>';
+    content2 += '<li>Careful when you remove it. It likes to wander off.</li>';
     content2 += '</ul></div></div>';
-    content2 += '<h5> TBD</h5>';
+    content2 += '<h5> Full Plate</h5>';
     content2 += '<p> 1,600gp</p>';
+
 
     $("#2").html(content2);
 
